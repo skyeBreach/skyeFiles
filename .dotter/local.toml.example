@@ -1,0 +1,11 @@
+# Copy to local.toml and edit for your machine.
+# local.toml is gitignored — it stays machine-specific.
+
+# Full desktop setup:
+packages = ["home", "zsh", "starship", "git", "nvim", "lsd", "qtile", "wezterm", "rofi", "dunst", "scripts"]
+
+# Headless / server:
+# packages = ["home", "zsh", "starship", "git", "nvim", "lsd"]
+
+[variables]
+hostname = "archbox"

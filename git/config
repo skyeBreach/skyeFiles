@@ -1,0 +1,19 @@
+[user]
+	name = skyeBreach
+	email = skyebenson@hotmail.com
+    useConfigOnly = true
+
+[alias]
+    clone = clone --depth=1
+    rclone = clone --recursive
+
+[init]
+    defaultBranch = main
+
+[safe]
+    directory = *
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto

@@ -1,0 +1,22 @@
+# Dotter runtime
+.dotter/local.toml
+.dotter/cache.toml
+.dotter/cache/
+
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Nvim generated
+nvim/lazy-lock.json
+nvim/.repro/
+
+# Qtile bytecache
+qtile/__pycache__/
+
+# Zsh generated
+zsh/.antidote/
+zsh/.zsh_plugins.zsh

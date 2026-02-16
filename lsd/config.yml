@@ -1,0 +1,100 @@
+---
+# ================================================================================================ #
+# Compatibility
+
+# Backwards compatiblity with `ls`
+classic: false
+
+# ================================================================================================ #
+# Structure
+
+# Items to display
+display: almost-all
+
+# Columns and order for long and tree layouts
+blocks:
+  - permission
+  - user
+  - group
+  - size
+  - date
+  - name
+  - git
+
+# Sorting rules
+sorting:
+  column: name
+  reverse: false
+  dir-grouping: first
+
+# Should display column headers
+header: false
+
+# Should attach hyperlink to filenames
+hyperlink: never
+
+# ================================================================================================ #
+# Styling
+
+# File tree layout
+layout: grid
+
+# Color scheme
+color:
+  when: auto
+  theme: custom
+
+# Icon theme
+icons:
+  when: auto
+  theme: fancy
+  separator: " "
+
+# Should add indicators for certain files
+indicators: true
+
+# Symlink arrow glyph
+symlink-arrow: =>
+
+# Should omit symlink targets
+no-symlink: false
+
+# ================================================================================================ #
+# Formatting
+
+# Date column format
+date: "+%x %X"
+
+# User and group name truncation rules
+truncate-owner:
+  after:
+  marker: ""
+
+# Size column format
+size: default
+
+# Permission column format
+permission: octal
+
+# Should add quotes to filenames
+literal: false
+
+# ================================================================================================ #
+# Searching
+
+# File tree recursion (downwards)
+recursion:
+  enabled: false
+  # depth: 3
+
+# Should calculate total size of directories
+total-size: false
+
+# Should dereference symbolic links
+dereference: false
+
+# Excluded glob patterns
+ignore-globs:
+
+# ================================================================================================ #
+

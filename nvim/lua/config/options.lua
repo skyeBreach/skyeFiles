@@ -1,0 +1,27 @@
+local global = vim.g
+local opt = vim.opt
+local api = vim.api
+
+opt.number = true
+opt.relativenumber = false
+opt.clipboard = "unnamed,unnamedplus"
+opt.syntax = "on"
+opt.autoindent = true
+opt.cursorline = true
+opt.expandtab = true
+opt.shiftwidth = 4
+opt.tabstop = 4
+opt.encoding = "UTF-8"
+opt.ruler = true
+opt.mouse = "a"
+opt.title = true
+opt.hidden = true
+opt.ttimeoutlen = 0
+opt.wildmenu = true
+opt.showcmd = true
+opt.showmatch = true
+opt.inccommand = "split"
+opt.splitright = true
+opt.splitbelow = true
+opt.termguicolors = true
+opt.laststatus = 3

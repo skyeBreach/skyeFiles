@@ -1,0 +1,23 @@
+# Dependencies
+getantidote/use-omz
+ohmyzsh/ohmyzsh path:lib
+
+# Debug plugins
+romkatv/zsh-bench kind:path
+
+# Helper plugins
+ohmyzsh/ohmyzsh path:plugins/colored-man-pages
+ohmyzsh/ohmyzsh path:plugins/command-not-found
+
+
+# Autocompletions setup
+mattmc3/ez-compinit
+belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
+
+# Autocompletions
+zsh-users/zsh-completions path:src kind:fpath
+
+# Fish-like suggestions, history searching, and syntax highlighting
+zsh-users/zsh-autosuggestions kind:defer
+zsh-users/zsh-history-substring-search
+zdharma-continuum/fast-syntax-highlighting

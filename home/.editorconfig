@@ -1,0 +1,18 @@
+root=true
+
+[*.sh]
+indent_style = space
+indent_size = 4
+
+# --language-dialect
+shell_variant      = posix
+simplify           = false
+binary_next_line   = false
+# --case-indent
+switch_case_indent = true
+space_redirects    = true
+keep_padding       = true
+# --func-next-line
+function_next_line = true
+minify             = false
+
