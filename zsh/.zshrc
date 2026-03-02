@@ -114,7 +114,18 @@ eval "$(just --completions zsh)"
 
 
 # ================================================================================================ #
+# Bun
 
-
-# bun completions
 [ -s "/home/skye/.local/share/bun/_bun" ] && source "/home/skye/.local/share/bun/_bun"
+
+# ================================================================================================ #
+# Python
+
+# UV
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
+
+# Ruff
+eval "$(ruff generate-shell-completion zsh)"
+
+# ================================================================================================ #

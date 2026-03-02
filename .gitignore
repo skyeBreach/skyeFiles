@@ -15,8 +15,10 @@ nvim/lazy-lock.json
 nvim/.repro/
 
 # Qtile bytecache
-qtile/__pycache__/
+**/__pycache__/
 
 # Zsh generated
 zsh/.antidote/
 zsh/.zsh_plugins.zsh
+
+

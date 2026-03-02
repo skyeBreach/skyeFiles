@@ -30,7 +30,7 @@
 # ── Desktop packages (graphical environment) ────────────────────
 
 [qtile.files]
-"qtile/config.py" = "~/.config/qtile/config.py"
+"qtile" = "~/.config/qtile"
 
 [wezterm.files]
 "wezterm/wezterm.lua"      = "~/.config/wezterm/wezterm.lua"
