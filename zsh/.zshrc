@@ -2,7 +2,12 @@
 # $ZDOTDIR/.zshrc
 #
 # ================================================================================================ #
-# Antiodote
+# Starship
+
+eval "$(starship init zsh)"
+
+# ================================================================================================ #
+# Antidote
 
 
 # Set the root name of the plugins files (.txt and .zsh) antidote will use.
@@ -25,6 +30,11 @@ source ${zsh_plugins}.zsh
 
 export HISTORY_SUBSTRING_SEARCH_PREFIXED=1
 
+# ================================================================================================ #
+# Transient Prompt
+
+#source $ZDOTDIR/theme/transient-prompt.zsh-theme
+TRANSIENT_PROMPT_TRANSIENT_PROMPT='$(starship module character)'
 
 # ================================================================================================ #
 # FNM
@@ -63,10 +73,7 @@ PATH="$BUN_INSTALL/bin:$PATH"
 
 [ -s "$BUN_INSTALL/_bun" ] && source "$BUN_INSTALL/_bun"
 
-# ================================================================================================ #
-# Starship
 
-eval "$(starship init zsh)"
 
 # ================================================================================================ #
 # Zoxide

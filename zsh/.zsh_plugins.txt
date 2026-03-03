@@ -21,3 +21,6 @@ zsh-users/zsh-completions path:src kind:fpath
 zsh-users/zsh-autosuggestions kind:defer
 zsh-users/zsh-history-substring-search
 zdharma-continuum/fast-syntax-highlighting
+
+# Transient Prompt
+olets/zsh-transient-prompt
