@@ -13,7 +13,9 @@
 "zsh/.zshenv" = "~/.config/zsh/.zshenv"
 "zsh/.zshrc" = "~/.config/zsh/.zshrc"
 "zsh/.zsh_plugins.txt" = "~/.config/zsh/.zsh_plugins.txt"
-"zsh/theme" = "~/.config/zsh/theme"
+"zsh/conf.d/" = "~/.config/zsh/conf.d/"
+"zsh/functions/" = "~/.config/zsh/functions/"
+
 
 [starship.files]
 "starship/starship.toml" = "~/.config/starship.toml"

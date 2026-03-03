@@ -11,11 +11,11 @@ ohmyzsh/ohmyzsh path:plugins/command-not-found
 
 
 # Autocompletions setup
-mattmc3/ez-compinit
-belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
+# mattmc3/ez-compinit
+# belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
 
 # Autocompletions
-zsh-users/zsh-completions path:src kind:fpath
+# zsh-users/zsh-completions path:src kind:fpath
 
 # Fish-like suggestions, history searching, and syntax highlighting
 zsh-users/zsh-autosuggestions kind:defer
@@ -24,3 +24,7 @@ zdharma-continuum/fast-syntax-highlighting
 
 # Transient Prompt
 olets/zsh-transient-prompt
+
+mattmc3/zephyr path:plugins/completion
+mattmc3/zephyr path:plugins/confd
+mattmc3/zephyr path:plugins/zfunctions

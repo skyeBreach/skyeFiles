@@ -12,3 +12,13 @@ success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set
 [package]
 disabled = true
 
+[profiles]
+transient = """
+$character\
+"""
+
+rtransient = """
+$status\
+$cmd_duration\
+$time\
+"""
