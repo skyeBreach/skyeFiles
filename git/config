@@ -3,15 +3,12 @@
 	email = skyebenson@hotmail.com
     useConfigOnly = true
 
-[core]
-    editor = nvim
-
-[init]
-    defaultBranch = main
-
 [alias]
     clone = clone --depth=1
     rclone = clone --recursive
+
+[init]
+    defaultBranch = main
 
 [safe]
     directory = *

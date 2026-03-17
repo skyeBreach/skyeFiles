@@ -55,14 +55,10 @@ bindsym $mod+Return exec wezterm
 # kill focused window
 bindsym $mod+Shift+q kill
 
-# Menu's
+# start dmenu (a program launcher)
 bindsym $amod+d exec --no-startup-id dmenu_run
-bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
-
-# Utilities
-bindsym $mod+Shift+s exec --no-startup-id flameshot
-
-focus_follows_mouse false
+# A more modern dmenu replacement is rofi:
+bindsym $mod+d exec "rofi -modi drun,run -show drun"
 
 # change focus
 bindsym $mod+j focus left
