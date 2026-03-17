@@ -38,6 +38,9 @@
 [i3.files]
 "i3" = "~/.config/i3"
 
+[gtk-3.files]
+"gtk-3" = "~/.config/gtk-3.0"
+
 [wezterm.files]
 "wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 "wezterm/stylua.toml" = "~/.config/wezterm/stylua.toml"
