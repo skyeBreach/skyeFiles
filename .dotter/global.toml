@@ -35,6 +35,9 @@
 [qtile.files]
 "qtile" = "~/.config/qtile"
 
+[i3.files]
+"i3" = "~/.config/i3"
+
 [wezterm.files]
 "wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
 "wezterm/stylua.toml" = "~/.config/wezterm/stylua.toml"
