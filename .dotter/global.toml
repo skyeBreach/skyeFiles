@@ -66,6 +66,9 @@
 "xdg/templates/.gitkeep" = "~/templates/.gitkeep"
 "xdg/videos/.gitkeep" = "~/videos/.gitkeep"
 
+[bruno.files]
+"bruno/preferences.json" = "~/.config/bruno/preferences.json"
+
 # ── Machine-specific packages ───────────────────────────────────
 
 [scripts.files]
