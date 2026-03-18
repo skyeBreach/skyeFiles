@@ -54,6 +54,18 @@
 [dunst.files]
 "dunst" = "~/.config/dunst"
 
+[xdg.files]
+"xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
+"xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
+"xdg/desktop/.gitkeep" = "~/desktop/.gitkeep"
+"xdg/documents/.gitkeep" = "~/documents/.gitkeep"
+"xdg/downloads/.gitkeep" = "~/downloads/.gitkeep"
+"xdg/music/.gitkeep" = "~/music/.gitkeep"
+"xdg/pictures/.gitkeep" = "~/pictures/.gitkeep"
+"xdg/public/.gitkeep" = "~/public/.gitkeep"
+"xdg/templates/.gitkeep" = "~/templates/.gitkeep"
+"xdg/videos/.gitkeep" = "~/videos/.gitkeep"
+
 # ── Machine-specific packages ───────────────────────────────────
 
 [scripts.files]
