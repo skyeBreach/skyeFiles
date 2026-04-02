@@ -22,8 +22,4 @@ fi
 # Source your static plugins file.
 source ${zsh_plugins}.zsh
 
-export HISTORY_SUBSTRING_SEARCH_PREFIXED=1
-
 # ================================================================================================ #
-
-
