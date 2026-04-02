@@ -1,0 +1,21 @@
+# Copy to local.toml and edit for your machine.
+# local.toml is gitignored — it stays machine-specific.
+
+# Full desktop setup:
+packages = [
+    "home",
+    "zsh",
+    "starship",
+    "git",
+    "nvim",
+    "lsd",
+    "i3",
+    "wezterm",
+    "rofi",
+    "dunst",
+    "scripts",
+    "gtk-3",
+    "xdg",
+    "bruno",
+    "opencode",
+]

@@ -24,7 +24,7 @@
 "git" = "~/.config/git"
 
 [nvim.files]
-"nvim" = "~/.config/nvim"
+"nvim" = { target = "~/.config/nvim", type = "symbolic" }
 
 [lsd.files]
 "lsd/config.yml" = "~/.config/lsd/config.yml"
@@ -68,6 +68,11 @@
 
 [bruno.files]
 "bruno/preferences.json" = "~/.config/bruno/preferences.json"
+
+[opencode.files]
+"opencode/opencode.jsonc" = "~/.config/opencode/opencode.jsonc"
+"opencode/tui.jsonc" = "~/.config/opencode/tui.jsonc"
+"opencode/skills" = "~/.config/opencode/skills"
 
 # ── Machine-specific packages ───────────────────────────────────
 

@@ -1,7 +1,4 @@
 # Copy to local.toml and edit for your machine.
 # local.toml is gitignored — it stays machine-specific.
 
-includes = [".dotter/environments/arch-workstation.toml"]
-
-[variables]
-hostname = "archbox"
+packages = ["home", "zsh", "starship", "git", "nvim", "lsd"]
