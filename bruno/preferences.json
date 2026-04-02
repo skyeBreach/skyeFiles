@@ -28,13 +28,15 @@
 				"port": null,
 				"auth": {
 					"username": "",
-					"password": ""
+					"password": "",
+					"disabled": false
 				},
 				"bypassProxy": ""
-			}
+			},
+			"disabled": false
 		},
 		"layout": {
-			"responsePaneOrientation": "horizontal"
+			"responsePaneOrientation": "vertical"
 		},
 		"beta": {
 			"openapi-sync": false
@@ -56,15 +58,22 @@
 		},
 		"cache": {
 			"sslSession": {
-				"enabled": false
+				"enabled": true
 			}
 		}
 	},
 	"window-bounds": {
 		"x": 0,
-		"y": 951,
+		"y": 0,
 		"width": 1080,
-		"height": 951
+		"height": 1902
 	},
-	"maximized": false
+	"maximized": true,
+	"workspaces": {
+		"lastOpenedWorkspaces": [
+			"/home/skye/developer/pathfinders/meta"
+		]
+	},
+	"themeMode": "system",
+	"themeBg": "#24273a"
 }
