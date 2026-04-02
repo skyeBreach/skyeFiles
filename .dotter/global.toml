@@ -16,7 +16,6 @@
 "zsh/conf.d/" = "~/.config/zsh/conf.d/"
 "zsh/functions/" = "~/.config/zsh/functions/"
 
-
 [starship.files]
 "starship/starship.toml" = "~/.config/starship.toml"
 
@@ -36,7 +35,9 @@
 "qtile" = "~/.config/qtile"
 
 [i3.files]
-"i3" = "~/.config/i3"
+"i3/config" = "~/.config/i3/config"
+"i3/betterlockscreenrc" = "~/.config/betterlockscreen/betterlockscreenrc"
+"i3/wallpapers" = "~/.config/betterlockscreen/wallpapers"
 
 [gtk-3.files]
 "gtk-3" = "~/.config/gtk-3.0"
