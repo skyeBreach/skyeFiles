@@ -25,3 +25,5 @@ opt.splitright = true
 opt.splitbelow = true
 opt.termguicolors = true
 opt.laststatus = 3
+
+global.lazyvim_mini_snippets_in_completion = true
