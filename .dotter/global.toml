@@ -1,8 +1,41 @@
-# Dotfiles — Dotter Package Definitions
-# Each [package.files] section maps repo paths to deploy targets.
-# Activate packages per-machine in local.toml.
+# ==================================================================================================================== #
+# Window Manager
 
-# ── Base packages (expected on every machine) ───────────────────
+[i3.files]
+"i3/config" = "~/.config/i3/config"
+"i3/betterlockscreenrc" = "~/.config/betterlockscreen/betterlockscreenrc"
+"i3/wallpapers" = "~/.config/betterlockscreen/wallpapers"
+
+[rofi.files]
+"rofi" = "~/.config/rofi"
+
+[dunst.files]
+"dunst" = "~/.config/dunst"
+
+# ==================================================================================================================== #
+# Desktop Utilities
+
+[gtk-3.files]
+"gtk-3" = "~/.config/gtk-3.0"
+
+[xdg.files]
+"xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
+"xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
+"xdg/mimeapps.list" = "~/.config/mimeapps.list"
+"xdg/desktop/.gitkeep" = "~/desktop/.gitkeep"
+"xdg/documents/.gitkeep" = "~/documents/.gitkeep"
+"xdg/downloads/.gitkeep" = "~/downloads/.gitkeep"
+"xdg/music/.gitkeep" = "~/music/.gitkeep"
+"xdg/pictures/.gitkeep" = "~/pictures/.gitkeep"
+"xdg/public/.gitkeep" = "~/public/.gitkeep"
+"xdg/templates/.gitkeep" = "~/templates/.gitkeep"
+"xdg/videos/.gitkeep" = "~/videos/.gitkeep"
+
+[scripts.files]
+"bin/set-monitors" = "~/bin/set-monitors"
+
+# ==================================================================================================================== #
+# Shell
 
 [home.files]
 "home/.zshenv" = "~/.zshenv"
@@ -16,31 +49,24 @@
 "zsh/conf.d/" = "~/.config/zsh/conf.d/"
 "zsh/functions/" = "~/.config/zsh/functions/"
 
+# ==================================================================================================================== #
+# Prompt
+
 [starship.files]
 "starship/starship.toml" = "~/.config/starship.toml"
-
-[git.files]
-"git" = "~/.config/git"
-
-[nvim.files]
-"nvim" = { target = "~/.config/nvim", type = "symbolic" }
 
 [lsd.files]
 "lsd/config.yml" = "~/.config/lsd/config.yml"
 "lsd/colors.yml" = "~/.config/lsd/colors.yml"
 
-# ── Desktop packages (graphical environment) ────────────────────
+# ==================================================================================================================== #
+# Version Control
 
-[qtile.files]
-"qtile" = "~/.config/qtile"
+[git.files]
+"git" = "~/.config/git"
 
-[i3.files]
-"i3/config" = "~/.config/i3/config"
-"i3/betterlockscreenrc" = "~/.config/betterlockscreen/betterlockscreenrc"
-"i3/wallpapers" = "~/.config/betterlockscreen/wallpapers"
-
-[gtk-3.files]
-"gtk-3" = "~/.config/gtk-3.0"
+# ==================================================================================================================== #
+# Terminal Emulator
 
 [wezterm.files]
 "wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
@@ -49,23 +75,15 @@
 "wezterm/config/theme.lua" = "~/.config/wezterm/config/theme.lua"
 "wezterm/config/font.lua" = "~/.config/wezterm/config/font.lua"
 
-[rofi.files]
-"rofi" = "~/.config/rofi"
 
-[dunst.files]
-"dunst" = "~/.config/dunst"
+# ==================================================================================================================== #
+# Editor
 
-[xdg.files]
-"xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
-"xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
-"xdg/desktop/.gitkeep" = "~/desktop/.gitkeep"
-"xdg/documents/.gitkeep" = "~/documents/.gitkeep"
-"xdg/downloads/.gitkeep" = "~/downloads/.gitkeep"
-"xdg/music/.gitkeep" = "~/music/.gitkeep"
-"xdg/pictures/.gitkeep" = "~/pictures/.gitkeep"
-"xdg/public/.gitkeep" = "~/public/.gitkeep"
-"xdg/templates/.gitkeep" = "~/templates/.gitkeep"
-"xdg/videos/.gitkeep" = "~/videos/.gitkeep"
+[nvim.files]
+"nvim" = { target = "~/.config/nvim", type = "symbolic" }
+
+# ==================================================================================================================== #
+# Applications
 
 [bruno.files]
 "bruno/preferences.json" = "~/.config/bruno/preferences.json"
@@ -75,12 +93,8 @@
 "opencode/tui.jsonc" = "~/.config/opencode/tui.jsonc"
 "opencode/skills" = "~/.config/opencode/skills"
 
-# ── Machine-specific packages ───────────────────────────────────
-
-[scripts.files]
-"bin/set-monitors" = "~/bin/set-monitors"
-
-# ── Default variables (available in handlebars templates) ────────
+# ==================================================================================================================== #
+# Default Variables
 
 [default.variables]
 theme = "catppuccin-macchiato"
@@ -112,3 +126,5 @@ surface0 = "#363a4f"
 base = "#24273a"
 mantle = "#1e2030"
 crust = "#181926"
+
+# ==================================================================================================================== #
