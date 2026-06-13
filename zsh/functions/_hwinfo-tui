@@ -1,0 +1,7 @@
+#compdef hwinfo-tui
+
+_hwinfo_tui_completion() {
+  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _HWINFO_TUI_COMPLETE=complete_zsh hwinfo-tui)
+}
+
+compdef _hwinfo_tui_completion hwinfo-tui
