@@ -1,0 +1,1 @@
+eval "$(rumdl completions zsh)"
