@@ -1,0 +1,13 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+Version=1.0
+Type=Application
+Exec=/home/skye/tools/UnrealEngine/Engine/Binaries/Linux/UnrealEditor -NoParallelRendering -onethread
+Path=/home/skye/tools/UnrealEngine/Engine/Binaries/Linux
+Name=Unreal Engine Editor
+Icon=ubinary
+Terminal=false
+StartupWMClass=UnrealEditor
+MimeType=application/uproject
+Comment=Created By Unreal Engine
