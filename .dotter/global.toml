@@ -1,4 +1,10 @@
 # ==================================================================================================================== #
+# Init System
+
+[systemd.files]
+"systemd/user" = "~/.config/systemd/user"
+
+# ==================================================================================================================== #
 # Window Manager
 
 [i3.files]
@@ -12,11 +18,14 @@
 [dunst.files]
 "dunst" = "~/.config/dunst"
 
+[polybar.files]
+"polybar" = "~/.config/polybar"
+
 # ==================================================================================================================== #
 # Desktop Utilities
 
-[gtk-3.files]
-"gtk-3" = "~/.config/gtk-3.0"
+[gtk-4.files]
+"gtk-4" = "~/.config/gtk-4.0"
 
 [xdg.files]
 "xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
@@ -75,15 +84,21 @@
 "wezterm/config/theme.lua" = "~/.config/wezterm/config/theme.lua"
 "wezterm/config/font.lua" = "~/.config/wezterm/config/font.lua"
 
-
 # ==================================================================================================================== #
 # Editor
 
 [nvim.files]
 "nvim" = { target = "~/.config/nvim", type = "symbolic" }
 
+[ue5.files]
+"ue5/applications" = { target = "~/.local/share/applications", type = "symbolic" }
+
 # ==================================================================================================================== #
 # Applications
+
+[betterdiscord.files]
+"betterdiscord/themes" = "~/.config/BetterDiscord/themes"
+"betterdiscord/data" = "~/.config/BetterDiscord/data"
 
 [bruno.files]
 "bruno/preferences.json" = "~/.config/bruno/preferences.json"
@@ -92,6 +107,15 @@
 "opencode/opencode.jsonc" = "~/.config/opencode/opencode.jsonc"
 "opencode/tui.jsonc" = "~/.config/opencode/tui.jsonc"
 "opencode/skills" = "~/.config/opencode/skills"
+
+[wakatime.files]
+"wakatime" = "~/.config/wakatime"
+
+[just.files]
+"just" = { target = "~/.config/just", type = "symbolic" }
+
+[glances.files]
+"glances" = { target = "~/.config/glances", type = "symbolic" }
 
 # ==================================================================================================================== #
 # Default Variables
