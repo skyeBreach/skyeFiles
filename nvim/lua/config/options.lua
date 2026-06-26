@@ -4,7 +4,7 @@ local api = vim.api
 
 opt.number = true
 opt.relativenumber = false
-opt.clipboard = "unnamed,unnamedplus"
+opt.clipboard = "unnamedplus"
 opt.syntax = "on"
 opt.autoindent = true
 opt.cursorline = true
@@ -27,3 +27,7 @@ opt.termguicolors = true
 opt.laststatus = 3
 
 global.lazyvim_mini_snippets_in_completion = true
+
+require("editorconfig").properties.rulers = function(bufnr, val, opts)
+    vim.b[bufnr].rulers = val
+end
