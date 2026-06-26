@@ -21,7 +21,10 @@
 			"codeFontSize": 13
 		},
 		"proxy": {
-			"inherit": true,
+			"source": "inherit",
+			"pac": {
+				"source": ""
+			},
 			"config": {
 				"protocol": "http",
 				"hostname": "",
@@ -50,7 +53,7 @@
 			"defaultWorkspacePath": "/home/skye/.config/bruno/default-workspace"
 		},
 		"autoSave": {
-			"enabled": false,
+			"enabled": true,
 			"interval": 1000
 		},
 		"display": {
@@ -63,17 +66,19 @@
 		}
 	},
 	"window-bounds": {
-		"x": 0,
-		"y": 0,
-		"width": 1080,
-		"height": 1902
+		"x": 2,
+		"y": 966,
+		"width": 1076,
+		"height": 925
 	},
-	"maximized": true,
+	"maximized": false,
 	"workspaces": {
 		"lastOpenedWorkspaces": [
-			"/home/skye/developer/pathfinders/meta"
+			"/home/skye/documents/bruno/Tooling",
+			"/home/skye/documents/bruno/Untitled Workspace",
+			"/home/skye/developer/projects/uee-pathfinders/tools/bruno/uee-pathfinders"
 		]
 	},
-	"themeMode": "system",
+	"themeMode": "dark",
 	"themeBg": "#24273a"
 }
