@@ -5,9 +5,19 @@
 
 [core]
     editor = nvim
+    pager = delta
 
 [init]
     defaultBranch = main
+
+[push]
+    autoSetupRemote = true
+
+[merge]
+    conflictStyle = zdiff3
+
+[interactive]
+    diffFilter = delta --color-only
 
 [alias]
     clone = clone --depth=1
@@ -20,3 +30,9 @@
     diff = auto
     status = auto
     branch = auto
+
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+    line-numbers = true
+
