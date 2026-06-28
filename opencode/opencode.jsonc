@@ -1,0 +1,56 @@
+{
+    "$schema": "https://opencode.ai/config.json",
+    "lsp": true,
+    "provider": {
+        "ollama": {
+            "name": "Ollama",
+            "npm": "@ai-sdk/openai-compatible",
+        },
+    },
+    "mcp": {
+        "penpot": {
+            "type": "remote",
+            "enabled": true,
+            "url": "http://localhost:9001/mcp/stream?userToken={{opencode_penpot_token}}",
+        },
+        "hubspot": {
+            "type": "remote",
+            "enabled": true,
+            "url": "https://mcp.hubspot.com",
+            "oauth": {
+                "clientId": "{{opencode_hubspot_client_id}}",
+                "clientSecret": "{{opencode_hubspot_client_secret}}",
+            },
+        },
+        "plane": {
+            "type": "local",
+            "enabled": true,
+            "command": ["uvx", "plane-mcp-server", "stdio"],
+            "environment": {
+                "PLANE_API_KEY": "{{opencode_plane_api_key}}",
+                "PLANE_WORKSPACE_SLUG": "{{opencode_plane_workspace_slug}}",
+            },
+        },
+        "discord": {
+            "type": "local",
+            "command": [
+                "bun",
+                "/home/skye/.config/opencode/plugins/discord-mcp/index.mjs",
+            ],
+            "environment": {
+                "DISCORD_USER_TOKEN": "{{opencode_discord_token}}",
+            },
+        },
+        "slack": {
+            "type": "local",
+            "command": [
+                "bun",
+                "run",
+                "/home/skye/.config/opencode/plugins/slack-mcp/index.ts",
+            ],
+            "environment": {
+                "SLACK_BOT_TOKEN": "{{opencode_slack_token}}",
+            },
+        },
+    },
+}

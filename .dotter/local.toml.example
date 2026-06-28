@@ -5,3 +5,12 @@ includes = [".dotter/environments/arch-workstation.toml"]
 
 [variables]
 hostname = "archbox"
+
+# opencode MCP credentials — get these from your password manager
+opencode_penpot_token = ""
+opencode_hubspot_client_id = ""
+opencode_hubspot_client_secret = ""
+opencode_plane_api_key = ""
+opencode_plane_workspace_slug = ""
+opencode_discord_token = ""
+opencode_slack_token = ""
