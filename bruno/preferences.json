@@ -67,13 +67,14 @@
 	},
 	"window-bounds": {
 		"x": 2,
-		"y": 966,
+		"y": 967,
 		"width": 1076,
-		"height": 925
+		"height": 924
 	},
 	"maximized": false,
 	"workspaces": {
 		"lastOpenedWorkspaces": [
+			"/home/skye/developer/projects/portfolio/tools/bruno/Portfolio",
 			"/home/skye/documents/bruno/Tooling",
 			"/home/skye/documents/bruno/Untitled Workspace",
 			"/home/skye/developer/projects/uee-pathfinders/tools/bruno/uee-pathfinders"
