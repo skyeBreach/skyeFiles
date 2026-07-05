@@ -67,14 +67,15 @@
 	},
 	"window-bounds": {
 		"x": 2,
-		"y": 967,
+		"y": 966,
 		"width": 1076,
-		"height": 924
+		"height": 925
 	},
 	"maximized": false,
 	"workspaces": {
 		"lastOpenedWorkspaces": [
-			"/home/skye/developer/projects/portfolio/tools/bruno/Portfolio",
+			"/home/skye/developer/breached-software/projects/noether/noether-server/tools/bruno/noether",
+			"/home/skye/documents/bruno/Untitled Workspace - 1",
 			"/home/skye/documents/bruno/Tooling",
 			"/home/skye/documents/bruno/Untitled Workspace",
 			"/home/skye/developer/projects/uee-pathfinders/tools/bruno/uee-pathfinders"
