@@ -7,6 +7,9 @@
             "npm": "@ai-sdk/openai-compatible",
         },
     },
+    "plugin": [
+        "@dietrichgebert/ponytail"
+    ],
     "mcp": {
         "penpot": {
             "type": "remote",
@@ -25,7 +28,11 @@
         "plane": {
             "type": "local",
             "enabled": true,
-            "command": ["uvx", "plane-mcp-server", "stdio"],
+            "command": [
+                "uvx",
+                "plane-mcp-server",
+                "stdio"
+            ],
             "environment": {
                 "PLANE_API_KEY": "{{opencode_plane_api_key}}",
                 "PLANE_WORKSPACE_SLUG": "{{opencode_plane_workspace_slug}}",
