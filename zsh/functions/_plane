@@ -1,0 +1,7 @@
+#compdef plane
+
+_plane_completion() {
+  eval $(env _TYPER_COMPLETE_ARGS="${words[1,$CURRENT]}" _PLANE_COMPLETE=complete_zsh plane)
+}
+
+compdef _plane_completion plane
