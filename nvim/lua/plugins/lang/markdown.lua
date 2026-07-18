@@ -4,6 +4,14 @@ LazyVim.on_very_lazy(function()
     })
 end)
 
+vim.lsp.config("rumdl", {
+    cmd = { "rumdl", "server" },
+    filetypes = { "markdown" },
+    root_markers = { ".git", ".rumdl.toml" },
+})
+
+vim.lsp.enable("rumdl")
+
 return {
     {
         "davidmh/mdx.nvim",
@@ -61,6 +69,7 @@ return {
                     end,
                 },
                 ["rumdl"] = {
+                    cwd = require("conform.util").root_file({ ".rumdl.toml", ".git" }),
                     condition = function(_, ctx)
                         local diag = vim.tbl_filter(function(d)
                             return d.source == "rumdl"
@@ -136,7 +145,7 @@ return {
                 -- These fence texts are wrapped within "<!-- % -->", where the '%' is
                 -- substituted with the text.
                 start_text = "toc-start",
-                end_text = "mtoc-end",
+                end_text = "toc-end",
                 -- An empty line is inserted on top and below the ToC list before the being
                 -- wrapped with the fence texts, same as vim-markdown-toc.
             },
