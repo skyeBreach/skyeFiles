@@ -14,7 +14,7 @@ packages = [
     "rofi",
     "dunst",
     "scripts",
-    "gtk-3",
+    "gtk-4",
     "xdg",
     "bruno",
     "opencode",

@@ -33,17 +33,30 @@ dotter deploy
 | `git`      | Git config and global ignore           | base     |
 | `nvim`     | Neovim (LazyVim)                       | base     |
 | `lsd`      | LSDeluxe file listing                  | base     |
-| `qtile`    | Qtile window manager                   | desktop  |
+| `systemd`  | systemd user units                     | base     |
+| `i3`       | i3 window manager + betterlockscreen   | desktop  |
 | `wezterm`  | Wezterm terminal                       | desktop  |
 | `rofi`     | Rofi launcher                          | desktop  |
 | `dunst`    | Dunst notifications                    | desktop  |
-| `scripts`  | Machine-specific scripts (`~/bin/`)    | machine  |
+| `polybar`  | Polybar status bar                     | desktop  |
+| `gtk-4`    | GTK4 settings                          | desktop  |
+| `xdg`      | XDG user dirs, MIME associations       | desktop  |
+| `scripts`  | Machine-specific scripts (`bin/`)      | machine  |
+| `betterdiscord` | BetterDiscord themes/plugins      | app      |
+| `bruno`    | Bruno API client preferences           | app      |
+| `opencode` | Opencode CLI config, MCP servers, skills | app    |
+| `wakatime` | WakaTime CLI config                    | app      |
+| `just`     | `just` command runner config           | app      |
+| `glances`  | Glances system monitor config          | app      |
+| `ue5`      | Unreal Engine 5 desktop entry          | app      |
+
+`grafana/gcx/config.yaml` is not a dotter package — `gcx` manages its own OAuth token refresh, so it isn't templated/synced. Run `gcx login` per machine; `grafana/gcx/config.yaml.example` documents the shape.
 
 ### Headless machine example
 
 ```toml
 # .dotter/local.toml
-packages = ["helpers", "home", "zsh", "starship", "git", "nvim", "lsd"]
+packages = ["home", "zsh", "starship", "git", "nvim", "lsd"]
 ```
 
 ## Adding a new tool
