@@ -34,8 +34,8 @@
                 "stdio"
             ],
             "environment": {
-                "PLANE_API_KEY": "{{opencode_plane_api_key}}",
-                "PLANE_WORKSPACE_SLUG": "{{opencode_plane_workspace_slug}}",
+                "PLANE_API_KEY": "{env:OPENCODE_PLANE_ACCESS_TOKEN}",
+                "PLANE_WORKSPACE_SLUG": "{env:OPENCODE_PLANE_WORKSPACE_SLUG}",
             },
         },
         "discord": {

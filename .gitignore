@@ -14,11 +14,14 @@ Thumbs.db
 nvim/lazy-lock.json
 nvim/.repro/
 
-# Qtile bytecache
+# Python bytecache
 **/__pycache__/
 
 # Zsh generated
 zsh/.antidote/
 zsh/.zsh_plugins.zsh
+
+# Grafana gcx OAuth state (live tokens, not portable config)
+grafana/gcx/config.yaml
 
 

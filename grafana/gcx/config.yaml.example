@@ -1,0 +1,17 @@
+contexts:
+  default:
+    grafana:
+      server: https://<your-stack>.grafana.net
+      proxy-endpoint: https://<assistant-endpoint>.grafana.net/assistant
+      oauth-token: ""
+      oauth-refresh-token: ""
+      oauth-token-expires-at: ""
+      oauth-refresh-expires-at: ""
+      auth-method: oauth
+      stack-id: 0
+    cloud:
+      token: ""
+      stack: <your-stack>
+      oauth-url: https://grafana.com
+      api-url: https://grafana.com
+current-context: default

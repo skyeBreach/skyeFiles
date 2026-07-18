@@ -14,3 +14,6 @@ opencode_plane_api_key = ""
 opencode_plane_workspace_slug = ""
 opencode_discord_token = ""
 opencode_slack_token = ""
+
+# wakatime
+wakatime_api_key = ""
