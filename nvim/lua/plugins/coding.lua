@@ -11,4 +11,8 @@ return {
         "wakatime/vim-wakatime",
         lazy = false,
     },
+    {
+        "projectfluent/fluent.vim",
+        ft = "fluent",
+    },
 }
