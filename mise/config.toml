@@ -1,0 +1,6 @@
+[settings]
+env_cache = true
+
+
+[tool_alias]
+ruler = "npm:@intellectronica/ruler"
