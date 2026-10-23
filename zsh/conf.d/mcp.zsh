@@ -1,13 +1,12 @@
 # ==================================================================================================================== #
-# UV
+# Zsh Config - MCP (Model Context Protocol)
+#
+#
+# ==================================================================================================================== #
+# OpenCode 
 
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
+# Plane 
+export OPENCODE_PLANE_ACCESS_TOKEN="{{opencode_plane_api_key}}"
+export OPENCODE_PLANE_WORKSPACE_SLUG="{{opencode_plane_workspace_slug}}"
 
 # ==================================================================================================================== #
-# Ruff
-
-eval "$(ruff generate-shell-completion zsh)"
-
-# ==================================================================================================================== #
-
