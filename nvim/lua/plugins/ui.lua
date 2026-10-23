@@ -48,7 +48,11 @@ return {
             { "<leader>fs", ":Neotree search_in_current_dir<cr>", desc = "Search" },
         },
         opts = {
-            sources = { "filesystem", "buffers", "git_status" },
+            sources = {
+                "filesystem",
+                "buffers",
+                "git_status",
+            },
             default_component_configs = {
                 indent = {
                     with_markers = true,
@@ -64,13 +68,12 @@ return {
                     hide_hidden = false,
                     hide_by_name = {
                         "package-lock.json",
+                        ".git",
                     },
                     hide_by_pattern = {
                         "*.egg-info",
                     },
-                    never_show = {
-                        ".git",
-                    },
+                    never_show = {},
                 },
             },
             window = {
