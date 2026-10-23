@@ -5,7 +5,8 @@ description: Master Rust async programming with Tokio, async traits, error handl
 
 # Rust Async Patterns
 
-Production patterns for async Rust programming with Tokio runtime, including tasks, channels, streams, and error handling.
+Production patterns for async Rust programming with Tokio runtime, including tasks, channels, streams, and error
+handling.
 
 ## When to Use This Skill
 
@@ -20,7 +21,7 @@ Production patterns for async Rust programming with Tokio runtime, including tas
 
 ### 1. Async Execution Model
 
-```
+```text
 Future (lazy) → poll() → Ready(value) | Pending
                 ↑           ↓
               Waker ← Runtime schedules
@@ -74,7 +75,8 @@ async fn fetch_data(url: &str) -> Result<String> {
 
 ## Detailed patterns and worked examples
 
-Detailed pattern documentation lives in `references/details.md`. Read that file when the navigation tier above is insufficient.
+Detailed pattern documentation lives in `references/details.md`. Read that file when the navigation tier above is
+insufficient.
 
 ## Best Practices
 
