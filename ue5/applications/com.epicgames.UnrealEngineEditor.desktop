@@ -3,7 +3,7 @@
 [Desktop Entry]
 Version=1.0
 Type=Application
-Exec=/home/skye/tools/UnrealEngine/Engine/Binaries/Linux/UnrealEditor -NoParallelRendering -onethread
+Exec=/home/skye/tools/UnrealEngine/Engine/Binaries/Linux/UnrealEditor
 Path=/home/skye/tools/UnrealEngine/Engine/Binaries/Linux
 Name=Unreal Engine Editor
 Icon=ubinary
