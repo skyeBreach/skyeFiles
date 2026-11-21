@@ -2,138 +2,145 @@
 # Init System
 
 [systemd.files]
-"systemd/user" = "~/.config/systemd/user"
+"config/systemd/user" = "~/.config/systemd/user"
 
 # ==================================================================================================================== #
 # Window Manager
 
 [i3.files]
-"i3/config" = "~/.config/i3/config"
-"i3/betterlockscreenrc" = "~/.config/betterlockscreen/betterlockscreenrc"
-"i3/wallpapers" = "~/.config/betterlockscreen/wallpapers"
+"config/i3/config" = "~/.config/i3/config"
+"config/i3/config.d" = "~/.config/i3/config.d"
+"config/i3/betterlockscreenrc" = "~/.config/betterlockscreen/betterlockscreenrc"
+"config/i3/wallpapers" = "~/.config/betterlockscreen/wallpapers"
 
 [rofi.files]
-"rofi" = "~/.config/rofi"
+"config/rofi" = "~/.config/rofi"
 
 [dunst.files]
-"dunst" = "~/.config/dunst"
+"config/dunst" = "~/.config/dunst"
 
 [polybar.files]
-"polybar" = "~/.config/polybar"
+"config/polybar" = "~/.config/polybar"
 
 # ==================================================================================================================== #
 # Desktop Utilities
 
 [gtk-4.files]
-"gtk-4" = "~/.config/gtk-4.0"
+"config/gtk-4" = "~/.config/gtk-4.0"
 
 [xdg.files]
-"xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
-"xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
-"xdg/mimeapps.list" = "~/.config/mimeapps.list"
-"xdg/desktop/.gitkeep" = "~/desktop/.gitkeep"
-"xdg/documents/.gitkeep" = "~/documents/.gitkeep"
-"xdg/downloads/.gitkeep" = "~/downloads/.gitkeep"
-"xdg/music/.gitkeep" = "~/music/.gitkeep"
-"xdg/pictures/.gitkeep" = "~/pictures/.gitkeep"
-"xdg/public/.gitkeep" = "~/public/.gitkeep"
-"xdg/templates/.gitkeep" = "~/templates/.gitkeep"
-"xdg/videos/.gitkeep" = "~/videos/.gitkeep"
+"config/xdg/user-dirs.dirs" = "~/.config/user-dirs.dirs"
+"config/xdg/user-dirs.locale" = "~/.config/user-dirs.locale"
+"config/xdg/mimeapps.list" = "~/.config/mimeapps.list"
+"config/xdg/desktop/.gitkeep" = "~/desktop/.gitkeep"
+"config/xdg/documents/.gitkeep" = "~/documents/.gitkeep"
+"config/xdg/downloads/.gitkeep" = "~/downloads/.gitkeep"
+"config/xdg/music/.gitkeep" = "~/music/.gitkeep"
+"config/xdg/pictures/.gitkeep" = "~/pictures/.gitkeep"
+"config/xdg/public/.gitkeep" = "~/public/.gitkeep"
+"config/xdg/templates/.gitkeep" = "~/templates/.gitkeep"
+"config/xdg/videos/.gitkeep" = "~/videos/.gitkeep"
 
 [scripts.files]
-"bin/set-monitors" = "~/bin/set-monitors"
+"config/bin/set-monitors" = "~/bin/set-monitors"
 
 # ==================================================================================================================== #
 # Shell
 
 [home.files]
-"home/.zshenv" = "~/.zshenv"
-"home/.profile" = "~/.profile"
-"home/.editorconfig" = "~/.editorconfig"
+"config/home/.zshenv" = "~/.zshenv"
+"config/home/.profile" = "~/.profile"
+"config/home/.editorconfig" = "~/.editorconfig"
+"stylua.toml" = "~/.config/stylua/stylua.toml"
 
 [zsh.files]
-"zsh/.zshenv" = "~/.config/zsh/.zshenv"
-"zsh/.zshrc" = "~/.config/zsh/.zshrc"
-"zsh/.zsh_plugins.txt" = "~/.config/zsh/.zsh_plugins.txt"
-"zsh/conf.d/" = "~/.config/zsh/conf.d/"
-"zsh/functions/" = "~/.config/zsh/functions/"
+"config/zsh/.zshenv" = "~/.config/zsh/.zshenv"
+"config/zsh/.zshrc" = "~/.config/zsh/.zshrc"
+"config/zsh/.zsh_plugins.txt" = "~/.config/zsh/.zsh_plugins.txt"
+"config/zsh/conf.d/" = "~/.config/zsh/conf.d/"
+"config/zsh/functions/" = "~/.config/zsh/functions/"
 
 # ==================================================================================================================== #
 # Prompt
 
 [starship.files]
-"starship/starship.toml" = "~/.config/starship.toml"
+"config/starship/starship.toml" = "~/.config/starship.toml"
 
 [lsd.files]
-"lsd/config.yml" = "~/.config/lsd/config.yml"
-"lsd/colors.yml" = "~/.config/lsd/colors.yml"
+"config/lsd/config.yml" = "~/.config/lsd/config.yml"
+"config/lsd/colors.yml" = "~/.config/lsd/colors.yml"
 
 # ==================================================================================================================== #
 # Version Control
 
 [git.files]
-"git" = "~/.config/git"
+"config/git" = "~/.config/git"
+
+[git.variables]
+git_user_name = "Skye Benson"
+git_user_email = "skyebenson@breachedsoftware.dev"
 
 # ==================================================================================================================== #
 # Project Templates
 
 [athame.files]
-"athame" = "~/.config/athame"
+"config/athame" = "~/.config/athame"
 
 # ==================================================================================================================== #
 # Package Management
 
 [mise.files]
-"mise/config" = "~/.config/mise"
-
+"config/mise/config" = "~/.config/mise"
 
 # ==================================================================================================================== #
 # Terminal Emulator
 
 [wezterm.files]
-"wezterm/wezterm.lua" = "~/.config/wezterm/wezterm.lua"
-"wezterm/stylua.toml" = "~/.config/wezterm/stylua.toml"
-"wezterm/config/init.lua" = "~/.config/wezterm/config/init.lua"
-"wezterm/config/theme.lua" = "~/.config/wezterm/config/theme.lua"
-"wezterm/config/font.lua" = "~/.config/wezterm/config/font.lua"
+"config/wezterm" = "~/.config/wezterm"
 
 # ==================================================================================================================== #
 # Editor
 
 [nvim.files]
-"nvim" = { target = "~/.config/nvim", type = "symbolic" }
+"config/nvim" = { target = "~/.config/nvim", type = "symbolic" }
 
 [ue5.files]
-"ue5/applications" = { target = "~/.local/share/applications", type = "symbolic" }
+"config/ue5/applications" = { target = "~/.local/share/applications", type = "symbolic" }
 
 # ==================================================================================================================== #
 # Applications
 
+[apiark.files]
+"config/apiark/config" = "~/.config/apiark"
+
 [betterdiscord.files]
-"betterdiscord/themes" = "~/.config/BetterDiscord/themes"
-"betterdiscord/data" = "~/.config/BetterDiscord/data"
+"config/betterdiscord/themes" = "~/.config/BetterDiscord/themes"
+"config/betterdiscord/data" = "~/.config/BetterDiscord/data"
 
 [bruno.files]
-"bruno/preferences.json" = "~/.config/bruno/preferences.json"
+"config/bruno/preferences.json" = "~/.config/bruno/preferences.json"
 
 [opencode.files]
-"opencode/opencode.jsonc" = "~/.config/opencode/opencode.jsonc"
-"opencode/tui.jsonc" = "~/.config/opencode/tui.jsonc"
-"opencode/skills" = "~/.config/opencode/skills"
+"config/opencode/opencode.jsonc" = "~/.config/opencode/opencode.jsonc"
+"config/opencode/tui.jsonc" = "~/.config/opencode/tui.jsonc"
+"config/opencode/skills" = "~/.config/opencode/skills"
 
 [wakatime.files]
-"wakatime" = "~/.config/wakatime"
+"config/wakatime" = "~/.config/wakatime"
 
 [just.files]
-"just" = { target = "~/.config/just", type = "symbolic" }
+"config/just" = { target = "~/.config/just", type = "symbolic" }
 
 [glances.files]
-"glances" = { target = "~/.config/glances", type = "symbolic" }
+"config/glances" = { target = "~/.config/glances", type = "symbolic" }
 
 [shiopa.files]
-"shiopa/config" = { target = "~/.config/shiopa", type = "symbolic" }
-"shiopa/applications/shiopa.desktop" = { target = "~/.local/share/applications/shiopa.desktop", type = "symbolic" }
-"shiopa/bin/shiopa" = { target = "~/.local/bin/shiopa", type = "symbolic" }
+"config/shiopa/config" = { target = "~/.config/shiopa", type = "symbolic" }
+"config/shiopa/applications/shiopa.desktop" = { target = "~/.local/share/applications/shiopa.desktop", type = "symbolic" }
+"config/shiopa/bin/shiopa" = { target = "~/.local/bin/shiopa", type = "symbolic" }
+
+[spotify.files]
+"config/spotify/spotify-flags.conf" = "~/.config/spotify-flags.conf"
 
 # ==================================================================================================================== #
 # Default Variables

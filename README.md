@@ -1,4 +1,14 @@
-# dotfiles
+<div align="center">
+    <img src="./crates/resources/assets/icons/icon.svg" width="96" alt="RecceFinder">
+    <h1>SkyeBreach's DotFiles</h1>
+    <p>{{tagline}}</p>
+    <a href="LICENSE">
+        <img
+            alt="Badge: License"
+            src="https://img.shields.io/gitlab/license/breached-software%2Fclients%2Fseikurohiko%2Fversesignum%2Fversesignum"
+        />
+    </a>
+</div>
 
 Managed with [dotter](https://github.com/SuperCuber/dotter). Each tool is its own package, toggled per-machine.
 
@@ -41,7 +51,7 @@ dotter deploy
 | `polybar`       | Polybar status bar                         | desktop  |
 | `gtk-4`         | GTK4 settings                              | desktop  |
 | `xdg`           | XDG user dirs, MIME associations           | desktop  |
-| `scripts`       | Machine-specific scripts (`bin/`)          | machine  |
+| `scripts`       | Machine-specific scripts (`config/bin/`)   | machine  |
 | `betterdiscord` | BetterDiscord themes/plugins               | app      |
 | `bruno`         | Bruno API client preferences               | app      |
 | `opencode`      | Opencode CLI config, MCP servers, skills   | app      |
@@ -49,8 +59,10 @@ dotter deploy
 | `just`          | `just` command runner config               | app      |
 | `glances`       | Glances system monitor config              | app      |
 | `ue5`           | Unreal Engine 5 desktop entry              | app      |
+| `spotify`       | Spotify launch flags (`--disable-gpu`)     | app      |
 
-`grafana/gcx/config.yaml` is not a dotter package — `gcx` manages its own OAuth token refresh, so it isn't templated/synced. Run `gcx login` per machine; `grafana/gcx/config.yaml.example` documents the shape.
+`config/grafana/gcx/config.yaml` is not a dotter package — `gcx` manages its own OAuth token refresh, so it isn't
+templated/synced. Run `gcx login` per machine; `config/grafana/gcx/config.yaml.example` documents the shape.
 
 ### Headless machine example
 
@@ -69,4 +81,5 @@ packages = ["home", "zsh", "starship", "git", "nvim", "lsd"]
 
 ## Theme
 
-Catppuccin Macchiato across all tools. The full palette is available as default variables in `global.toml` for any config that uses handlebars templating.
+Catppuccin Macchiato across all tools. The full palette is available as default variables in `global.toml` for any
+config that uses handlebars templating.
