@@ -16,5 +16,22 @@ indent_style = space
 indent_size = 4
 rulers = 120
 
+# ==================================================================================================================== #
+# Filetype Specific
+
 [{Makefile,justfile}]
 indent_style = tab
+
+[*.{json,jsonc}]
+indent_style = space
+indent_size = 4
+
+[*.{yaml,yml}]
+indent_style = space
+indent_size = 2
+
+[*.{tf,hcl}]
+indent_style = space
+indent_size = 2
+
+# ==================================================================================================================== #
