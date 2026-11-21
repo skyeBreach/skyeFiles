@@ -1,0 +1,39 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles: Shell & Terminal
+#
+# See:
+#   - https://mise.jdx.dev/dotfiles/groups.html
+# ==================================================================================================================== #
+# Shell
+
+[dotfile_groups.zsh]
+root = "zsh"
+target = "~/.config/zsh"
+mode = "symlink-each"
+exclude = ["conf.d/ai.zsh"]
+
+[dotfile_groups.zsh.entries]
+"~/.config/zsh/conf.d/ai.zsh" = { source = "conf.d/ai.zsh", mode = "template" }
+
+# ==================================================================================================================== #
+# Prompt & Listing
+
+[dotfile_groups.starship]
+root = "starship"
+target = "~/.config"
+mode = "symlink-each"
+
+[dotfile_groups.lsd]
+root = "lsd"
+target = "~/.config/lsd"
+mode = "symlink-each"
+
+# ==================================================================================================================== #
+# Terminal Emulator
+
+[dotfile_groups.wezterm]
+root = "wezterm"
+target = "~/.config/wezterm"
+mode = "symlink-each"
+
+# ==================================================================================================================== #

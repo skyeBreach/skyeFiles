@@ -1,0 +1,47 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles: System
+#
+# See:
+#   - https://mise.jdx.dev/dotfiles/groups.html
+# ==================================================================================================================== #
+# Init System
+
+[dotfile_groups.systemd]
+root = "systemd/user"
+target = "~/.config/systemd/user"
+mode = "symlink-each"
+
+# ==================================================================================================================== #
+# Home
+
+[dotfile_groups.home]
+root = "home"
+target = "~"
+mode = "symlink-each"
+
+[dotfile_groups.home.entries]
+"~/.config/stylua/stylua.toml" = { source = "../../stylua.toml", mode = "symlink" }
+
+# ==================================================================================================================== #
+# XDG
+
+[dotfile_groups.xdg]
+root = "xdg"
+target = "~"
+mode = "symlink-each"
+exclude = ["user-dirs.dirs", "user-dirs.locale", "mimeapps.list"]
+
+[dotfile_groups.xdg.entries]
+"~/.config/user-dirs.dirs" = { source = "user-dirs.dirs", mode = "symlink" }
+"~/.config/user-dirs.locale" = { source = "user-dirs.locale", mode = "symlink" }
+"~/.config/mimeapps.list" = { source = "mimeapps.list", mode = "symlink" }
+
+# ==================================================================================================================== #
+# Scripts
+
+[dotfile_groups.scripts]
+root = "bin"
+target = "~/bin"
+mode = "symlink-each"
+
+# ==================================================================================================================== #

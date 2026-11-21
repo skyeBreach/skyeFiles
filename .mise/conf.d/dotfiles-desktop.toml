@@ -1,0 +1,47 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles: Desktop
+#
+# See:
+#   - https://mise.jdx.dev/dotfiles/groups.html
+# ==================================================================================================================== #
+# Window Manager
+
+[dotfile_groups.i3]
+root = "i3"
+target = "~/.config/i3"
+mode = "symlink-each"
+exclude = ["betterlockscreenrc", "wallpapers/**"]
+
+[dotfile_groups.i3-lockscreen]
+root = "i3"
+target = "~/.config/betterlockscreen"
+mode = "symlink-each"
+exclude = ["config", "config.d/**"]
+
+# ==================================================================================================================== #
+# Bar, Launcher & Notifications
+
+[dotfile_groups.polybar]
+root = "polybar"
+target = "~/.config/polybar"
+mode = "symlink-each"
+
+[dotfile_groups.rofi]
+root = "rofi"
+target = "~/.config/rofi"
+mode = "symlink-each"
+
+[dotfile_groups.dunst]
+root = "dunst"
+target = "~/.config/dunst"
+mode = "symlink-each"
+
+# ==================================================================================================================== #
+# Toolkits
+
+[dotfile_groups.gtk-4]
+root = "gtk-4"
+target = "~/.config/gtk-4.0"
+mode = "symlink-each"
+
+# ==================================================================================================================== #

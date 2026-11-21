@@ -1,0 +1,76 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles: Applications
+#
+# See:
+#   - https://mise.jdx.dev/dotfiles/groups.html
+# ==================================================================================================================== #
+# AI & Time Tracking
+
+[dotfile_groups.opencode]
+root = "opencode"
+target = "~/.config/opencode"
+mode = "symlink-each"
+exclude = ["opencode.jsonc"]
+
+[dotfile_groups.opencode.entries]
+"~/.config/opencode/opencode.jsonc" = { source = "opencode.jsonc", mode = "template" }
+
+[dotfile_groups.wakatime]
+root = "wakatime"
+target = "~/.config/wakatime"
+mode = "symlink-each"
+exclude = [".wakatime.cfg"]
+
+[dotfile_groups.wakatime.entries]
+"~/.config/wakatime/.wakatime.cfg" = { source = ".wakatime.cfg", mode = "template" }
+
+# ==================================================================================================================== #
+# API Clients
+
+[dotfile_groups.apiark]
+root = "apiark"
+target = "~/.config/apiark"
+mode = "symlink-each"
+
+[dotfile_groups.bruno]
+root = "bruno"
+target = "~/.config/bruno"
+mode = "symlink-each"
+
+# ==================================================================================================================== #
+# Media & Chat
+
+[dotfile_groups.betterdiscord]
+root = "betterdiscord"
+target = "~/.config/BetterDiscord"
+mode = "symlink-each"
+
+[dotfile_groups.spotify]
+root = "spotify"
+target = "~/.config"
+mode = "symlink-each"
+
+[dotfile_groups.shiopa]
+root = "shiopa/config"
+target = "~/.config/shiopa"
+mode = "symlink-each"
+
+[dotfile_groups.shiopa-launcher]
+root = "shiopa"
+target = "~"
+mode = "symlink-each"
+exclude = ["**"]
+
+[dotfile_groups.shiopa-launcher.entries]
+"~/.local/share/applications/shiopa.desktop" = { source = "applications/shiopa.desktop", mode = "symlink" }
+"~/.local/bin/shiopa" = { source = "bin/shiopa", mode = "symlink" }
+
+# ==================================================================================================================== #
+# Game Development
+
+[dotfile_groups.ue5]
+root = "ue5/applications"
+target = "~/.local/share/applications"
+mode = "symlink-each"
+
+# ==================================================================================================================== #

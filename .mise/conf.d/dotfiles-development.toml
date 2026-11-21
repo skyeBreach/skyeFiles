@@ -1,0 +1,49 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles: Development
+#
+# See:
+#   - https://mise.jdx.dev/dotfiles/groups.html
+# ==================================================================================================================== #
+# Version Control
+
+[dotfile_groups.git]
+root = "git"
+target = "~/.config/git"
+mode = "symlink-each"
+exclude = ["config"]
+
+[dotfile_groups.git.entries]
+"~/.config/git/config" = { source = "config", mode = "template" }
+
+# ==================================================================================================================== #
+# Editor
+
+[dotfile_groups.nvim]
+root = "nvim"
+target = "~/.config/nvim"
+mode = "symlink-each"
+
+# ==================================================================================================================== #
+# Tooling
+
+[dotfile_groups.mise]
+root = "mise/config"
+target = "~/.config/mise"
+mode = "symlink-each"
+
+[dotfile_groups.athame]
+root = "athame"
+target = "~/.config/athame"
+mode = "symlink-each"
+
+[dotfile_groups.just]
+root = "just"
+target = "~/.config/just"
+mode = "symlink-each"
+
+[dotfile_groups.glances]
+root = "glances"
+target = "~/.config/glances"
+mode = "symlink-each"
+
+# ==================================================================================================================== #

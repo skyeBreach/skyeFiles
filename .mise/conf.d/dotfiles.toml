@@ -1,0 +1,38 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles
+#
+# Each tool in config/ is a dotfile group. A machine picks its groups in mise.local.toml.
+# Apply with `mise run dotfiles:apply` so secrets from .env.local are loaded.
+#
+# See:
+#   - https://mise.jdx.dev/dotfiles.html
+#   - https://mise.jdx.dev/dotfiles/groups.html
+# ==================================================================================================================== #
+# Settings
+
+[settings]
+dotfiles.root = "{{config_root}}/config"
+
+# ==================================================================================================================== #
+# Variables
+
+[vars]
+git_user_name = "Skye Benson"
+git_user_email = "skyebenson@breachedsoftware.dev"
+
+# ==================================================================================================================== #
+# Secrets
+#
+# Values come from environment variables, set in .env.local (see .env.local.example).
+
+[bootstrap.secrets]
+opencode_penpot_token = "OPENCODE_PENPOT_TOKEN"
+opencode_hubspot_client_id = "OPENCODE_HUBSPOT_CLIENT_ID"
+opencode_hubspot_client_secret = "OPENCODE_HUBSPOT_CLIENT_SECRET"
+opencode_plane_api_key = "OPENCODE_PLANE_API_KEY"
+opencode_plane_workspace_slug = "OPENCODE_PLANE_WORKSPACE_SLUG"
+opencode_discord_token = "OPENCODE_DISCORD_TOKEN"
+opencode_slack_token = "OPENCODE_SLACK_TOKEN"
+wakatime_api_key = "WAKATIME_API_KEY"
+
+# ==================================================================================================================== #
