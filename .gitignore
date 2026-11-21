@@ -1,14 +1,4 @@
 # Dotter runtime
-.dotter/local.toml
-.dotter/cache.toml
-.dotter/cache/
-
-# OS / editor
-.DS_Store
-Thumbs.db
-*.swp
-*.swo
-*~
 
 # Nvim generated
 nvim/lazy-lock.json
@@ -24,8 +14,6 @@ zsh/.zsh_plugins.zsh
 # Grafana gcx OAuth state (live tokens, not portable config)
 grafana/gcx/config.yaml
 
-
-
 dist
 .wrangler
 .output
@@ -33,3 +21,85 @@ dist
 .netlify
 .vinxi
 app.config.timestamp_*.js
+
+# ==================================================================================================================== #
+# System Files
+
+# MacOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# ==================================================================================================================== #
+# Editors and IDEs
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Visual Studio Code
+.vscode/
+
+# Vim
+*.swp
+*.swo
+
+# IntelliJ IDE
+/.idea
+
+# Eclipse
+.project
+.classpath
+
+# ==================================================================================================================== #
+# Environment and Secrets
+
+# Environment Files
+.env
+.env.*
+!.env.example
+!.env.*.example
+.env.local
+.env.*.local
+
+# Dotter
+.dotter/local.toml
+!.dotter/local.toml.example
+
+# ==================================================================================================================== #
+# Package Manager
+
+# LeftHook
+.lefthook-local/
+
+# Node
+node_modules/
+
+# TurboRepo
+.turbo/
+
+# Cargo
+**/target
+
+# Mise
+.mise/locks/
+
+# ==================================================================================================================== #
+# Cache & Temporary Files
+
+# Backup Files
+**/*.bak
+
+# Dotter
+.dotter/cache.toml
+.dotter/cache/
+
+# ==================================================================================================================== #
+# Build & Compilation Artefacts
+
+# ==================================================================================================================== #
+# Testing & Coverage
+
+# ==================================================================================================================== #
