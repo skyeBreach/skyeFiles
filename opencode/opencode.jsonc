@@ -4,17 +4,15 @@
     "provider": {
         "ollama": {
             "name": "Ollama",
-            "npm": "@ai-sdk/openai-compatible",
-        },
+            "npm": "@ai-sdk/openai-compatible"
+        }
     },
-    "plugin": [
-        "@dietrichgebert/ponytail"
-    ],
+    "plugin": ["@dietrichgebert/ponytail"],
     "mcp": {
         "penpot": {
             "type": "remote",
             "enabled": true,
-            "url": "http://localhost:9001/mcp/stream?userToken={{opencode_penpot_token}}",
+            "url": "http://localhost:9001/mcp/stream?userToken={{opencode_penpot_token}}"
         },
         "hubspot": {
             "type": "remote",
@@ -22,42 +20,31 @@
             "url": "https://mcp.hubspot.com",
             "oauth": {
                 "clientId": "{{opencode_hubspot_client_id}}",
-                "clientSecret": "{{opencode_hubspot_client_secret}}",
-            },
+                "clientSecret": "{{opencode_hubspot_client_secret}}"
+            }
         },
         "plane": {
             "type": "local",
             "enabled": true,
-            "command": [
-                "uvx",
-                "plane-mcp-server",
-                "stdio"
-            ],
+            "command": ["uvx", "plane-mcp-server", "stdio"],
             "environment": {
                 "PLANE_API_KEY": "{env:OPENCODE_PLANE_ACCESS_TOKEN}",
-                "PLANE_WORKSPACE_SLUG": "{env:OPENCODE_PLANE_WORKSPACE_SLUG}",
-            },
+                "PLANE_WORKSPACE_SLUG": "{env:OPENCODE_PLANE_WORKSPACE_SLUG}"
+            }
         },
         "discord": {
             "type": "local",
-            "command": [
-                "bun",
-                "/home/skye/.config/opencode/plugins/discord-mcp/index.mjs",
-            ],
+            "command": ["bun", "/home/skye/.config/opencode/plugins/discord-mcp/index.mjs"],
             "environment": {
-                "DISCORD_USER_TOKEN": "{{opencode_discord_token}}",
-            },
+                "DISCORD_USER_TOKEN": "{{opencode_discord_token}}"
+            }
         },
         "slack": {
             "type": "local",
-            "command": [
-                "bun",
-                "run",
-                "/home/skye/.config/opencode/plugins/slack-mcp/index.ts",
-            ],
+            "command": ["bun", "run", "/home/skye/.config/opencode/plugins/slack-mcp/index.ts"],
             "environment": {
-                "SLACK_BOT_TOKEN": "{{opencode_slack_token}}",
-            },
-        },
-    },
+                "SLACK_BOT_TOKEN": "{{opencode_slack_token}}"
+            }
+        }
+    }
 }
