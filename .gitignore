@@ -66,6 +66,9 @@ Thumbs.db
 .dotter/local.toml
 !.dotter/local.toml.example
 
+# Mise
+mise.local.toml
+
 # ==================================================================================================================== #
 # Package Manager
 

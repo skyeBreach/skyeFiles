@@ -1,0 +1,30 @@
+# ==================================================================================================================== #
+# Mise - Dotfiles Tasks
+#
+# Run these through mise so .env.local is loaded and template secrets resolve.
+#
+# See:
+#   - https://mise.jdx.dev/cli/dotfiles.html
+# ==================================================================================================================== #
+# Deploy
+
+["dotfiles:apply"]
+description = "Deploy the dotfile groups this machine selects in mise.local.toml"
+run = "mise dot apply"
+
+["dotfiles:unapply"]
+description = "Remove everything mise deployed for this machine"
+run = "mise dot unapply"
+
+# ==================================================================================================================== #
+# Inspect
+
+["dotfiles:status"]
+description = "Show which dotfiles are applied, missing or in conflict"
+run = "mise dot status"
+
+["dotfiles:diff"]
+description = "Show what dotfiles:apply would change"
+run = "mise dot diff"
+
+# ==================================================================================================================== #

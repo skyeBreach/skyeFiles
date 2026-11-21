@@ -1,0 +1,28 @@
+# ==================================================================================================================== #
+# Mise - Machine Profile: Full desktop setup
+#
+# Copy to mise.local.toml at the repo root, then edit for the machine.
+# ==================================================================================================================== #
+# Dotfile Groups
+
+[bootstrap]
+dotfile_groups = [
+    "home",
+    "zsh",
+    "starship",
+    "git",
+    "nvim",
+    "lsd",
+    "i3",
+    "i3-lockscreen",
+    "wezterm",
+    "rofi",
+    "dunst",
+    "scripts",
+    "gtk-4",
+    "xdg",
+    "bruno",
+    "opencode",
+]
+
+# ==================================================================================================================== #
