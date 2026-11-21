@@ -2,33 +2,51 @@
 # ==================================================================================================================== #
 # Rofi - Power Menu
 #
-# Rofi script mode: run with no argument to list the options, rofi runs it again with the chosen option.
-#
-# See:
-#   - https://github.com/davatorium/rofi/blob/next/doc/rofi-script.5.markdown
+# A row of icon buttons under the host and uptime. Logout, reboot and shutdown ask for a yes / no first.
 # ==================================================================================================================== #
-# Options
+# Configuration
 
-typeset -A actions=(
-    "󰌾  Lock"      "betterlockscreen -l dim"
-    "󰍃  Logout"    "i3-msg exit"
-    "󰤄  Suspend"   "systemctl suspend"
-    "󰜉  Reboot"    "systemctl reboot"
-    "󰐥  Shutdown"  "systemctl poweroff"
-)
-order=("󰌾  Lock" "󰍃  Logout" "󰤄  Suspend" "󰜉  Reboot" "󰐥  Shutdown")
+rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
+
+lock="󰌾"
+suspend="󰤄"
+logout="󰍃"
+reboot="󰜉"
+shutdown="󰐥"
+yes="󰄬"
+no="󰅖"
+
+uptime_text="$(uptime -p | sed 's/^up //')"
+
+# ==================================================================================================================== #
+# Helpers
+
+# Ask a yes / no question. Succeeds only on yes.
+confirm() {
+    local answer
+    answer="$(print -l "$yes" "$no" | rofi -dmenu -mesg "$1" -theme "$rofi_dir/panels/confirm.rasi")"
+    [[ "$answer" == "$yes" ]]
+}
+
+# Run a command detached from rofi, so rofi can close first.
+run_detached() {
+    setsid -f "$@" > /dev/null 2>&1
+}
 
 # ==================================================================================================================== #
 # Menu
 
-if [[ -z "$1" ]]; then
-    print -l "${order[@]}"
-    exit 0
-fi
+choice="$(
+    print -l "$lock" "$suspend" "$logout" "$reboot" "$shutdown" \
+        | rofi -dmenu -p "$HOST  ·  up $uptime_text" -theme "$rofi_dir/panels/power.rasi"
+)" || exit 0
 
-command="${actions[$1]}"
-[[ -n "$command" ]] || exit 1
-
-setsid -f zsh -c "$command" > /dev/null 2>&1
+case "$choice" in
+    "$lock")     run_detached betterlockscreen -l dim ;;
+    "$suspend")  run_detached systemctl suspend ;;
+    "$logout")   confirm "Log out?" && run_detached i3-msg exit ;;
+    "$reboot")   confirm "Reboot?" && run_detached systemctl reboot ;;
+    "$shutdown") confirm "Shut down?" && run_detached systemctl poweroff ;;
+esac
 
 # ==================================================================================================================== #

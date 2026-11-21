@@ -2,56 +2,49 @@
 # ==================================================================================================================== #
 # Rofi - Panel Launcher
 #
-# Opens one rofi panel by name, each with its own modes and its own layout from panels/<name>.rasi.
-# Usage: panel <apps|run|windows|files|ssh|power>
+# Opens one rofi panel by name.
+# Usage: panel launcher [apps|run|files|windows|ssh] [filter]
+#        panel pinned
+#        panel power
 # ==================================================================================================================== #
 # Configuration
 
 set -euo pipefail
 
 rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
-panel="${1:-apps}"
+panel="${1:-pinned}"
 
-# Grid width of the apps panel. Exported so scripts/pinned-apps pads its row to the same width.
-export PINNED_COLUMNS=6
+# Friendly tab names -> rofi mode names
+typeset -A tabs=(
+    apps    drun
+    run     run
+    files   filebrowser
+    windows window
+    ssh     ssh
+)
 
 # ==================================================================================================================== #
 # Panels
 
 case "$panel" in
-    apps)
-        args=(
-            -show combi
-            -combi-modes "pinned:$rofi_dir/scripts/pinned-apps,drun"
-            -combi-hide-mode-prefix
-            -display-combi "Apps"
-            -theme-str "listview { columns: $PINNED_COLUMNS; }"
-        )
+    launcher)
+        tab="${tabs[${2:-apps}]:-drun}"
+        args=(-show "$tab" -theme "$rofi_dir/panels/launcher.rasi")
+        if [[ -n "${3:-}" ]]; then
+            args+=(-filter "$3")
+        fi
+        exec rofi "${args[@]}"
         ;;
-    run)
-        args=(-show run -display-run "Run")
-        ;;
-    windows)
-        args=(-show window -display-window "Windows")
-        ;;
-    files)
-        args=(-show filebrowser -display-filebrowser "Files")
-        ;;
-    ssh)
-        args=(-show ssh -display-ssh "SSH")
+    pinned)
+        exec "$rofi_dir/scripts/pinned"
         ;;
     power)
-        args=(-show power -modes "power:$rofi_dir/scripts/power-menu" -display-power "Power")
+        exec "$rofi_dir/scripts/power-menu"
         ;;
     *)
-        print -u2 "panel: unknown panel '$panel' (apps, run, windows, files, ssh, power)"
+        print -u2 "panel: unknown panel '$panel' (launcher, pinned, power)"
         exit 1
         ;;
 esac
-
-# ==================================================================================================================== #
-# Launch
-
-exec rofi -theme "$rofi_dir/panels/$panel.rasi" "${args[@]}"
 
 # ==================================================================================================================== #

@@ -1,7 +1,7 @@
 /* ================================================================================================================== */
-/* Rofi - Panel: Windows                                                                                              */
+/* Rofi - Panel: Confirm                                                                                              */
 /*                                                                                                                    */
-/* Every open window, with its app icon.                                                                              */
+/* Yes / no check before a power action.                                                                              */
 /* ================================================================================================================== */
 /* Base Theme                                                                                                         */
 
@@ -11,15 +11,30 @@
 /* Layout                                                                                                             */
 
 window {
-    width: 800px;
+    width: 360px;
+}
+
+mainbox {
+    children: [ message, listview ];
+}
+
+textbox {
+    horizontal-align: 0.5;
 }
 
 listview {
-    lines: 10;
+    lines:   1;
+    columns: 2;
+    spacing: 10px;
 }
 
-element-icon {
-    size: 1.25em;
+element {
+    padding: 16px 0px;
+}
+
+element-text {
+    font:             "FiraCode Nerd Font 20";
+    horizontal-align: 0.5;
 }
 
 /* ================================================================================================================== */

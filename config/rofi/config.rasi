@@ -7,12 +7,20 @@
 /* Configuration                                                                                                      */
 
 configuration {
-    modes: "drun,run,window";
+    modes: "drun,run,filebrowser,window,ssh";
     show-icons: true;
     icon-theme: "Papirus-Dark";
     font: "FiraCode Nerd Font 11";
     terminal: "wezterm";
     drun-display-format: "{name}";
+    window-format: "{w} · {c} · {t}";
+
+    display-drun: "󰀻  Apps";
+    display-run: "󰞷  Run";
+    display-filebrowser: "󰉋  Files";
+    display-window: "󰖯  Windows";
+    display-ssh: "󰣀  SSH";
+}";
 }
 
 /* ================================================================================================================== */

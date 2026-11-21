@@ -1,7 +1,7 @@
 /* ================================================================================================================== */
-/* Rofi - Panel: Files                                                                                                */
+/* Rofi - Panel: Pinned                                                                                               */
 /*                                                                                                                    */
-/* Browse the file system from your home folder.                                                                      */
+/* Big-icon grid of pinned apps. scripts/pinned sets the columns and rows to fit the list.                            */
 /* ================================================================================================================== */
 /* Base Theme                                                                                                         */
 
@@ -14,8 +14,40 @@ window {
     width: 640px;
 }
 
+mainbox {
+    children: [ inputbar, listview, message ];
+}
+
+inputbar {
+    children: [ textbox-prompt-colon, entry ];
+}
+
+textbox-prompt-colon {
+    str: "󰀻";
+}
+
 listview {
-    lines: 12;
+    flow:          horizontal;
+    spacing:       10px;
+    fixed-columns: true;
+}
+
+element {
+    orientation: vertical;
+    padding:     16px 8px;
+    spacing:     10px;
+}
+
+element-icon {
+    size: 56px;
+}
+
+element-text {
+    horizontal-align: 0.5;
+}
+
+textbox {
+    horizontal-align: 0.5;
 }
 
 /* ================================================================================================================== */

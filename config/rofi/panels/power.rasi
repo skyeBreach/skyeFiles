@@ -1,7 +1,7 @@
 /* ================================================================================================================== */
 /* Rofi - Panel: Power                                                                                                */
 /*                                                                                                                    */
-/* One row of buttons, no search bar.                                                                                 */
+/* A row of square icon buttons under the host and uptime.                                                            */
 /* ================================================================================================================== */
 /* Base Theme                                                                                                         */
 
@@ -11,26 +11,46 @@
 /* Layout                                                                                                             */
 
 window {
-    width: 720px;
+    width: 600px;
 }
 
 mainbox {
-    children: [ listview ];
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    padding:          0px;
+    background-color: transparent;
+    children:         [ textbox-prompt-colon, prompt ];
+}
+
+textbox-prompt-colon {
+    str:              "󰐥";
+    padding:          10px 14px;
+    border-radius:    8px;
+    background-color: @red;
+    text-color:       @crust;
+}
+
+prompt {
+    padding:          10px 14px;
+    border-radius:    8px;
+    background-color: @surface0;
+    text-color:       @subtext0;
 }
 
 listview {
-    lines: 1;
+    lines:   1;
     columns: 5;
-    spacing: 8px;
-    scrollbar: false;
+    spacing: 10px;
 }
 
 element {
-    padding: 16px 0px;
-    children: [ element-text ];
+    padding: 22px 0px;
 }
 
 element-text {
+    font:             "FiraCode Nerd Font 24";
     horizontal-align: 0.5;
 }
 

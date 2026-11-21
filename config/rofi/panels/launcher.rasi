@@ -1,7 +1,7 @@
 /* ================================================================================================================== */
-/* Rofi - Panel: Run                                                                                                  */
+/* Rofi - Panel: Launcher                                                                                             */
 /*                                                                                                                    */
-/* Commands on your PATH, no icons.                                                                                   */
+/* Tabbed search across apps, commands, files, windows and SSH hosts.                                                 */
 /* ================================================================================================================== */
 /* Base Theme                                                                                                         */
 
@@ -11,15 +11,15 @@
 /* Layout                                                                                                             */
 
 window {
-    width: 520px;
+    width: 760px;
+}
+
+mainbox {
+    children: [ inputbar, mode-switcher, listview ];
 }
 
 listview {
-    lines: 8;
-}
-
-element {
-    children: [ element-text ];
+    lines: 9;
 }
 
 /* ================================================================================================================== */

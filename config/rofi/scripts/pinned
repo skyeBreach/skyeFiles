@@ -1,0 +1,110 @@
+#!/usr/bin/env zsh
+# ==================================================================================================================== #
+# Rofi - Pinned Apps
+#
+# Big-icon grid of the apps in pinned.conf. Typing filters the grid. Enter launches the highlighted app.
+# Tab, or Enter with no match, opens the full launcher with whatever you typed already filled in.
+#
+# See:
+#   - https://github.com/davatorium/rofi/blob/next/doc/rofi-dmenu.5.markdown
+# ==================================================================================================================== #
+# Configuration
+
+rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
+pinned_file="$rofi_dir/pinned.conf"
+data_dirs=("${XDG_DATA_HOME:-$HOME/.local/share}" ${(s.:.)${XDG_DATA_DIRS:-/usr/local/share:/usr/share}})
+max_columns=6
+
+# rofi exit code for the first custom key (-kb-custom-1)
+exit_search_all=10
+
+# ==================================================================================================================== #
+# Helpers
+
+# Print the path of a desktop file ID, searching the XDG data dirs in priority order.
+desktop_path() {
+    local dir
+    for dir in "${data_dirs[@]}"; do
+        if [[ -r "$dir/applications/$1" ]]; then
+            print -r -- "$dir/applications/$1"
+            return 0
+        fi
+    done
+    return 1
+}
+
+# Print one key's value from a desktop file's [Desktop Entry] section.
+desktop_value() {
+    awk -F= -v key="$2" '
+        /^\[/ { section = $0 }
+        section == "[Desktop Entry]" && $1 == key { print substr($0, index($0, "=") + 1); exit }
+    ' "$1"
+}
+
+# Hand over to the full launcher, keeping whatever was typed.
+search_all() {
+    exec "$rofi_dir/scripts/panel" launcher apps "$1"
+}
+
+# ==================================================================================================================== #
+# Collect
+
+names=()
+icons=()
+desktop_files=()
+
+if [[ -r "$pinned_file" ]]; then
+    for id in ${(f)"$(grep -vE '^[[:space:]]*(#|$)' "$pinned_file")"}; do
+        desktop_file="$(desktop_path "$id")" || continue
+        names+=("$(desktop_value "$desktop_file" Name)")
+        icons+=("$(desktop_value "$desktop_file" Icon)")
+        desktop_files+=("$desktop_file")
+    done
+fi
+
+if (( ${#names} == 0 )); then
+    search_all ""
+fi
+
+columns=$(( ${#names} < max_columns ? ${#names} : max_columns ))
+rows=$(( (${#names} + columns - 1) / columns ))
+
+# ==================================================================================================================== #
+# Show
+
+# -format "i|f" prints the chosen row's index, then the typed filter. Index is -1 when nothing matched.
+result="$(
+    for index in {1..${#names}}; do
+        print -rn -- "${names[$index]}"$'\0'"icon"$'\x1f'"${icons[$index]}"$'\n'
+    done | rofi -dmenu -i \
+        -p "Pinned" \
+        -mesg "Tab searches every app" \
+        -format "i|f" \
+        -kb-element-next "" \
+        -kb-custom-1 "Tab" \
+        -theme "$rofi_dir/panels/pinned.rasi" \
+        -theme-str "listview { columns: $columns; lines: $rows; }"
+)"
+rofi_exit=$?
+
+chosen="${result%%|*}"
+typed="${result#*|}"
+
+# ==================================================================================================================== #
+# Act
+
+if (( rofi_exit == exit_search_all )); then
+    search_all "$typed"
+fi
+
+if (( rofi_exit != 0 )); then
+    exit 0
+fi
+
+if [[ "$chosen" == "-1" ]]; then
+    search_all "$typed"
+fi
+
+setsid -f dex "${desktop_files[$(( chosen + 1 ))]}" > /dev/null 2>&1
+
+# ==================================================================================================================== #
