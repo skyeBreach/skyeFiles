@@ -1,0 +1,53 @@
+#!/usr/bin/env zsh
+# ==================================================================================================================== #
+# Rofi - Panel Launcher
+#
+# Opens one rofi panel by name, each with its own modes and its own layout from panels/<name>.rasi.
+# Usage: panel <apps|run|windows|files|ssh|power>
+# ==================================================================================================================== #
+# Configuration
+
+set -euo pipefail
+
+rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
+panel="${1:-apps}"
+
+# ==================================================================================================================== #
+# Panels
+
+case "$panel" in
+    apps)
+        args=(
+            -show combi
+            -combi-modes "pinned:$rofi_dir/scripts/pinned-apps,drun"
+            -combi-hide-mode-prefix
+            -display-combi "Apps"
+        )
+        ;;
+    run)
+        args=(-show run -display-run "Run")
+        ;;
+    windows)
+        args=(-show window -display-window "Windows")
+        ;;
+    files)
+        args=(-show filebrowser -display-filebrowser "Files")
+        ;;
+    ssh)
+        args=(-show ssh -display-ssh "SSH")
+        ;;
+    power)
+        args=(-show power -modes "power:$rofi_dir/scripts/power-menu" -display-power "Power")
+        ;;
+    *)
+        print -u2 "panel: unknown panel '$panel' (apps, run, windows, files, ssh, power)"
+        exit 1
+        ;;
+esac
+
+# ==================================================================================================================== #
+# Launch
+
+exec rofi -theme "$rofi_dir/panels/$panel.rasi" "${args[@]}"
+
+# ==================================================================================================================== #
