@@ -12,6 +12,9 @@ set -euo pipefail
 rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
 panel="${1:-apps}"
 
+# Grid width of the apps panel. Exported so scripts/pinned-apps pads its row to the same width.
+export PINNED_COLUMNS=6
+
 # ==================================================================================================================== #
 # Panels
 
@@ -22,6 +25,7 @@ case "$panel" in
             -combi-modes "pinned:$rofi_dir/scripts/pinned-apps,drun"
             -combi-hide-mode-prefix
             -display-combi "Apps"
+            -theme-str "listview { columns: $PINNED_COLUMNS; }"
         )
         ;;
     run)

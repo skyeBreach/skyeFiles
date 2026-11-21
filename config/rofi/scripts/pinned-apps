@@ -3,7 +3,8 @@
 # Rofi - Pinned Apps
 #
 # Rofi script mode used inside the apps panel's combi, ahead of drun. With no selection it lists the apps from
-# pinned.conf (styled as "active" so they stand apart). When rofi calls it back with a selection, it launches it.
+# pinned.conf as the grid's top row (styled as "active"), padded with blank cells so the full app list starts on a
+# fresh row. When rofi calls it back with a selection, it launches it.
 #
 # See:
 #   - https://github.com/davatorium/rofi/blob/next/doc/rofi-script.5.markdown
@@ -11,6 +12,7 @@
 # Configuration
 
 pinned_file="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/pinned.conf"
+columns="${PINNED_COLUMNS:-6}"
 data_dirs=("${XDG_DATA_HOME:-$HOME/.local/share}" ${(s.:.)${XDG_DATA_DIRS:-/usr/local/share:/usr/share}})
 
 # ==================================================================================================================== #
@@ -36,9 +38,10 @@ desktop_value() {
     ' "$1"
 }
 
-# Print a row that cannot be selected and disappears as soon as you type a filter.
-header_row() {
-    print -rn -- "$1"$'\0'"nonselectable"$'\x1f'"true"$'\n'
+# Print a blank cell that cannot be selected. rofi drops empty rows, so the cell holds a zero-width space: it shows
+# nothing, and you never type it, so it vanishes as soon as you start filtering.
+blank_cell() {
+    print -rn -- $'\u200b'$'\0'"nonselectable"$'\x1f'"true"$'\n'
 }
 
 # ==================================================================================================================== #
@@ -55,17 +58,20 @@ fi
 
 [[ -r "$pinned_file" ]] || exit 0
 
-header_row "Pinned"
+count=0
 
 for id in ${(f)"$(grep -vE '^[[:space:]]*(#|$)' "$pinned_file")"}; do
     desktop_file="$(desktop_path "$id")" || continue
     name="$(desktop_value "$desktop_file" Name)"
     icon="$(desktop_value "$desktop_file" Icon)"
 
-    print -rn -- "$name"$'\0'"icon"$'\x1f'"$icon"$'\x1f'"info"$'\x1f'"$desktop_file"$'\x1f'"active"$'\x1f'"true"
-    print -rn -- $'\x1f'"display"$'\x1f'"󰐃  $name"$'\n'
+    print -rn -- "$name"$'\0'"icon"$'\x1f'"$icon"$'\x1f'"info"$'\x1f'"$desktop_file"$'\x1f'"active"$'\x1f'"true"$'\n'
+    (( count += 1 ))
 done
 
-header_row "Applications"
+# Pad the last pinned row so the full app list starts on a row of its own.
+if (( count % columns != 0 )); then
+    repeat $(( columns - count % columns )) blank_cell
+fi
 
 # ==================================================================================================================== #
