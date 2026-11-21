@@ -25,3 +25,11 @@ zsh/.zsh_plugins.zsh
 grafana/gcx/config.yaml
 
 
+
+dist
+.wrangler
+.output
+.vercel
+.netlify
+.vinxi
+app.config.timestamp_*.js
