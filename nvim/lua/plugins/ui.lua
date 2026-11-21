@@ -1,3 +1,8 @@
+_G.__cached_neo_tree_selector = nil
+_G.__get_selector = function()
+    return _G.__cached_neo_tree_selector
+end
+
 return {
     -- lazy.nvim
     {
@@ -125,6 +130,41 @@ return {
             open_files_do_not_replace_types = { "terminal", "Trouble", "qf", "Outline" },
             sort_case_insensitive = false,
             sorting_strategy = "ascending",
+            event_handlers = {
+                {
+                    event = "after_render",
+                    handler = function(state)
+                        if
+                            state.current_position == "left"
+                            or state.current_position == "right"
+                        then
+                            vim.api.nvim_win_call(state.winid, function()
+                                local str = require("neo-tree.ui.selector").get()
+                                if str then
+                                    _G.__cached_neo_tree_selector = str
+                                end
+                            end)
+                        end
+                    end,
+                },
+            },
+        },
+    },
+    {
+        "akinsho/bufferline.nvim",
+        version = "*",
+        dependencies = "nvim-tree/nvim-web-devicons",
+        opts = {
+            options = {
+                offsets = {
+                    {
+                        filetype = "neo-tree",
+                        raw = " %{%v:lua.__get_selector()%} ",
+                        highlight = { sep = { link = "WinSeparator" } },
+                        separator = "┃",
+                    },
+                },
+            },
         },
     },
 }
