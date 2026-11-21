@@ -1,30 +1,39 @@
-# Dependencies
-getantidote/use-omz
-ohmyzsh/ohmyzsh path:lib
+# ==================================================================================================================== #
+# Debugging
 
-# Debug plugins
+# Benchmarking 
 romkatv/zsh-bench kind:path
 
-# Helper plugins
-ohmyzsh/ohmyzsh path:plugins/colored-man-pages
-ohmyzsh/ohmyzsh path:plugins/command-not-found
+# ==================================================================================================================== #
+# Zephyr
 
+# Colours
+mattmc3/zephyr path:plugins/color
 
-# Autocompletions setup
-# mattmc3/ez-compinit
-# belak/zsh-utils path:completion/functions kind:autoload post:compstyle_zshzoo_setup
+# TODO: compinit, conf.d, functions/
+mattmc3/zephyr path:plugins/confd
+mattmc3/zephyr path:plugins/completion
+mattmc3/zephyr path:plugins/zfunctions
 
-# Autocompletions
-# zsh-users/zsh-completions path:src kind:fpath
+# ==================================================================================================================== #
+# Prompt
 
-# Fish-like suggestions, history searching, and syntax highlighting
-zsh-users/zsh-autosuggestions kind:defer
-zsh-users/zsh-history-substring-search
+# Suggestions
+mattmc3/zephyr path:plugins/autosuggest kind:defer
+
+# History
+mattmc3/zephyr path:plugins/history
+mattmc3/zephyr path:plugins/history-search
+
+# Syntax Highlighting
 zdharma-continuum/fast-syntax-highlighting
+
+# Search History
+zsh-users/zsh-history-substring-search
 
 # Transient Prompt
 olets/zsh-transient-prompt
 
-mattmc3/zephyr path:plugins/completion
-mattmc3/zephyr path:plugins/confd
-mattmc3/zephyr path:plugins/zfunctions
+
+
+# ==================================================================================================================== #
