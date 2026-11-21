@@ -13,19 +13,19 @@ display: almost-all
 
 # Columns and order for long and tree layouts
 blocks:
-  - permission
-  - user
-  - group
-  - size
-  - date
-  - name
-  - git
+    - permission
+    - user
+    - group
+    - size
+    - date
+    - name
+    - git
 
 # Sorting rules
 sorting:
-  column: name
-  reverse: false
-  dir-grouping: first
+    column: name
+    reverse: false
+    dir-grouping: first
 
 # Should display column headers
 header: false
@@ -41,14 +41,14 @@ layout: grid
 
 # Color scheme
 color:
-  when: auto
-  theme: custom
+    when: auto
+    theme: custom
 
 # Icon theme
 icons:
-  when: auto
-  theme: fancy
-  separator: " "
+    when: auto
+    theme: fancy
+    separator: " "
 
 # Should add indicators for certain files
 indicators: true
@@ -67,8 +67,8 @@ date: "+%x %X"
 
 # User and group name truncation rules
 truncate-owner:
-  after:
-  marker: ""
+    after:
+    marker: ""
 
 # Size column format
 size: default
@@ -84,9 +84,8 @@ literal: false
 
 # File tree recursion (downwards)
 recursion:
-  enabled: false
-  # depth: 3
-
+    enabled: false
+    # depth: 3
 # Should calculate total size of directories
 total-size: false
 
@@ -97,4 +96,3 @@ dereference: false
 ignore-globs:
 
 # ================================================================================================ #
-
