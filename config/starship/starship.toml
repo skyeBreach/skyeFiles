@@ -8,7 +8,7 @@
 # File Schema
 '$schema' = 'https://starship.rs/config-schema.json'
 
-#
+# Timeouts
 scan_timeout = 30
 command_timeout = 1000
 
@@ -24,6 +24,7 @@ add_newline = false
 format = """
 $line_break\
 $os$username$hostname\
+$sudo\
 \
 $directory\
 $git_branch\
@@ -71,7 +72,7 @@ $fill\
 $status$cmd_duration$time\
 """
 
-# ======================================================================================= #
+# ==================================================================================================================== #
 # Palettes
 
 # Catppuccin Macchiato
@@ -103,7 +104,7 @@ base = '#24273a'
 mantle = '#1e2030'
 crust = '#181926'
 
-# ======================================================================================= #
+# ==================================================================================================================== #
 # Typography
 
 [fill]
@@ -238,6 +239,18 @@ bisect = '\[ BISECTING\]'
 am = '\[󰇮 AM\]'
 am_or_rebase = '\[󰇮 AM/REBASE\]'
 
+[git_metrics]
+disabled = false
+format = '([+$added]($added_style))([-$deleted]($deleted_style) )'
+added_style = 'bold green'
+deleted_style = 'bold red'
+
+[sudo]
+disabled = false
+symbol = '󰌾 '
+format = '[$symbol]($style)'
+style = 'bold peach'
+
 [git_status]
 format = '[$all_status]($style)[$ahead_behind](bold sapphire)'
 style = 'bold peach'
@@ -338,10 +351,8 @@ style = 'bold blue'
 [mise]
 disabled = false
 symbol = '󱁤'
-format = '[\[](overlay1)[$symbol$health]($style)[\]](overlay1)'
+format = '[\[](overlay1)[$symbol]($style)[\]](overlay1)'
 style = 'bold mauve'
-healthy_symbol = ''
-unhealthy_symbol = ' 󰀦'
 
 # ==================================================================================================================== #
 # Feedback
