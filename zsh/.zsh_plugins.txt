@@ -19,6 +19,7 @@ mattmc3/zephyr path:plugins/zfunctions
 # Completions
 
 zsh-users/zsh-completions path:src kind:fpath
+bazelbuild/bazel path:scripts/zsh_completion kind:fpath
 
 # ==================================================================================================================== #
 # Prompt
