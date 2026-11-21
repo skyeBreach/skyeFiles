@@ -16,6 +16,11 @@ mattmc3/zephyr path:plugins/completion
 mattmc3/zephyr path:plugins/zfunctions
 
 # ==================================================================================================================== #
+# Completions
+
+zsh-users/zsh-completions path:src kind:fpath
+
+# ==================================================================================================================== #
 # Prompt
 
 # Suggestions
