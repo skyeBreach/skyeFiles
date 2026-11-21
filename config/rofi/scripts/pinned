@@ -3,7 +3,7 @@
 # Rofi - Pinned Apps
 #
 # Big-icon grid of the apps in pinned.conf. Typing filters the grid. Enter launches the highlighted app.
-# Tab, or Enter with no match, opens the full launcher with whatever you typed already filled in.
+# Enter with no match opens the full launcher with whatever you typed already filled in.
 #
 # See:
 #   - https://github.com/davatorium/rofi/blob/next/doc/rofi-dmenu.5.markdown
@@ -14,9 +14,6 @@ rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
 pinned_file="$rofi_dir/pinned.conf"
 data_dirs=("${XDG_DATA_HOME:-$HOME/.local/share}" ${(s.:.)${XDG_DATA_DIRS:-/usr/local/share:/usr/share}})
 max_columns=6
-
-# rofi exit code for the first custom key (-kb-custom-1)
-exit_search_all=10
 
 # ==================================================================================================================== #
 # Helpers
@@ -78,10 +75,8 @@ result="$(
         print -rn -- "${names[$index]}"$'\0'"icon"$'\x1f'"${icons[$index]}"$'\n'
     done | rofi -dmenu -i \
         -p "Pinned" \
-        -mesg "Tab searches every app" \
+        -mesg "Not pinned? Type its name and press Enter" \
         -format "i|f" \
-        -kb-element-next "" \
-        -kb-custom-1 "Tab" \
         -theme "$rofi_dir/panels/pinned.rasi" \
         -theme-str "listview { columns: $columns; lines: $rows; }"
 )"
@@ -92,10 +87,6 @@ typed="${result#*|}"
 
 # ==================================================================================================================== #
 # Act
-
-if (( rofi_exit == exit_search_all )); then
-    search_all "$typed"
-fi
 
 if (( rofi_exit != 0 )); then
     exit 0
