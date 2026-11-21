@@ -1,0 +1,87 @@
+# ==================================================================================================================== #
+# Git - User Config
+#
+# See:
+#   - https://git-scm.com/docs/git-config
+# ==================================================================================================================== #
+# Identity
+
+[user]
+    name = {{git_user_name}}
+    email = {{git_user_email}}
+    useConfigOnly = true
+
+# ==================================================================================================================== #
+# Core
+
+[core]
+    editor = nvim
+    pager = delta
+
+[init]
+    defaultBranch = main
+
+[help]
+    autocorrect = prompt
+
+# ==================================================================================================================== #
+# Branches & Commits
+
+[branch]
+    sort = -committerdate
+
+[commit]
+    verbose = true
+
+# ==================================================================================================================== #
+# Remotes
+
+[fetch]
+    prune = true
+
+[pull]
+    rebase = true
+
+[push]
+    autoSetupRemote = true
+
+[credential "https://github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+
+[credential "https://gist.github.com"]
+    helper =
+    helper = !/usr/bin/gh auth git-credential
+
+# ==================================================================================================================== #
+# Diff & Merge
+
+[diff]
+    algorithm = histogram
+    colorMoved = default
+
+[merge]
+    conflictStyle = zdiff3
+
+[rebase]
+    autoStash = true
+
+[rerere]
+    enabled = true
+
+[interactive]
+    diffFilter = delta --color-only
+
+[delta]
+    navigate = true
+    dark = true
+    line-numbers = true
+
+# ==================================================================================================================== #
+# Aliases
+
+[alias]
+    sclone = clone --depth=1
+    rclone = clone --recursive
+
+# ==================================================================================================================== #
