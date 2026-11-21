@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-#MISE description="Move stray home folders into XDG locations and remove stale ones"
+#MISE description="Move stray home folders into XDG locations and remove stale ones (--dry-run to preview)"
 #MISE confirm="Close editors, terminals and apps using cargo, rustup, npm, wine or docker first. Continue?"
 # ==================================================================================================================== #
 # Mise Task - Home Migrate
@@ -8,6 +8,7 @@
 # the X session picks up the new variables.
 #
 # Folders are only moved when the destination does not exist yet, so nothing is ever overwritten.
+# Pass --dry-run to print what would happen without changing anything.
 # ==================================================================================================================== #
 # Configuration
 
@@ -16,6 +17,11 @@ set -euo pipefail
 config="${XDG_CONFIG_HOME:-$HOME/.config}"
 cache="${XDG_CACHE_HOME:-$HOME/.cache}"
 data="${XDG_DATA_HOME:-$HOME/.local/share}"
+
+dry_run=false
+if [[ "${1:-}" == "--dry-run" ]]; then
+    dry_run=true
+fi
 
 # Source in ~ -> destination
 typeset -A moves=(
@@ -56,9 +62,13 @@ move_path() {
         return
     fi
 
+    print "move  ~/$1 -> $destination"
+    if [[ "$dry_run" == true ]]; then
+        return
+    fi
+
     mkdir -p "${destination:h}"
     mv "$source" "$destination"
-    print "move  ~/$1 -> $destination"
 }
 
 # Delete ~/<path> if it exists.
@@ -69,8 +79,12 @@ remove_path() {
         return
     fi
 
+    print "rm    ~/$1 ($(du -sh "$target" 2> /dev/null | cut -f1))"
+    if [[ "$dry_run" == true ]]; then
+        return
+    fi
+
     rm -rf "$target"
-    print "rm    ~/$1"
 }
 
 # ==================================================================================================================== #
@@ -83,6 +97,11 @@ done
 for target in "${removals[@]}"; do
     remove_path "$target"
 done
+
+if [[ "$dry_run" == true ]]; then
+    print "dry run: nothing was changed"
+    exit 0
+fi
 
 # .nuget keeps NuGet/NuGet.Config, which has no XDG option, so only drop it once it is empty.
 rmdir "$HOME/.nuget" 2> /dev/null || true
