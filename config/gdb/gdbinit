@@ -1,0 +1,23 @@
+# ==================================================================================================================== #
+# GDB - User Init
+#
+# Registers Unreal Engine pretty printers, so FString, TArray and friends show their contents.
+#
+# See:
+#   - https://sourceware.org/gdb/current/onlinedocs/gdb.html/Initialization-Files.html
+# ==================================================================================================================== #
+# Unreal Engine
+
+python
+import os
+import sys
+
+sys.path.append(os.path.expanduser("~/.config/Epic/GDBPrinters/"))
+
+from UEPrinters import register_ue_printers
+register_ue_printers(None)
+print("Registered pretty printers for UE classes")
+
+end
+
+# ==================================================================================================================== #

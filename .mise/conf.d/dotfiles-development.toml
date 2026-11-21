@@ -46,4 +46,21 @@ root = "glances"
 target = "~/.config/glances"
 mode = "symlink-each"
 
+[dotfile_groups.wget]
+root = "wget"
+target = "~/.config/wget"
+mode = "symlink-each"
+exclude = ["wgetrc"]
+
+[dotfile_groups.wget.entries]
+"~/.config/wget/wgetrc" = { source = "wgetrc", mode = "template" }
+
+# ==================================================================================================================== #
+# Debugging
+
+[dotfile_groups.gdb]
+root = "gdb"
+target = "~/.config/gdb"
+mode = "symlink-each"
+
 # ==================================================================================================================== #

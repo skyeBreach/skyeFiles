@@ -8,6 +8,8 @@
 [bootstrap]
 dotfile_groups = [
     "home",
+    "environment",
+    "wget",
     "zsh",
     "starship",
     "git",
