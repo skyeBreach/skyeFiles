@@ -12,7 +12,7 @@ mr-boxington = "1.26"
 cargo-generate = "0.25.0"
 
 [tools.rust]
-version = "1.99"
+version = "latest"
 profile = "minimal"
 components = ["rustc", "cargo", "rustfmt", "rust-analyzer", "clippy"]
 mr_boxington = true
