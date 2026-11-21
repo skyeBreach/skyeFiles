@@ -1,0 +1,9 @@
+{
+    "appearance": {
+        "theme": "dark",
+        "font_size": 14
+    },
+    "window": {
+        "always_on_top": true
+    }
+}
