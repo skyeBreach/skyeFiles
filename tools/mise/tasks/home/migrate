@@ -1,0 +1,92 @@
+#!/usr/bin/env zsh
+#MISE description="Move stray home folders into XDG locations and remove stale ones"
+#MISE confirm="Close editors, terminals and apps using cargo, rustup, npm, wine or docker first. Continue?"
+# ==================================================================================================================== #
+# Mise Task - Home Migrate
+#
+# One-off clean-up after ~/.config/environment.d took over the environment. Run it once, then log out and back in so
+# the X session picks up the new variables.
+#
+# Folders are only moved when the destination does not exist yet, so nothing is ever overwritten.
+# ==================================================================================================================== #
+# Configuration
+
+set -euo pipefail
+
+config="${XDG_CONFIG_HOME:-$HOME/.config}"
+cache="${XDG_CACHE_HOME:-$HOME/.cache}"
+data="${XDG_DATA_HOME:-$HOME/.local/share}"
+
+# Source in ~ -> destination
+typeset -A moves=(
+    ".dotnet"              "$data/dotnet/.dotnet"
+    ".nuget/packages"      "$cache/NuGetPackages"
+    ".docker"              "$config/docker"
+    ".ansible"             "$data/ansible"
+    ".tflint.d/plugins"    "$data/tflint/plugins"
+    ".wine"                "$data/wine"
+    ".password-store"      "$data/pass"
+    ".codex"               "$data/codex"
+    ".electron-gyp"        "$cache/electron-gyp"
+    ".wget-hsts"           "$cache/wget-hsts"
+)
+
+# Stray duplicates (the XDG copies are the real ones), caches, and stale leftovers
+removals=(
+    .cargo .rustup .bun
+    .npm .yarn .yarnrc .nv
+    .wakatime .wakatime.cfg
+    .gdbinit .zsh_history .fehbg .pulse-cookie .viminfo .vim
+    .biome .screenlayout .texlive .terraform.d .gitlab .tflint.d
+    .config/environment.d/shiopa
+)
+
+# ==================================================================================================================== #
+# Helpers
+
+# Move ~/<source> to <destination>, skipping when there is nothing to move or the destination is taken.
+move_path() {
+    local source="$HOME/$1" destination="$2"
+
+    if [[ ! -e "$source" ]]; then
+        return
+    fi
+    if [[ -e "$destination" ]]; then
+        print -u2 "skip  ~/$1: $destination already exists"
+        return
+    fi
+
+    mkdir -p "${destination:h}"
+    mv "$source" "$destination"
+    print "move  ~/$1 -> $destination"
+}
+
+# Delete ~/<path> if it exists.
+remove_path() {
+    local target="$HOME/$1"
+
+    if [[ ! -e "$target" && ! -L "$target" ]]; then
+        return
+    fi
+
+    rm -rf "$target"
+    print "rm    ~/$1"
+}
+
+# ==================================================================================================================== #
+# Migrate
+
+for source in "${(@k)moves}"; do
+    move_path "$source" "${moves[$source]}"
+done
+
+for target in "${removals[@]}"; do
+    remove_path "$target"
+done
+
+# .nuget keeps NuGet/NuGet.Config, which has no XDG option, so only drop it once it is empty.
+rmdir "$HOME/.nuget" 2> /dev/null || true
+
+print "done: log out and back in so the X session and systemd pick up ~/.config/environment.d"
+
+# ==================================================================================================================== #
