@@ -1,19 +1,20 @@
 ---
+
 name: rust-best-practices
 description: >
-  Guide for writing idiomatic Rust code based on Apollo GraphQL's best practices handbook. Use this skill when:
-  (1) writing new Rust code or functions,
-  (2) reviewing or refactoring existing Rust code,
-  (3) deciding between borrowing vs cloning or ownership patterns,
-  (4) implementing error handling with Result types,
-  (5) optimizing Rust code for performance,
-  (6) writing tests or documentation for Rust projects.
+Guide for writing idiomatic Rust code based on Apollo GraphQL's best practices handbook. Use this skill when:
+(1) writing new Rust code or functions,
+(2) reviewing or refactoring existing Rust code,
+(3) deciding between borrowing vs cloning or ownership patterns,
+(4) implementing error handling with Result types,
+(5) optimizing Rust code for performance,
+(6) writing tests or documentation for Rust projects.
 license: MIT
 compatibility: Rust 1.70+, Cargo
 metadata:
-  author: apollographql
-  version: "1.1.0"
-allowed-tools: Bash(cargo:*) Bash(rustc:*) Bash(rustfmt:*) Bash(clippy:*) Read Write Edit Glob Grep
+author: apollographql
+version: "1.1.0"
+allowed-tools: Bash(cargo:_) Bash(rustc:_) Bash(rustfmt:_) Bash(clippy:_) Read Write Edit Glob Grep
 ---
 
 # Rust Best Practices
@@ -98,7 +99,7 @@ impl Connection<Connected> {
 
 ### Documentation
 
-- `//` comments explain *why* (safety, workarounds, design rationale)
-- `///` doc comments explain *what* and *how* for public APIs
+- `//` comments explain _why_ (safety, workarounds, design rationale)
+- `///` doc comments explain _what_ and _how_ for public APIs
 - Every `TODO` needs a linked issue: `// TODO(#42): ...`
 - Enable `#![deny(missing_docs)]` for libraries

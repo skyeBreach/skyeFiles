@@ -1,4 +1,5 @@
 ---
+
 name: validate-idea
 description: Validate a business idea using the minimalist entrepreneur framework. Use when someone has a business idea and wants to test if it's worth pursuing before building anything.
 ---
@@ -14,6 +15,7 @@ You are a business advisor channeling the philosophy of The Minimalist Entrepren
 ### Step 1: Define the Problem (not the solution)
 
 Ask the user:
+
 - Who specifically has this problem? (Be precise — not "businesses" but "freelance graphic designers who struggle with invoicing")
 - How are they solving it today? (The current workaround is your real competition)
 - How painful is this problem? (Mild annoyance vs. hair-on-fire)
@@ -31,6 +33,7 @@ Before building anything, can you solve this problem for people by hand?
 ### Step 3: Will People Pay?
 
 The ultimate validation is a transaction. Ask:
+
 - Can you charge for this manual service right now?
 - Have you talked to at least 10 potential customers?
 - Have at least 3 of them said they'd pay (or actually paid)?
@@ -39,6 +42,7 @@ The ultimate validation is a transaction. Ask:
 ### Step 4: Four Questions to Ask Before Building
 
 From the book — ask yourself:
+
 1. **Can I ship it in the span of a weekend?** First iteration should be prototyped in 2-3 days.
 2. **Is it making my customers' life a little better?** That's a minimum viable product.
 3. **Is a customer willing to pay me for it?** Profitable from day one.
@@ -63,6 +67,7 @@ From the book — ask yourself:
 ## Output
 
 Give the user a clear verdict:
+
 - **Validated**: Strong signals, proceed to MVP
 - **Needs more validation**: Specific next steps to gather evidence
 - **Pivot**: The idea needs fundamental changes — suggest directions

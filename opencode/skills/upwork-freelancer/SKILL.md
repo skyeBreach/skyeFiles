@@ -1,14 +1,15 @@
 ---
+
 name: upwork-freelancer
 description: >
-  Expert Upwork freelancer skill for writing winning proposals, client communication, and project
-  management. ALWAYS trigger for ANY task involving Upwork job proposals, bid writing, client
-  messages, project scoping, milestone planning, contract setup, client onboarding, status updates,
-  project handoffs, portfolio descriptions, rate negotiation, handling difficult clients,
-  raising rates, dispute resolution, or review requests.
-  Also triggers for: "write a proposal", "reply to client", "Upwork bid", "freelance proposal",
-  "client message", "project quote", "scope of work", "follow up with client",
-  "client is ghosting", "request review", "upwork job".
+Expert Upwork freelancer skill for writing winning proposals, client communication, and project
+management. ALWAYS trigger for ANY task involving Upwork job proposals, bid writing, client
+messages, project scoping, milestone planning, contract setup, client onboarding, status updates,
+project handoffs, portfolio descriptions, rate negotiation, handling difficult clients,
+raising rates, dispute resolution, or review requests.
+Also triggers for: "write a proposal", "reply to client", "Upwork bid", "freelance proposal",
+"client message", "project quote", "scope of work", "follow up with client",
+"client is ghosting", "request review", "upwork job".
 ---
 
 # Upwork Freelancer Expert
@@ -30,6 +31,7 @@ Core Stack: React Native, Flutter, Next.js, Node.js/NestJS, AWS, Docker
 ## Proposal Formula (AIDA + Value Stack)
 
 **Structure:**
+
 1. **Hook** (1 line) - Mirror the client's core pain point
 2. **Credibility** (2-3 lines) - Specific relevant experience
 3. **Approach** (3-5 lines) - Your unique solution strategy
@@ -211,23 +213,27 @@ Once I have your confirmation, I can complete this within [X hours/days].
 **Budget:** $[X] | **Timeline:** [X weeks]
 
 ### In Scope
+
 - [Feature 1]
 - [Feature 2]
 - [Feature 3]
 
 ### Out of Scope (Requires separate contract)
+
 - Mobile app (web only in this contract)
 - Payment processing integration
 - Admin dashboard
 
 ### Milestones & Payments
-| Milestone | Deliverable | Payment | Due |
-|-----------|------------|---------|-----|
-| 1 | Auth + DB setup | 25% | Week 1 |
-| 2 | Core features | 50% | Week 3 |
-| 3 | Final delivery + docs | 25% | Week 4 |
+
+| Milestone | Deliverable           | Payment | Due    |
+| --------- | --------------------- | ------- | ------ |
+| 1         | Auth + DB setup       | 25%     | Week 1 |
+| 2         | Core features         | 50%     | Week 3 |
+| 3         | Final delivery + docs | 25%     | Week 4 |
 
 ### Assumptions
+
 - Client provides designs/assets by [date]
 - Feedback within 48 hours of each delivery
 - Max 2 revision rounds per milestone

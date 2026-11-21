@@ -1,4 +1,5 @@
 ---
+
 name: find-community
 description: Help identify and evaluate communities to build a minimalist business around. Use when someone is looking for a business idea, trying to find their community, or wondering where to start as an entrepreneur.
 ---
@@ -44,6 +45,7 @@ For each potential community, help evaluate:
 ## Output
 
 Help the user narrow down to 1-3 communities they could realistically serve, with specific problems identified in each. For each, note:
+
 - The community
 - The persistent problem
 - How the user is connected to this community

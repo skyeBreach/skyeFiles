@@ -38,8 +38,8 @@ If Stripe is enabled and a customer appears in both QuickBooks AR and Stripe ove
 
 PayPal's MCP connector rate-limits aggressively when the requested date window is wide. The most common cause is querying 14–30 days of transactions in a single call.
 
-*Fix:* Always query with `transaction_status: S` (settled only) and a **7-day window** ending today. This is the default in the workflow.
+_Fix:_ Always query with `transaction_status: S` (settled only) and a **7-day window** ending today. This is the default in the workflow.
 
-*Retry pattern:* If a 7-day query returns 429, retry immediately with a **3-day window**. A narrower window reduces the response payload and usually succeeds.
+_Retry pattern:_ If a 7-day query returns 429, retry immediately with a **3-day window**. A narrower window reduces the response payload and usually succeeds.
 
-*Fallback:* If the 3-day retry also returns 429, skip the PayPal cross-reference for this run entirely. Flag every customer in the batch as "PayPal unavailable — verify manually" in the summary table. Proceed with QuickBooks-only scoring. Do not silently drop the caveat — the owner needs to know the cross-reference was skipped before approving any sends.
+_Fallback:_ If the 3-day retry also returns 429, skip the PayPal cross-reference for this run entirely. Flag every customer in the batch as "PayPal unavailable — verify manually" in the summary table. Proceed with QuickBooks-only scoring. Do not silently drop the caveat — the owner needs to know the cross-reference was skipped before approving any sends.

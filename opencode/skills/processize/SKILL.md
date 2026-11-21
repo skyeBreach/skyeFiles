@@ -1,4 +1,5 @@
 ---
+
 name: processize
 description: Turn a product idea into a manual-first process you can start delivering today. Use when you have an idea and want to figure out how to deliver value by hand before writing any code.
 ---
@@ -53,6 +54,7 @@ Document your manual process so clearly that someone else could do it:
 > Write down every step you take on a piece of paper. This is your "magic piece of paper" - if you went on vacation, someone else could pick it up and keep the business running.
 
 Your magic piece of paper should include:
+
 1. **Trigger** - What kicks off the process? (Customer emails you, fills out a form, sends a message)
 2. **Steps** - Numbered list of exactly what to do, in order
 3. **Tools needed** - What you use at each step (spreadsheet, email, phone, etc.)
@@ -84,6 +86,7 @@ Then - and only then - automate one step at a time. The first thing to automate 
 ## Output
 
 Help the user create:
+
 1. A one-sentence description of what their product does manually
 2. The magic piece of paper - their full manual process, step by step
 3. A list of 3 specific people to deliver it to this week

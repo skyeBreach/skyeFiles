@@ -7,14 +7,14 @@ Configure content sources for optimal purging:
 ```javascript
 // tailwind.config.js
 export default {
-  content: [
-    "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx,vue,svelte}",
-    "./node_modules/@mycompany/ui-lib/**/*.{js,ts,jsx,tsx}",
-  ],
-  // Enable JIT for faster builds
-  jit: true,
-}
+    content: [
+        "./index.html",
+        "./src/**/*.{js,ts,jsx,tsx,vue,svelte}",
+        "./node_modules/@mycompany/ui-lib/**/*.{js,ts,jsx,tsx}",
+    ],
+    // Enable JIT for faster builds
+    jit: true,
+};
 ```
 
 ### Content Path Best Practices
@@ -51,16 +51,16 @@ export default {
 @import "tailwindcss";
 
 @theme {
-  /* Define once, use everywhere */
-  --color-brand: #3b82f6;
-  --font-mono: "Fira Code", monospace;
+    /* Define once, use everywhere */
+    --color-brand: #3b82f6;
+    --font-mono: "Fira Code", monospace;
 }
 
 /* Critical CSS for above-the-fold content */
 @layer critical {
-  .hero-title {
-    @apply text-4xl md:text-6xl font-bold;
-  }
+    .hero-title {
+        @apply text-4xl md:text-6xl font-bold;
+    }
 }
 ```
 
@@ -73,22 +73,18 @@ export default {
 ```javascript
 // tailwind.config.js
 module.exports = {
-  purge: {
-    enabled: process.env.NODE_ENV === 'production',
-    content: [
-      './src/**/*.html',
-      './src/**/*.jsx',
-      './src/**/*.tsx',
-    ],
-    options: {
-      safelist: [
-        'bg-red-500',
-        'text-center',
-        // Classes that shouldn't be purged
-      ],
+    purge: {
+        enabled: process.env.NODE_ENV === "production",
+        content: ["./src/**/*.html", "./src/**/*.jsx", "./src/**/*.tsx"],
+        options: {
+            safelist: [
+                "bg-red-500",
+                "text-center",
+                // Classes that shouldn't be purged
+            ],
+        },
     },
-  },
-}
+};
 ```
 
 ### Minification

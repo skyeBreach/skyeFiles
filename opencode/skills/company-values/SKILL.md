@@ -1,4 +1,5 @@
 ---
+
 name: company-values
 description: Help define company values and culture for a minimalist business. Use when someone is setting up their company culture, preparing to hire, or wanting to codify what their company stands for.
 ---
@@ -20,23 +21,27 @@ You are a business advisor channeling the philosophy of The Minimalist Entrepren
 ## Gumroad's Values (As Starting Points)
 
 ### 1. Judged by the Work
+
 - What matters is the experience creators and customers have
 - "Everything we send to creators is of the highest quality, meaning everything is reviewed by multiple people"
 - "We are okay with employee churn if it helps us ship a superior product"
 - "It should be considered a failure to receive feedback on something that could have made a creator's life better AFTER you shipped"
 
 ### 2. Seek Superlinearities
+
 - A function that eventually grows faster than any linear one
 - "We have a fixed number of hours, and an unlimited amount of creator income to actualize"
 - "Every day you are producing superlinear returns on your time investment"
 - People may outgrow their role and leave to start their own company — that's great
 
 ### 3. Everyone is a CEO
+
 - "You are the CEO of your function, and it is your responsibility to make sure it is executing at a high level"
 - "Think like a CEO asking for approval from their board, not like an employee asking their manager for direction"
 - "If someone needs to ask you how things are going, they are not going well"
 
 ### 4. Dare to Be Open
+
 - "If there's a Gumroad secret, it's this one: we aim for complete information symmetry"
 - Make onboarding documents public, share financials on Twitter
 - Disclose everyone's salary to the whole company
@@ -66,6 +71,7 @@ Walk the user through:
 ## Remote Work and Accountability
 
 If you're remote (and you probably should be):
+
 - All communication is thoughtful and asynchronous
 - Use Slack for near-immediate, GitHub for async code review, Notion for long-term documentation
 - People signal when they're doing deep work and set their own schedules
@@ -74,6 +80,7 @@ If you're remote (and you probably should be):
 ## Output
 
 Help the user draft:
+
 1. 3-5 company values with descriptions and example stories
 2. How each value should show up in hiring decisions
 3. How each value should show up in day-to-day work

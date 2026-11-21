@@ -6,21 +6,21 @@ Scoring logic and email tone guidelines for invoice-chase.
 
 Score each customer using QuickBooks payment history for the last 12 months. Require a minimum of 3 invoices to score; fewer than 3 defaults to `occasionally-late`.
 
-| Score | Criteria |
-|---|---|
-| `good-payer` | Paid on time or early in ≥ 75% of invoices |
+| Score               | Criteria                                                            |
+| ------------------- | ------------------------------------------------------------------- |
+| `good-payer`        | Paid on time or early in ≥ 75% of invoices                          |
 | `occasionally-late` | Paid late in 25–50% of invoices, or fewer than 3 invoices on record |
-| `repeat-late` | Paid late in > 50% of invoices |
+| `repeat-late`       | Paid late in > 50% of invoices                                      |
 
 "On time" means payment received on or before the invoice due date.
 
 ## Tone by score
 
-| Score | Tone | Character |
-|---|---|---|
-| `good-payer` | Gentle | Friendly, assumes oversight. Opens with grace. |
-| `occasionally-late` | Neutral | Professional, no judgment. Factual follow-up. |
-| `repeat-late` | Firm | Direct, states a deadline. No warmth, no accusation. |
+| Score               | Tone    | Character                                            |
+| ------------------- | ------- | ---------------------------------------------------- |
+| `good-payer`        | Gentle  | Friendly, assumes oversight. Opens with grace.       |
+| `occasionally-late` | Neutral | Professional, no judgment. Factual follow-up.        |
+| `repeat-late`       | Firm    | Direct, states a deadline. No warmth, no accusation. |
 
 ## Subject lines
 
@@ -33,6 +33,7 @@ Score each customer using QuickBooks payment history for the last 12 months. Req
 Every reminder includes: invoice number(s), total amount due, original due date, days overdue, and payment link or instructions.
 
 Tone-specific additions:
+
 - **Gentle**: one acknowledgment sentence ("I know things get busy")
 - **Neutral**: none — facts only
 - **Firm**: one deadline sentence ("Please remit by [date]")

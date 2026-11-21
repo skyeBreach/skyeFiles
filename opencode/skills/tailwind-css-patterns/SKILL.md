@@ -1,4 +1,5 @@
 ---
+
 name: tailwind-css-patterns
 description: Provides comprehensive Tailwind CSS utility-first styling patterns including responsive design, layout utilities, flexbox, grid, spacing, typography, colors, and modern CSS best practices. Use when styling React/Vue/Svelte components, building responsive layouts, implementing design systems, or optimizing CSS workflow.
 allowed-tools: Read, Write, Edit, Glob, Grep, Bash
@@ -24,13 +25,13 @@ Provides actionable patterns for responsive, accessible UIs with Tailwind CSS v4
 
 ### Responsive Breakpoints
 
-| Prefix | Min Width | Description |
-|--------|-----------|-------------|
-| `sm:` | 640px | Small screens |
-| `md:` | 768px | Tablets |
-| `lg:` | 1024px | Desktops |
-| `xl:` | 1280px | Large screens |
-| `2xl:` | 1536px | Extra large |
+| Prefix | Min Width | Description   |
+| ------ | --------- | ------------- |
+| `sm:`  | 640px     | Small screens |
+| `md:`  | 768px     | Tablets       |
+| `lg:`  | 1024px    | Desktops      |
+| `xl:`  | 1280px    | Large screens |
+| `2xl:` | 1536px    | Extra large   |
 
 ### Common Patterns
 
@@ -67,17 +68,17 @@ Provides actionable patterns for responsive, accessible UIs with Tailwind CSS v4
 
 ```tsx
 function ProductCard({ product }: { product: Product }) {
-  return (
-    <div className="bg-white rounded-lg shadow-lg overflow-hidden sm:flex">
-      <img className="h-48 w-full object-cover sm:h-auto sm:w-48" src={product.image} />
-      <div className="p-6">
-        <h3 className="text-lg font-semibold">{product.name}</h3>
-        <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
-          Add to Cart
-        </button>
-      </div>
-    </div>
-  );
+    return (
+        <div className="bg-white rounded-lg shadow-lg overflow-hidden sm:flex">
+            <img className="h-48 w-full object-cover sm:h-auto sm:w-48" src={product.image} />
+            <div className="p-6">
+                <h3 className="text-lg font-semibold">{product.name}</h3>
+                <button className="mt-4 px-4 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700">
+                    Add to Cart
+                </button>
+            </div>
+        </div>
+    );
 }
 ```
 
@@ -111,16 +112,19 @@ function ProductCard({ product }: { product: Product }) {
 ## Troubleshooting
 
 ### Classes Not Applying
+
 - **Check content paths**: Ensure all template files are included in `content: []` in config
 - **Verify build**: Run `npm run build` to regenerate purged CSS
 - **Dev mode**: Use `npx tailwindcss -o` with `--watch` flag for live updates
 
 ### Responsive Styles Not Working
+
 - **Order matters**: Responsive prefixes must come before non-responsive (e.g., `md:flex` not `flex md:flex`)
 - **Check breakpoint values**: Verify breakpoints match your design requirements
 - **DevTools**: Use browser DevTools responsive mode to test at each breakpoint
 
 ### Dark Mode Issues
+
 - **Verify config**: Ensure `darkMode: 'class'` or `'media'` is set correctly
 - **Toggle implementation**: Use `document.documentElement.classList.toggle('dark')` for class strategy
 - **Initial flash**: Add `dark` class to `<html>` before body renders

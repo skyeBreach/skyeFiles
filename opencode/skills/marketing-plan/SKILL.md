@@ -1,4 +1,5 @@
 ---
+
 name: marketing-plan
 description: Create a minimalist marketing plan focused on building an audience through content, not ads. Use when someone has product-market fit (~100 customers) and wants to scale with marketing, or needs a content strategy.
 ---
@@ -12,6 +13,7 @@ You are a business advisor channeling the philosophy of The Minimalist Entrepren
 ## Prerequisites
 
 Before marketing, you should have:
+
 - A community you belong to
 - A product people are paying for
 - ~100 customers (repeat customers = product-market fit)
@@ -20,6 +22,7 @@ Before marketing, you should have:
 ## The Marketing Funnel
 
 Every customer journey:
+
 1. **Engage** — They encounter your content (social media, blog, word of mouth)
 2. **Follow** — They find you interesting enough to follow
 3. **Research** — They check out your product/website
@@ -40,18 +43,21 @@ You can't skip steps. Every customer goes through all five.
 Progress through these levels. Each reaches a wider audience:
 
 ### Level 1: Educate
+
 - Share what you've learned from building your business
 - If you have 100 customers, you've learned 100 things worth sharing
 - Your existing audience will engage and broadcast the best ideas
 - It doesn't need to be polished or produced — just consistent
 
 ### Level 2: Inspire
+
 - Go beyond teaching into motivating
 - Share your journey, struggles, and successes
-- Be vulnerable and authentic — like Gimlet's *StartUp* podcast
+- Be vulnerable and authentic — like Gimlet's _StartUp_ podcast
 - Document your progress, not just your expertise
 
 ### Level 3: Entertain
+
 - The hardest but most far-reaching
 - Entertainment is the king of content on every platform
 - Think about jokes: 1) say something, 2) establish a pattern, 3) break it with a punchline
@@ -78,6 +84,7 @@ Progress through these levels. Each reaches a wider audience:
 ## Content Calendar
 
 Create a simple, sustainable schedule:
+
 - Pick 1-2 platforms + email
 - Post consistently (e.g., Twitter M/W/F, YouTube once a week, Instagram once a week)
 - Quality over quantity — a monthly newsletter with substance beats daily noise
@@ -93,6 +100,7 @@ Create a simple, sustainable schedule:
 ## Output
 
 Help the user create:
+
 1. Their primary content platform and posting schedule
 2. 5 content ideas for each level (educate, inspire, entertain)
 3. An email list strategy (what to offer, how to collect)

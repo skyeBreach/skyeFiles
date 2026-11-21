@@ -1,9 +1,13 @@
 ---
+
 # ═══════════════════════════════════════════════════════════════════════════════
+
 # CLAUDE OFFICE SKILL - Enhanced Metadata v2.0
+
 # ═══════════════════════════════════════════════════════════════════════════════
 
 # Basic Information
+
 name: cover-letter
 description: ">"
 version: "1.0.0"
@@ -11,40 +15,42 @@ author: Claude Office Skills Contributors
 license: MIT
 
 # Categorization
+
 category: hr
 tags:
-  - cover-letter
-  - job-application
-  - writing
-department: HR/Personal
+
+- cover-letter
+- job-application
+- writing
+  department: HR/Personal
 
 # AI Model Compatibility
+
 models:
-  recommended:
-    - claude-sonnet-4
-    - claude-opus-4
-  compatible:
-    - claude-3-5-sonnet
-    - gpt-4
-    - gpt-4o
+recommended: - claude-sonnet-4 - claude-opus-4
+compatible: - claude-3-5-sonnet - gpt-4 - gpt-4o
 
 # MCP Tools Integration
+
 mcp:
-  server: office-mcp
-  tools:
-    - create_docx
-    - docx_to_pdf
+server: office-mcp
+tools: - create_docx - docx_to_pdf
 
 # Skill Capabilities
+
 capabilities:
-  - letter_writing
-  - personalization
-  - professional_tone
+
+- letter_writing
+- personalization
+- professional_tone
 
 # Language Support
+
 languages:
-  - en
-  - zh
+
+- en
+- zh
+
 ---
 
 # Cover Letter
@@ -54,6 +60,7 @@ languages:
 This skill helps you write personalized, compelling cover letters that effectively communicate your value to potential employers and increase your chances of landing interviews.
 
 **Use Cases:**
+
 - Job applications
 - Career transitions
 - Internal transfers
@@ -68,6 +75,7 @@ This skill helps you write personalized, compelling cover letters that effective
 4. I'll create a tailored cover letter
 
 **Example prompts:**
+
 - "Write a cover letter for this Senior PM role at Google"
 - "Create a career-change cover letter from teacher to corporate trainer"
 - "Draft a cover letter highlighting my Python and ML experience"
@@ -194,12 +202,14 @@ What excites me about [Company] is [specific reason]. I am particularly drawn to
 ### Opening Lines That Work
 
 **Good openings:**
+
 - "After leading [Company]'s biggest product launch, I'm ready to bring that energy to [Target Company]."
 - "[Referral Name] suggested I reach out – and after researching [Company]'s work on [Project], I knew I had to apply."
 - "Your job posting describes my exact background: [specific match]."
 - "I've admired [Company]'s approach to [specific thing] since [when/how you learned about them]."
 
 **Avoid:**
+
 - "I am writing to apply for..." (boring)
 - "I believe I would be a great fit..." (generic)
 - "To whom it may concern" (impersonal)
@@ -207,16 +217,17 @@ What excites me about [Company] is [specific reason]. I am particularly drawn to
 
 ### Quantify Your Achievements
 
-| Instead of | Write |
-|------------|-------|
-| "Increased sales" | "Grew sales 45% YoY, adding $2M in revenue" |
-| "Managed a team" | "Led 12-person team across 3 time zones" |
-| "Improved efficiency" | "Reduced processing time from 5 days to 4 hours" |
+| Instead of                | Write                                                             |
+| ------------------------- | ----------------------------------------------------------------- |
+| "Increased sales"         | "Grew sales 45% YoY, adding $2M in revenue"                       |
+| "Managed a team"          | "Led 12-person team across 3 time zones"                          |
+| "Improved efficiency"     | "Reduced processing time from 5 days to 4 hours"                  |
 | "Handled customer issues" | "Resolved 50+ customer escalations monthly with 98% satisfaction" |
 
 ### Show Company Research
 
 Mention specific things like:
+
 - Recent news, funding, or launches
 - Company values that resonate with you
 - Specific products or services you admire
@@ -250,16 +261,19 @@ Mention specific things like:
 ---
 
 ## Key Points Highlighted
+
 - [Accomplishment 1 matched to requirement]
 - [Accomplishment 2 matched to requirement]
 
 ## Customization Notes
+
 - [Any suggestions for further personalization]
 ```
 
 ## Customization Options
 
 Tell me your preferences:
+
 - **Tone:** Professional, conversational, enthusiastic, confident
 - **Length:** Concise (250 words), standard (350 words), detailed (450 words)
 - **Focus:** Skills, achievements, cultural fit, career story
@@ -297,6 +311,7 @@ Best regards,
 ---
 
 **Key Points Highlighted:**
+
 - Direct payment systems experience (matches domain)
 - Quantified achievements ($50M, 40% reduction, 10x throughput)
 - Go and Python expertise (matches tech stack)

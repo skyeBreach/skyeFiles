@@ -10,17 +10,17 @@
 
 ### Transition Properties
 
-| Class | Description |
-|-------|-------------|
-| `transition` | All properties |
-| `transition-colors` | Color properties only |
-| `transition-opacity` | Opacity only |
-| `transition-transform` | Transform only |
-| `duration-150` | 150ms duration |
-| `duration-300` | 300ms duration |
-| `ease-in` | Ease in timing |
-| `ease-out` | Ease out timing |
-| `ease-in-out` | Ease in-out timing |
+| Class                  | Description           |
+| ---------------------- | --------------------- |
+| `transition`           | All properties        |
+| `transition-colors`    | Color properties only |
+| `transition-opacity`   | Opacity only          |
+| `transition-transform` | Transform only        |
+| `duration-150`         | 150ms duration        |
+| `duration-300`         | 300ms duration        |
+| `ease-in`              | Ease in timing        |
+| `ease-out`             | Ease out timing       |
+| `ease-in-out`          | Ease in-out timing    |
 
 ---
 
@@ -80,24 +80,28 @@
 ```css
 /* In your CSS with @theme */
 @theme {
-  --animate-fade-in: fadeIn 0.5s ease-in-out;
-  --animate-slide-up: slideUp 0.3s ease-out;
+    --animate-fade-in: fadeIn 0.5s ease-in-out;
+    --animate-slide-up: slideUp 0.3s ease-out;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes slideUp {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 ```
 
@@ -130,12 +134,12 @@ Respect user's motion preferences:
 
 ```css
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-  }
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
 }
 ```

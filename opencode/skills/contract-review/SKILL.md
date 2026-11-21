@@ -1,12 +1,13 @@
 ---
+
 name: contract-review
 description: >
-  Lightweight NDA, MSA, and vendor contract review for SMBs without legal on
-  staff. Reads contracts from local files, Gmail attachments, or DocuSign
-  envelopes; flags non-standard terms; explains risks in plain English; and
-  outputs a marked-up redline as a separate DOCX. Use when the user says
-  "review this contract," "what am I signing," "red flags," "flag any concerns,"
-  "check the payment terms," or uploads/forwards a contract or legal agreement.
+Lightweight NDA, MSA, and vendor contract review for SMBs without legal on
+staff. Reads contracts from local files, Gmail attachments, or DocuSign
+envelopes; flags non-standard terms; explains risks in plain English; and
+outputs a marked-up redline as a separate DOCX. Use when the user says
+"review this contract," "what am I signing," "red flags," "flag any concerns,"
+"check the payment terms," or uploads/forwards a contract or legal agreement.
 ---
 
 # Contract Review

@@ -7,6 +7,7 @@ Real examples and templates based on user's style and winning formula.
 ## Example 1: n8n + Google Sheets + AI + PDF
 
 **Job:**
+
 ```
 We are seeking a skilled freelancer to automate a process using N8N that involves
 integrating Google Sheets, running a prompt using ChatGPT or DeepSeek, and sending
@@ -14,6 +15,7 @@ a formatted PDF via email twice a week.
 ```
 
 **Winning Proposal:**
+
 ```
 Hey there 👋
 
@@ -43,6 +45,7 @@ When would you like to kick off?
 ## Example 2: AI Agent for Email Processing
 
 **Job:**
+
 ```
 We are seeking a skilled developer to create an AI agent capable of processing
 8 years of emails. The agent should categorize emails, summarize content, and
@@ -50,6 +53,7 @@ extract meaningful intelligence. Use of n8n is fine.
 ```
 
 **Winning Proposal:**
+
 ```
 Hey there 👋
 
@@ -73,6 +77,7 @@ Let's discuss your data format and preferred output structure.
 **Word count:** ~95 words
 
 **Shorter version:**
+
 ```
 Hey 👋
 
@@ -90,6 +95,7 @@ Let's discuss data format — when works to chat?
 ## Example 3: Customer Feedback Automation
 
 **Job:**
+
 ```
 Looking for someone to create an automated system that can manage customer
 feedback and requests using n8n and Google tools. Collect form submissions,
@@ -98,6 +104,7 @@ replies based on category.
 ```
 
 **Winning Proposal:**
+
 ```
 Hey there 👋
 
@@ -125,6 +132,7 @@ When would you like to start?
 ## Example 4: AI-Powered Business Systems
 
 **Job:**
+
 ```
 We are building multiple AI-powered businesses across finance, real estate,
 healthcare, and home services. Looking for AI-native operators who can use
@@ -134,6 +142,7 @@ workflows that execute end-to-end with minimal human involvement.
 ```
 
 **Winning Proposal:**
+
 ```
 Hey 👋
 
@@ -165,12 +174,14 @@ for one of your verticals?
 ## Example 5: Shopify Automation
 
 **Job:**
+
 ```
 Need help automating Shopify order processing, inventory sync, and customer
 notifications using n8n.
 ```
 
 **Winning Proposal:**
+
 ```
 Hey there 👋
 
@@ -196,27 +207,32 @@ First version ready within 3-4 days. When would you like to kick off?
 Pick one based on context:
 
 **Standard:**
+
 ```
 When would you like to kick off?
 ```
 
 **With availability:**
+
 ```
 Available to start Monday. When works to discuss?
 ```
 
 **Offering demo:**
+
 ```
 Want me to share my screen and walk through how I'd build this?
 ```
 
 **Inviting action:**
+
 ```
 If this sounds like a fit, invite me and share your requirements — I'll start
 with a quick scope review.
 ```
 
 **Reducing risk:**
+
 ```
 Let's start with just [Phase 1]. If that works well, we continue to the rest.
 ```
@@ -226,6 +242,7 @@ Let's start with just [Phase 1]. If that works well, we continue to the rest.
 ## Example 6: Complex Project with Methodology (Trust Signal)
 
 **Job:**
+
 ```
 Looking for a developer to build a production-ready automation system for our
 e-commerce business. Must be reliable, well-documented, and maintainable.
@@ -234,6 +251,7 @@ professional who can deliver quality work.
 ```
 
 **Winning Proposal (with methodology):**
+
 ```
 Hey there 👋
 
@@ -268,16 +286,16 @@ When would you like to discuss requirements?
 
 ## When to Add Methodology
 
-| Client Signal | Add Methodology? |
-|---------------|------------------|
-| "reliable", "production-ready" | Yes |
-| "maintainable", "documented" | Yes |
-| "previous freelancer failed" | Yes |
-| Budget $500+ | Yes |
-| Long-term/ongoing project | Yes |
-| Simple one-off task | No |
-| "fast and cheap" | No |
-| Quick fix under $100 | No |
+| Client Signal                  | Add Methodology? |
+| ------------------------------ | ---------------- |
+| "reliable", "production-ready" | Yes              |
+| "maintainable", "documented"   | Yes              |
+| "previous freelancer failed"   | Yes              |
+| Budget $500+                   | Yes              |
+| Long-term/ongoing project      | Yes              |
+| Simple one-off task            | No               |
+| "fast and cheap"               | No               |
+| Quick fix under $100           | No               |
 
 ---
 
@@ -300,6 +318,7 @@ that run with minimal human intervention.
 ```
 
 **With methodology:**
+
 ```
 I build reliable, tested automation. You get working code plus specs, tests,
 and documentation — not just "it seems to work."

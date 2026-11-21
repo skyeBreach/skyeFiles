@@ -1,9 +1,11 @@
 ### drawer
+
 Drawer is a grid layout that can show/hide a sidebar on the left or right side of the page
 
 [drawer docs](https://daisyui.com/components/drawer/)
 
 #### Class names
+
 - component: `drawer`
 - part: `drawer-toggle`, `drawer-content`, `drawer-side`, `drawer-overlay`
 - placement: `drawer-end`
@@ -11,6 +13,7 @@ Drawer is a grid layout that can show/hide a sidebar on the left or right side o
 - variant: `is-drawer-open:`, `is-drawer-close:`
 
 #### Syntax
+
 ```html
 <div class="drawer {MODIFIER}">
   <input id="my-drawer" type="checkbox" class="drawer-toggle" />
@@ -20,6 +23,7 @@ Drawer is a grid layout that can show/hide a sidebar on the left or right side o
 ```
 where {CONTENT} can be navbar, site content, footer, etc
 and {SIDEBAR} can be a menu like:
+
 ```html
 <ul class="menu p-4 w-80 min-h-full bg-base-100 text-base-content">
   <li><a>Item 1</a></li>
@@ -27,10 +31,12 @@ and {SIDEBAR} can be a menu like:
 </ul>
 ```
 To open/close the drawer, use a label that points to the `drawer-toggle` input:
+
 ```html
 <label for="my-drawer" class="btn drawer-button">Open/close drawer</label>
 ```
 Example: This sidebar is always visible on large screen, can be toggled on small screen:
+
 ```html
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-3" type="checkbox" class="drawer-toggle" />
@@ -52,6 +58,7 @@ Example: This sidebar is always visible on large screen, can be toggled on small
 ```
 
 Example: This sidebar is always visible. When it's close we only see iocns, when it's open we see icons and text
+
 ```html
 <div class="drawer lg:drawer-open">
   <input id="my-drawer-4" type="checkbox" class="drawer-toggle" />
@@ -90,6 +97,7 @@ Example: This sidebar is always visible. When it's close we only see iocns, when
 ```
 
 #### Rules
+
 - {MODIFIER} is optional and can have one of the modifier/placement class names
 - `id` is required for the `drawer-toggle` input. change `my-drawer` to a unique id according to your needs
 - `lg:drawer-open` can be used to make sidebar visible on larger screens

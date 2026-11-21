@@ -15,6 +15,7 @@ Clients spend only **10-15 seconds** scanning proposals initially. Structure for
 **Formula:** `[Greeting] + [Their specific problem/need]`
 
 **Examples:**
+
 ```
 Hey there 👋 I can help you automate that Google Sheets → AI → PDF workflow.
 ```
@@ -26,6 +27,7 @@ Hey! Your email categorization project sounds perfect — I recently built somet
 ```
 
 **DON'T:**
+
 - "Dear Hiring Manager" (instant delete)
 - "I hope this finds you well" (AI red flag)
 - "I am writing to express my interest" (robotic)
@@ -39,6 +41,7 @@ Hey! Your email categorization project sounds perfect — I recently built somet
 **Formula:** `[X similar projects] + [Quantified result]`
 
 **Examples:**
+
 ```
 I've built 15+ n8n automations for e-commerce clients, including order processing, inventory sync, and customer notifications. My last Shopify automation reduced manual work by 12 hours/week for the client.
 ```
@@ -57,6 +60,7 @@ Over the past year, I've processed and categorized 50,000+ emails using AI pipel
 **Format:** Bullet points for skimmability.
 
 **Example:**
+
 ```
 Here's my approach:
 - Connect Google Sheets with scheduled triggers
@@ -78,6 +82,7 @@ I'll also add error handling and logging so you can monitor the workflow.
 **Formula:** `[Past project name/type] + [Specific metric]`
 
 **Examples:**
+
 ```
 I recently built a similar workflow for a finance client — automated weekly reports from Sheets to PDF emails, running reliably for 6 months now.
 ```
@@ -94,6 +99,7 @@ My WhatsApp + n8n customer support system handles 200+ messages daily with 95% a
 **Formula:** `[Specific date] or [Specific duration]`
 
 **Examples:**
+
 ```
 I can have the first working version ready by Friday. Full delivery within 5 days.
 ```
@@ -110,6 +116,7 @@ Available to start Monday. Estimated completion: December 15th.
 **Purpose:** Clear pricing removes friction.
 
 **Examples:**
+
 ```
 Fixed rate: $XXX for the complete workflow.
 ```
@@ -126,6 +133,7 @@ Happy to discuss pricing based on scope — my typical rate for this type of pro
 **Purpose:** One clear next step. Create urgency without being pushy.
 
 **Examples:**
+
 ```
 When would you like to kick off? I'm available to discuss tomorrow.
 ```
@@ -168,11 +176,11 @@ When would you like to kick off?
 
 ## Length Guidelines
 
-| Proposal Length | Effectiveness |
-|-----------------|---------------|
-| Under 100 words | Too brief, may seem low-effort |
-| **150-250 words** | **Optimal** |
-| 250-400 words | Acceptable if project is complex |
-| 400+ words | Too long, gets skimmed |
+| Proposal Length   | Effectiveness                    |
+| ----------------- | -------------------------------- |
+| Under 100 words   | Too brief, may seem low-effort   |
+| **150-250 words** | **Optimal**                      |
+| 250-400 words     | Acceptable if project is complex |
+| 400+ words        | Too long, gets skimmed           |
 
 Rule: **If you can say it in fewer words, do it.**

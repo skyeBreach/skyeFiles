@@ -1,4 +1,5 @@
 ---
+
 name: hono-typescript
 description: Guidelines for building edge-first, high-performance APIs with Hono and TypeScript for Cloudflare Workers, Deno, Bun, and Node.js
 ---
@@ -70,17 +71,17 @@ src/
 ### App Initialization
 
 ```typescript
-import { Hono } from 'hono';
+import { Hono } from "hono";
 
 // Type your environment bindings
 type Bindings = {
-  DB: D1Database;
-  KV: KVNamespace;
-  JWT_SECRET: string;
+    DB: D1Database;
+    KV: KVNamespace;
+    JWT_SECRET: string;
 };
 
 type Variables = {
-  user: User;
+    user: User;
 };
 
 const app = new Hono<{ Bindings: Bindings; Variables: Variables }>();
@@ -95,13 +96,13 @@ const app = new Hono<{ Bindings: Bindings; Variables: Variables }>();
 ```typescript
 const users = new Hono<{ Bindings: Bindings }>();
 
-users.get('/', listUsers);
-users.get('/:id', getUser);
-users.post('/', zValidator('json', createUserSchema), createUser);
-users.put('/:id', zValidator('json', updateUserSchema), updateUser);
-users.delete('/:id', deleteUser);
+users.get("/", listUsers);
+users.get("/:id", getUser);
+users.post("/", zValidator("json", createUserSchema), createUser);
+users.put("/:id", zValidator("json", updateUserSchema), updateUser);
+users.delete("/:id", deleteUser);
 
-app.route('/api/users', users);
+app.route("/api/users", users);
 ```
 
 ### Middleware
@@ -111,19 +112,19 @@ app.route('/api/users', users);
 - Chain middleware for composability
 
 ```typescript
-import { cors } from 'hono/cors';
-import { logger } from 'hono/logger';
-import { jwt } from 'hono/jwt';
+import { cors } from "hono/cors";
+import { logger } from "hono/logger";
+import { jwt } from "hono/jwt";
 
-app.use('*', logger());
-app.use('/api/*', cors());
-app.use('/api/*', jwt({ secret: 'your-secret' }));
+app.use("*", logger());
+app.use("/api/*", cors());
+app.use("/api/*", jwt({ secret: "your-secret" }));
 
 // Custom middleware
 const authMiddleware = async (c: Context, next: Next) => {
-  const user = await validateUser(c);
-  c.set('user', user);
-  await next();
+    const user = await validateUser(c);
+    c.set("user", user);
+    await next();
 };
 ```
 
@@ -134,20 +135,20 @@ const authMiddleware = async (c: Context, next: Next) => {
 - Infer types from Zod schemas
 
 ```typescript
-import { z } from 'zod';
-import { zValidator } from '@hono/zod-validator';
+import { z } from "zod";
+import { zValidator } from "@hono/zod-validator";
 
 const createUserSchema = z.object({
-  name: z.string().min(1),
-  email: z.string().email(),
-  role: z.enum(['user', 'admin']).default('user'),
+    name: z.string().min(1),
+    email: z.string().email(),
+    role: z.enum(["user", "admin"]).default("user"),
 });
 
 type CreateUserInput = z.infer<typeof createUserSchema>;
 
-app.post('/users', zValidator('json', createUserSchema), async (c) => {
-  const data = c.req.valid('json');
-  // data is typed as CreateUserInput
+app.post("/users", zValidator("json", createUserSchema), async (c) => {
+    const data = c.req.valid("json");
+    // data is typed as CreateUserInput
 });
 ```
 
@@ -158,19 +159,17 @@ app.post('/users', zValidator('json', createUserSchema), async (c) => {
 - Access environment bindings through context
 
 ```typescript
-app.get('/users/:id', async (c) => {
-  const id = c.req.param('id');
-  const db = c.env.DB;
+app.get("/users/:id", async (c) => {
+    const id = c.req.param("id");
+    const db = c.env.DB;
 
-  const user = await db.prepare('SELECT * FROM users WHERE id = ?')
-    .bind(id)
-    .first();
+    const user = await db.prepare("SELECT * FROM users WHERE id = ?").bind(id).first();
 
-  if (!user) {
-    return c.json({ error: 'User not found' }, 404);
-  }
+    if (!user) {
+        return c.json({ error: "User not found" }, 404);
+    }
 
-  return c.json(user);
+    return c.json(user);
 });
 ```
 
@@ -181,20 +180,20 @@ app.get('/users/:id', async (c) => {
 - Return consistent error responses
 
 ```typescript
-import { HTTPException } from 'hono/http-exception';
+import { HTTPException } from "hono/http-exception";
 
 // Throwing errors
 if (!user) {
-  throw new HTTPException(404, { message: 'User not found' });
+    throw new HTTPException(404, { message: "User not found" });
 }
 
 // Global error handler
 app.onError((err, c) => {
-  if (err instanceof HTTPException) {
-    return c.json({ error: err.message }, err.status);
-  }
-  console.error(err);
-  return c.json({ error: 'Internal Server Error' }, 500);
+    if (err instanceof HTTPException) {
+        return c.json({ error: err.message }, err.status);
+    }
+    console.error(err);
+    return c.json({ error: "Internal Server Error" }, 500);
 });
 ```
 
@@ -207,14 +206,14 @@ app.onError((err, c) => {
 
 ```typescript
 // D1 Database
-const result = await c.env.DB.prepare('SELECT * FROM users').all();
+const result = await c.env.DB.prepare("SELECT * FROM users").all();
 
 // KV Storage
-await c.env.KV.put('key', 'value');
-const value = await c.env.KV.get('key');
+await c.env.KV.put("key", "value");
+const value = await c.env.KV.get("key");
 
 // R2 Storage
-await c.env.BUCKET.put('file.txt', content);
+await c.env.BUCKET.put("file.txt", content);
 ```
 
 ### Testing
@@ -224,18 +223,18 @@ await c.env.BUCKET.put('file.txt', content);
 - Test handlers and middleware separately
 
 ```typescript
-import { testClient } from 'hono/testing';
-import { describe, it, expect } from 'vitest';
+import { testClient } from "hono/testing";
+import { describe, it, expect } from "vitest";
 
-describe('User API', () => {
-  const client = testClient(app);
+describe("User API", () => {
+    const client = testClient(app);
 
-  it('should list users', async () => {
-    const res = await client.api.users.$get();
-    expect(res.status).toBe(200);
-    const data = await res.json();
-    expect(Array.isArray(data)).toBe(true);
-  });
+    it("should list users", async () => {
+        const res = await client.api.users.$get();
+        expect(res.status).toBe(200);
+        const data = await res.json();
+        expect(Array.isArray(data)).toBe(true);
+    });
 });
 ```
 

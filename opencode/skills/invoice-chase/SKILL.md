@@ -1,13 +1,14 @@
 ---
+
 name: invoice-chase
 version: 0.2.0
 description: >
-  Drafts overdue-invoice reminder emails from QuickBooks and PayPal data,
-  matched to each customer's payment history and tone (gentle for good customers,
-  firm for repeat late payers). Sends via PayPal with owner approval;
-  non-PayPal invoices queue as mail drafts. Use when the user asks
-  "who owes me money," mentions overdue invoices, or wants to follow up
-  on unpaid invoices.
+Drafts overdue-invoice reminder emails from QuickBooks and PayPal data,
+matched to each customer's payment history and tone (gentle for good customers,
+firm for repeat late payers). Sends via PayPal with owner approval;
+non-PayPal invoices queue as mail drafts. Use when the user asks
+"who owes me money," mentions overdue invoices, or wants to follow up
+on unpaid invoices.
 ---
 
 # Invoice Chase
@@ -54,10 +55,10 @@ Do not ask again on subsequent runs.
 
 5. **Present drafts to owner.** Show a summary table first:
 
-   | Customer | Amount Due | Days Late | Tone | Send via |
-   |---|---|---|---|---|
-   | Acme Corp | $1,200 | 18 days | Gentle | PayPal |
-   | Smith LLC | $450 | 47 days | Firm | Gmail draft |
+   | Customer  | Amount Due | Days Late | Tone   | Send via    |
+   | --------- | ---------- | --------- | ------ | ----------- |
+   | Acme Corp | $1,200     | 18 days   | Gentle | PayPal      |
+   | Smith LLC | $450       | 47 days   | Firm   | Gmail draft |
 
    Then show each draft email in full. Wait for owner to say "send these" or approve individually.
 

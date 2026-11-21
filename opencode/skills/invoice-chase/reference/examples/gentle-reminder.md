@@ -21,6 +21,7 @@ Thanks so much, and let me know if anything looks off on the invoice.
 ---
 
 **Why this works:**
+
 - Opens with assumption of oversight, not accusation
 - Gives an easy out ("if it's already on its way")
 - Single call to action — one payment link
