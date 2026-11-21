@@ -47,10 +47,6 @@ bun.lock
 # Backup Files
 **/*.bak
 
-# Dotter
-.dotter/cache.toml
-.dotter/cache/
-
 # Rumdl
 .rumdl_cache/
 

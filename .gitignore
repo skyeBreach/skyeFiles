@@ -62,10 +62,6 @@ Thumbs.db
 .env.local
 .env.*.local
 
-# Dotter
-.dotter/local.toml
-!.dotter/local.toml.example
-
 # Mise
 mise.local.toml
 
@@ -92,10 +88,6 @@ node_modules/
 
 # Backup Files
 **/*.bak
-
-# Dotter
-.dotter/cache.toml
-.dotter/cache/
 
 # ==================================================================================================================== #
 # Build & Compilation Artefacts
