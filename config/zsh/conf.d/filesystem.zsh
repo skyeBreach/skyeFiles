@@ -14,7 +14,9 @@ alias cd='z'
 # ==================================================================================================================== #
 # lsDeluxe
 
-alias lsd="lsd -F --group-directories-first --sort git"
+if [[ "$TERM_PROGRAM" == "WezTerm" ]]; then
+    alias lsd="lsd --hyperlink auto"
+fi
 
 alias ls="lsd"
 alias ld="lsd -d"
