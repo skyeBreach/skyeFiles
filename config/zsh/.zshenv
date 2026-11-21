@@ -2,37 +2,18 @@
 # Zsh Environment
 #
 # ==================================================================================================================== #
-# Path Definition
+# Environment
 
-# Include the users private bin
-PATH=$HOME/bin:$PATH
-PATH=$HOME/.local/bin:$PATH
+# Shared with the X session and systemd, see ~/.config/environment.d/
+emulate sh -c '. "$HOME/.profile"'
 
-#Export once modification is complete1
-PATH=$PATH
-
-# ==================================================================================================================== #
-# XDG Base Directory
-
-XDG_CONFIG_HOME=$HOME/.config
-XDG_CACHE_HOME=$HOME/.cache
-XDG_DATA_HOME=$HOME/.local/share
-XDG_STATE_HOME=$HOME/.local/state
-
-
-# ==================================================================================================================== #
-# Default Applications
-
-TERMINAL=wezterm
-EDITOR=nvim
-PAGER=less
-THEME=catppuccin-macchiato
+typeset -U path
 
 # ==================================================================================================================== #
 # Function Paths
 
 fpath=(
-    /home/skye/.local/share/uv/tools/argcomplete/lib/python3.14/site-packages/argcomplete/bash_completion.d "${fpath[@]}"
+    "$XDG_DATA_HOME/uv/tools/argcomplete/lib/python3.14/site-packages/argcomplete/bash_completion.d" "${fpath[@]}"
 )
 
 # ==================================================================================================================== #

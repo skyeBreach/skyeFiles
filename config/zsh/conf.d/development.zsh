@@ -6,20 +6,12 @@
 # Configuration
 
 # Bun
-export BUN_INSTALL="$XDG_DATA_HOME/bun"
-export BUN_INSTALL_CACHE_DIR="$XDG_DATA_HOME/bun/install"
+export BUN_INSTALL_CACHE_DIR="$BUN_INSTALL/install"
 
 # Lua Rocks
 export LUAROCKS_CONFIG="$XDG_CONFIG_HOME/luarocks/config-5.1.lua"
 
-# Rust
-export CARGO_HOME="$XDG_DATA_HOME/cargo"
-export RUSTUP_HOME="$XDG_DATA_HOME/rustup"
-
 # Node.js
-export NPM_HOME="$XDG_CONFIG_HOME/npm"
-export NPM_CONFIG_USERCONFIG="$NPM_HOME/npmrc"
-
 export FNM_PATH="$XDG_DATA_HOME/fnm"
 
 PNPM_HOME="$XDG_DATA_HOME/pnpm"
