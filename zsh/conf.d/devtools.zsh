@@ -9,17 +9,17 @@ autoload -Uz compinit && compinit
 autoload -U +X bashcompinit && bashcompinit
 
 # ==================================================================================================================== #
-# Resend CLI
-
-export PATH="$HOME/.resend/bin:$PATH"
-eval "$(resend completion zsh)"
-
-# ==================================================================================================================== #
 # Mise
 
 eval "$(mise activate zsh --shims)" # should be first
 eval "$(mise activate zsh)"
 eval "$(mise completion zsh)"
+
+# ==================================================================================================================== #
+# Resend CLI
+
+export PATH="$HOME/.resend/bin:$PATH"
+eval "$(resend completion zsh)"
 
 # ==================================================================================================================== #
 # Terraform
