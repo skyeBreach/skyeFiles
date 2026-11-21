@@ -1,0 +1,34 @@
+# ==================================================================================================================== #
+# athame - user config
+#
+# See:
+#   - ~/developer/projects/athame/README.md
+# ==================================================================================================================== #
+# Sources
+
+[sources.code]
+path = "~/developer/templates"
+label = "Code"
+icon = ""
+order = 1
+
+[sources.biz]
+path = "~/developer/breached-software/templates"
+label = "Breached Software"
+icon = ""
+order = 2
+values = { company = "Breached Software" }
+
+[sources.gen]
+path = "~/templates"
+label = "General"
+icon = ""
+order = 3
+
+# ==================================================================================================================== #
+# Default answers
+
+[values]
+author = "Skye Benson"
+
+# ==================================================================================================================== #
