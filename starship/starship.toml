@@ -1,24 +1,386 @@
-# Get editor completions based on the config schema
-"$schema" = 'https://starship.rs/config-schema.json'
+# ==================================================================================================================== #
+# Starship - User Config
+#
+#
+# ==================================================================================================================== #
+# Config
 
-# Inserts a blank line between shell prompts
-add_newline = true
+# File Schema
+'$schema' = 'https://starship.rs/config-schema.json'
 
-# Replace the '❯' symbol in the prompt with '➜'
-[character] # The name of the module we are configuring is 'character'
-success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
+#
+scan_timeout = 30
+command_timeout = 1000
 
-# Disable the package module, hiding it from the prompt completely
-[package]
-disabled = true
+# Theme
+palette = 'catppuccin_macchiato'
 
-[profiles]
-transient = """
+# ==================================================================================================================== #
+# Layout
+
+add_newline = false
+
+# Left Prompt (First Line)
+format = """
+$line_break\
+$os$username$hostname\
+\
+$directory\
+$git_branch\
+$git_commit\
+$git_state\
+$git_status\
+$git_metrics\
+$fill\
+\
+$rust\
+$nodejs\
+$bun\
+$python\
+$golang\
+$dotnet\
+$java\
+$lua\
+$c\
+$cpp\
+$cmake\
+${custom.bazel}\
+$terraform\
+$docker_context\
+$mise\
+$line_break\
+\
+$jobs\
 $character\
 """
 
-rtransient = """
+# Right Prompt
+right_format = """
 $status\
 $cmd_duration\
-$time\
+$time
 """
+
+[profiles]
+# Left Transient Prompt
+transient = '$character'
+
+# Right Transient Prompt
+rtransient = """
+$fill\
+$status$cmd_duration$time\
+"""
+
+# ======================================================================================= #
+# Palettes
+
+# Catppuccin Macchiato
+[palettes.catppuccin_macchiato]
+rosewater = '#f4dbd6'
+flamingo = '#f0c6c6'
+pink = '#f5bde6'
+mauve = '#c6a0f6'
+red = '#ed8796'
+maroon = '#ee99a0'
+peach = '#f5a97f'
+yellow = '#eed49f'
+green = '#a6da95'
+teal = '#8bd5ca'
+sky = '#91d7e3'
+sapphire = '#7dc4e4'
+blue = '#8aadf4'
+lavender = '#b7bdf8'
+text = '#cad3f5'
+subtext1 = '#b8c0e0'
+subtext0 = '#a5adcb'
+overlay2 = '#939ab7'
+overlay1 = '#8087a2'
+overlay0 = '#6e738d'
+surface2 = '#5b6078'
+surface1 = '#494d64'
+surface0 = '#363a4f'
+base = '#24273a'
+mantle = '#1e2030'
+crust = '#181926'
+
+# ======================================================================================= #
+# Typography
+
+[fill]
+symbol = ' '
+
+[character]
+success_symbol = '[󰅂](bold green)'
+error_symbol = '[󰅂](bold red)'
+vimcmd_symbol = '[󰅁](bold mauve)'
+vimcmd_replace_one_symbol = '[󰅁](bold peach)'
+vimcmd_replace_symbol = '[󰅁](bold peach)'
+vimcmd_visual_symbol = '[󰅁](bold yellow)'
+
+# ==================================================================================================================== #
+# System
+
+[os]
+disabled = false
+format = "[ $symbol\u2009]($style)"
+style = 'bold bg:mauve fg:crust'
+
+[os.symbols]
+Arch = '󰣇'
+Linux = '󰌽 '
+
+[username]
+format = '[$user ]($style)'
+
+style_user = 'bold bg:mauve fg:crust'
+style_root = 'bold bg:red fg:crust'
+
+show_always = true
+
+[hostname]
+format = '[[](bold bg:blue fg:mauve) $ssh_symbol󰒍 $hostname [](bold fg:blue)]($style)'
+style = 'bold bg:blue fg:crust'
+
+ssh_only = false
+ssh_symbol = '󰒍 '
+
+[jobs]
+symbol = ' '
+number_threshold = 1
+format = '[$symbol$number]($style) '
+style = 'bold teal'
+
+# ==================================================================================================================== #
+# Directory (plain)
+
+[directory]
+format = ' [$read_only]($read_only_style)[$path]($style) '
+style = 'bold peach'
+
+home_symbol = '~'
+
+read_only = ' '
+read_only_style = 'bold blink red'
+
+truncation_length = 4
+truncate_to_repo = true
+truncation_symbol = ''
+
+substitutions = [
+    # Path Substitution
+    { from = '^~/developer/breached-software(?<path>.*)', to = '<icon-breached>$1', regex = true },
+    { from = '^~/developer(?<path>.*)', to = '<icon-developer>$1', regex = true },
+    { from = '^~/desktop(?<path>.*)', to = '<icon-desktop>$1', regex = true },
+    { from = '^~/documents(?<path>.*)', to = '<icon-documents>$1', regex = true },
+    { from = '^~/downloads(?<path>.*)', to = '<icon-downloads>$1', regex = true },
+    { from = '^~/music(?<path>.*)', to = '<icon-music>$1', regex = true },
+    { from = '^~/pictures(?<path>.*)', to = '<icon-pictures>$1', regex = true },
+    { from = '^~/public(?<path>.*)', to = '<icon-public>$1', regex = true },
+    { from = '^~/templates(?<path>.*)', to = '<icon-templates>$1', regex = true },
+    { from = '^~/tools(?<path>.*)', to = '<icon-tools>$1', regex = true },
+    { from = '^~/videos(?<path>.*)', to = '<icon-video>$1', regex = true },
+    { from = '^/root(?<path>.*)', to = '<icon-root>$1', regex = true },
+    { from = '^~(?<path>.*)', to = '<icon-home>$1', regex = true },
+    { from = '^/home(?<path>.*)', to = '<icon-user>$1', regex = true },
+
+    # Formatting
+    { from = '(.*)(?<name><icon-.*>)(.*)', to = '$1$2 $3', regex = true },
+    { from = '^(<icon-.*>) /{0,1}(.*)', to = '$1 /$2', regex = true },
+
+    # Icon Substitution
+    { from = '<icon-breached>', to = '󰃖' },
+    { from = '<icon-developer>', to = '' },
+    { from = '<icon-desktop>', to = '󰇄' },
+    { from = '<icon-documents>', to = '󰈔' },
+    { from = '<icon-downloads>', to = '󰇚' },
+    { from = '<icon-music>', to = '' },
+    { from = '<icon-pictures>', to = '󰋩' },
+    { from = '<icon-public>', to = '' },
+    { from = '<icon-templates>', to = '󰆘' },
+    { from = '<icon-tools>', to = '󱁤' },
+    { from = '<icon-video>', to = '󰕧' },
+    { from = '<icon-root>', to = '󰚊' },
+    { from = '<icon-home>', to = '' },
+    { from = '<icon-user>', to = '' },
+    { from = '/', to = '' },
+]
+
+# ==================================================================================================================== #
+# Git
+
+[git_branch]
+format = '[$symbol$branch(:$remote_branch)]($style) '
+style = 'bold pink'
+
+symbol = ' '
+
+truncation_length = 32
+truncation_symbol = '󰇘'
+
+[git_commit]
+format = '[\[󰜘 $hash$tag\]]($style) '
+style = 'bold yellow'
+
+tag_symbol = ' '
+tag_disabled = false
+only_detached = true
+
+[git_state]
+format = '[$state( $progress_current/$progress_total)]($style) '
+style = 'bold peach'
+
+merge = '\[ MERGING\]'
+rebase = '\[ REBASING\]'
+cherry_pick = '\[ PICKING\]'
+revert = '\[ REVERTING\]'
+bisect = '\[ BISECTING\]'
+
+am = '\[󰇮 AM\]'
+am_or_rebase = '\[󰇮 AM/REBASE\]'
+
+[git_status]
+format = '[$all_status]($style)[$ahead_behind](bold sapphire)'
+style = 'bold peach'
+
+conflicted = '[\[󰀦 ${count}](bold red)\]'
+staged = '[\[󰐕 ${count}](bold green)\]'
+modified = '[\[󰏫 ${count}](bold yellow)\]'
+deleted = '[\[󰆴 ${count}](bold mauve)\]'
+untracked = '[\[󰋖 ${count}](overlay1)\]'
+
+ahead = '\[󰁝 ${count}\]'
+behind = '\[󰁅 ${count}\]'
+diverged = '\[󰁝 ${ahead_count} 󰁅 ${behind_count}\]'
+
+# ==================================================================================================================== #
+# Languages
+
+[rust]
+symbol = '󱘗 '
+format = '[\[](overlay1)[$symbol($version)]($style)[\]](overlay1)'
+style = 'bold peach'
+
+[nodejs]
+symbol = '󰎙 '
+format = '[\[](overlay1)[$symbol($version)]($style)[\]](overlay1)'
+style = 'bold green'
+
+[bun]
+symbol = '󰳮 '
+format = '[\[](overlay1)[$symbol($version)]($style)[\]](overlay1)'
+style = 'bold rosewater'
+
+[python]
+symbol = '󰌠 '
+format = '[\[](overlay1)[$symbol$pyenv_prefix($version)( \\($virtualenv\\))]($style)[\]](overlay1)'
+style = 'bold yellow'
+python_binary = ['python3', 'python']
+
+[golang]
+symbol = '󰟓 '
+format = '[\[](overlay1)[$symbol($version)]($style)[\]](overlay1)'
+style = 'bold sapphire'
+
+[dotnet]
+symbol = ' '
+format = '[\[](overlay1)[$symbol($version)( 󰓾 $tfm)]($style)[\]](overlay1)'
+style = 'bold mauve'
+
+[lua]
+symbol = ' '
+format = '[\[](overlay1)[$symbol($version)]($style)[\]](overlay1)'
+style = 'bold blue'
+
+[c]
+symbol = ' '
+format = '[\[](overlay1)[$symbol($version(-$name))]($style)[\]](overlay1)'
+style = 'bold blue'
+
+[cpp]
+disabled = false
+symbol = ' '
+format = '[\[](overlay1)[$symbol($version(-$name))]($style)[\]](overlay1)'
+style = 'bold blue'
+
+
+# ==================================================================================================================== #
+# Build Systems
+
+[cmake]
+symbol = '󰋙 '
+format = '[\[](overlay1)[$symbol($version)]($style)[\]](overlay1)'
+style = 'bold sky'
+
+[custom.bazel]
+detect_files = ['MODULE.bazel', 'WORKSPACE', 'WORKSPACE.bazel']
+symbol = '󰆧'
+format = '[\[](overlay1)[$symbol]($style)[\]](overlay1)'
+style = 'bold green'
+
+# ==================================================================================================================== #
+# Infrastructure
+
+# Covers both terraform and tofu (.tf / .tofu)
+[terraform]
+symbol = '󱁢 '
+format = '[\[](overlay1)[$symbol$workspace]($style)[\]](overlay1)'
+style = 'bold lavender'
+
+[docker_context]
+symbol = '󰡨 '
+only_with_files = true
+format = '[\[](overlay1)[$symbol$context]($style)[\]](overlay1)'
+style = 'bold blue'
+
+# ==================================================================================================================== #
+# Environment Tools
+
+[mise]
+disabled = false
+symbol = '󱁤'
+format = '[\[](overlay1)[$symbol$health]($style)[\]](overlay1)'
+style = 'bold mauve'
+healthy_symbol = ''
+unhealthy_symbol = ' 󰀦'
+
+# ==================================================================================================================== #
+# Feedback
+
+[cmd_duration]
+min_time = 2_000
+format = ' [󰔟 $duration]($style)'
+style = 'bold yellow'
+show_notifications = true         # dunst popup for long builds
+min_time_to_notify = 45_000
+
+[status]
+disabled = false
+pipestatus = true
+map_symbol = true
+symbol = '󰀦 '
+not_executable_symbol = '󰜺 '
+not_found_symbol = '󰍉 '
+sigint_symbol = '󰓛 '
+signal_symbol = '󱐋 '
+format = ' [$symbol$common_meaning$signal_name$maybe_int]($style)'
+pipestatus_format = ' $pipestatus 󰁔 [$symbol$common_meaning$signal_name$maybe_int]($style)'
+pipestatus_segment_format = '[$status]($style)'
+style = 'bold red'
+
+[time]
+disabled = false
+time_format = '%H:%M'
+format = ' [󰅐 $time]($style)'
+style = 'bold subtext0'
+
+# ==================================================================================================================== #
+# Hidden
+
+[package]
+disabled = true
+
+# ==================================================================================================================== #
+# Profiles - used only via `starship prompt --profile transient`
+
+
+# ==================================================================================================================== #
