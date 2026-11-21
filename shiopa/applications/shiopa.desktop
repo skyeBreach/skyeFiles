@@ -1,0 +1,13 @@
+[Desktop Entry]
+Type=Application
+Name=Shiopa
+GenericName=Movies and Shows
+Comment=Watch movies and shows
+Categories=AudioVideo;Video;
+Exec=/home/skye/.local/bin/shiopa %u
+TryExec=/home/skye/.local/bin/shiopa
+Icon=shiopa
+StartupWMClass=shiopa
+MimeType=x-scheme-handler/shiopa;
+Terminal=false
+StartupNotify=true

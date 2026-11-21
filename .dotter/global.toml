@@ -75,10 +75,16 @@
 "git" = "~/.config/git"
 
 # ==================================================================================================================== #
+# Project Templates
+
+[athame.files]
+"athame" = "~/.config/athame"
+
+# ==================================================================================================================== #
 # Package Management
 
 [mise.files]
-"mise/config.toml" = "~/.config/mise/config.toml"
+"mise/config" = "~/.config/mise"
 
 
 # ==================================================================================================================== #
@@ -123,6 +129,11 @@
 
 [glances.files]
 "glances" = { target = "~/.config/glances", type = "symbolic" }
+
+[shiopa.files]
+"shiopa/config" = { target = "~/.config/shiopa", type = "symbolic" }
+"shiopa/applications/shiopa.desktop" = { target = "~/.local/share/applications/shiopa.desktop", type = "symbolic" }
+"shiopa/bin/shiopa" = { target = "~/.local/bin/shiopa", type = "symbolic" }
 
 # ==================================================================================================================== #
 # Default Variables

@@ -1,0 +1,38 @@
+#!/usr/bin/env zsh
+# ==================================================================================================================== #
+# Shiopa - Launcher
+#
+#
+# ==================================================================================================================== #
+# Configuration
+
+set -euo pipefail
+
+app="${XDG_BIN_HOME:-$HOME/.local/bin}/Shiopa.AppImage"
+icon="${XDG_DATA_HOME:-$HOME/.local/share}/icons/hicolor/512x512/apps/shiopa.png"
+links="https://help.shiopa.com/v/links.json"
+
+# ==================================================================================================================== #
+# Install
+
+if [[ ! -x "$app" ]]; then
+    url="$(curl -fsSL "$links" | jq -r .downloads.linuxAppImage)"
+
+    mkdir -p "${app:h}"
+    curl -fL --progress-bar -o "$app.part" "$url"
+    chmod +x "$app.part"
+    mv "$app.part" "$app"
+
+    tmp="$(mktemp -d)"
+    (cd "$tmp" && "$app" --appimage-extract shiopa.png > /dev/null)
+    mkdir -p "${icon:h}"
+    cp "$tmp/squashfs-root/shiopa.png" "$icon"
+    rm -rf "$tmp"
+fi
+
+# ==================================================================================================================== #
+# Launch
+
+WEBKIT_DISABLE_DMABUF_RENDERER=1 exec "$app" "$@"
+
+# ==================================================================================================================== #
