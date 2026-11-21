@@ -7,8 +7,8 @@
 # Identity
 
 [user]
-    name = {{git_user_name}}
-    email = {{git_user_email}}
+    name = {{ vars.git_user_name }}
+    email = {{ vars.git_user_email }}
     useConfigOnly = true
 
 # ==================================================================================================================== #
