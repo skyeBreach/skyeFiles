@@ -5,6 +5,8 @@
 # ==================================================================================================================== #
 # Starship
 
+export STARSHIP_CACHE=~/.cache/starship
+
 eval "$(starship init zsh)"
 eval "$(starship completions zsh)"
 
