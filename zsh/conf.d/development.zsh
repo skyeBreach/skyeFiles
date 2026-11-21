@@ -28,7 +28,7 @@ PATH="$PNPM_HOME:$PATH"
 # ==================================================================================================================== #
 # Bun
 
-# Environment 
+# Environment
 PATH="$BUN_INSTALL/bin:$PATH"
 
 # Completions

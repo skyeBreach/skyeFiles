@@ -19,9 +19,8 @@ XDG_CACHE_HOME=$HOME/.cache
 XDG_DATA_HOME=$HOME/.local/share
 XDG_STATE_HOME=$HOME/.local/state
 
-# 
+
 # ==================================================================================================================== #
- #
 # Default Applications
 
 TERMINAL=wezterm
@@ -32,7 +31,7 @@ THEME=catppuccin-macchiato
 # ==================================================================================================================== #
 # Function Paths
 
-fpath=( 
+fpath=(
     /home/skye/.local/share/uv/tools/argcomplete/lib/python3.14/site-packages/argcomplete/bash_completion.d "${fpath[@]}"
 )
 
