@@ -4,7 +4,6 @@
 #
 # Opens one rofi panel by name.
 # Usage: panel launcher [apps|run|files|windows|ssh] [filter]
-#        panel pinned
 #        panel power
 # ==================================================================================================================== #
 # Configuration
@@ -12,11 +11,11 @@
 set -euo pipefail
 
 rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
-panel="${1:-pinned}"
+panel="${1:-launcher}"
 
 # Friendly tab names -> rofi mode names
 typeset -A tabs=(
-    apps    drun
+    apps    combi
     run     run
     files   filebrowser
     windows window
@@ -28,21 +27,27 @@ typeset -A tabs=(
 
 case "$panel" in
     launcher)
-        tab="${tabs[${2:-apps}]:-drun}"
-        args=(-show "$tab" -theme "$rofi_dir/panels/launcher.rasi")
+        tab="${tabs[${2:-apps}]:-combi}"
+        args=(
+            -show "$tab"
+            -modes "combi,run,filebrowser,window,ssh"
+            -combi-modes "pinned:$rofi_dir/scripts/pinned,drun"
+            -combi-hide-mode-prefix
+            -theme "$rofi_dir/panels/launcher.rasi"
+        )
         if [[ -n "${3:-}" ]]; then
             args+=(-filter "$3")
+        elif [[ "$tab" == combi ]]; then
+            # Row 0 is the unselectable "PINNED" header; start on the first pinned app instead.
+            args+=(-selected-row 1)
         fi
         exec rofi "${args[@]}"
-        ;;
-    pinned)
-        exec "$rofi_dir/scripts/pinned"
         ;;
     power)
         exec "$rofi_dir/scripts/power-menu"
         ;;
     *)
-        print -u2 "panel: unknown panel '$panel' (launcher, pinned, power)"
+        print -u2 "panel: unknown panel '$panel' (launcher, power)"
         exit 1
         ;;
 esac

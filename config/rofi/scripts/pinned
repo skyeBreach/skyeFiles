@@ -2,18 +2,17 @@
 # ==================================================================================================================== #
 # Rofi - Pinned Apps
 #
-# Big-icon grid of the apps in pinned.conf. Typing filters the grid. Enter launches the highlighted app.
-# Enter with no match opens the full launcher with whatever you typed already filled in.
+# Script mode used by the launcher's Apps tab (combi), ahead of drun. With no selection it prints the pinned section:
+# a "Pinned" header, the apps from pinned.conf (flagged active, so they use the accent colour), then an "All apps"
+# header. Headers are unselectable and vanish once you type. When rofi calls back with a choice, it launches it.
 #
 # See:
-#   - https://github.com/davatorium/rofi/blob/next/doc/rofi-dmenu.5.markdown
+#   - https://github.com/davatorium/rofi/blob/next/doc/rofi-script.5.markdown
 # ==================================================================================================================== #
 # Configuration
 
-rofi_dir="${XDG_CONFIG_HOME:-$HOME/.config}/rofi"
-pinned_file="$rofi_dir/pinned.conf"
+pinned_file="${XDG_CONFIG_HOME:-$HOME/.config}/rofi/pinned.conf"
 data_dirs=("${XDG_DATA_HOME:-$HOME/.local/share}" ${(s.:.)${XDG_DATA_DIRS:-/usr/local/share:/usr/share}})
-max_columns=6
 
 # ==================================================================================================================== #
 # Helpers
@@ -38,64 +37,40 @@ desktop_value() {
     ' "$1"
 }
 
-# Hand over to the full launcher, keeping whatever was typed.
-search_all() {
-    exec "$rofi_dir/scripts/panel" launcher apps "$1"
+# Print a small, dim section header that cannot be selected. Its text never matches a search, so it disappears
+# as soon as you start typing.
+header_row() {
+    local markup="<span size='small' foreground='#6e738d'>$1</span>"
+    print -rn -- $'\u200b'"$1"$'\0'"nonselectable"$'\x1f'"true"$'\x1f'"display"$'\x1f'"$markup"$'\n'
 }
 
 # ==================================================================================================================== #
-# Collect
+# Launch
 
-names=()
-icons=()
-desktop_files=()
-
-if [[ -r "$pinned_file" ]]; then
-    for id in ${(f)"$(grep -vE '^[[:space:]]*(#|$)' "$pinned_file")"}; do
-        desktop_file="$(desktop_path "$id")" || continue
-        names+=("$(desktop_value "$desktop_file" Name)")
-        icons+=("$(desktop_value "$desktop_file" Icon)")
-        desktop_files+=("$desktop_file")
-    done
-fi
-
-if (( ${#names} == 0 )); then
-    search_all ""
-fi
-
-columns=$(( ${#names} < max_columns ? ${#names} : max_columns ))
-rows=$(( (${#names} + columns - 1) / columns ))
-
-# ==================================================================================================================== #
-# Show
-
-# -format "i|f" prints the chosen row's index, then the typed filter. Index is -1 when nothing matched.
-result="$(
-    for index in {1..${#names}}; do
-        print -rn -- "${names[$index]}"$'\0'"icon"$'\x1f'"${icons[$index]}"$'\n'
-    done | rofi -dmenu -i \
-        -p "Pinned" \
-        -mesg "Not pinned? Type its name and press Enter" \
-        -format "i|f" \
-        -theme "$rofi_dir/panels/pinned.rasi" \
-        -theme-str "listview { columns: $columns; lines: $rows; }"
-)"
-rofi_exit=$?
-
-chosen="${result%%|*}"
-typed="${result#*|}"
-
-# ==================================================================================================================== #
-# Act
-
-if (( rofi_exit != 0 )); then
+# ROFI_RETV=1 means rofi is calling back with the chosen row. ROFI_INFO holds its desktop file path.
+if [[ "${ROFI_RETV:-0}" == 1 && -n "${ROFI_INFO:-}" ]]; then
+    setsid -f dex "$ROFI_INFO" > /dev/null 2>&1
     exit 0
 fi
 
-if [[ "$chosen" == "-1" ]]; then
-    search_all "$typed"
-fi
+# ==================================================================================================================== #
+# List
 
-setsid -f dex "${desktop_files[$(( chosen + 1 ))]}" > /dev/null 2>&1
+[[ -r "$pinned_file" ]] || exit 0
+
+# Mode option: allow the Pango markup used by the headers.
+print -rn -- $'\0'"markup-rows"$'\x1f'"true"$'\n'
+
+header_row "PINNED"
+
+for id in ${(f)"$(grep -vE '^[[:space:]]*(#|$)' "$pinned_file")"}; do
+    desktop_file="$(desktop_path "$id")" || continue
+    name="$(desktop_value "$desktop_file" Name)"
+    icon="$(desktop_value "$desktop_file" Icon)"
+
+    print -rn -- "$name"$'\0'"icon"$'\x1f'"$icon"$'\x1f'"info"$'\x1f'"$desktop_file"$'\x1f'"active"$'\x1f'"true"$'\n'
+done
+
+header_row "ALL APPS"
 
 # ==================================================================================================================== #

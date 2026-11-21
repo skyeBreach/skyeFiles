@@ -15,6 +15,7 @@ configuration {
     drun-display-format: "{name}";
     window-format: "{w} · {c} · {t}";
 
+    display-combi: "󰀻  Apps";
     display-drun: "󰀻  Apps";
     display-run: "󰞷  Run";
     display-filebrowser: "󰉋  Files";
