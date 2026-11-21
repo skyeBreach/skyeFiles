@@ -14,7 +14,7 @@ dotfile_groups = [
     "nvim",
     "lsd",
     "i3",
-    "i3-lockscreen",
+    "betterlockscreen",
     "wezterm",
     "rofi",
     "dunst",

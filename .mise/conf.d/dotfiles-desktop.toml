@@ -10,13 +10,11 @@
 root = "i3"
 target = "~/.config/i3"
 mode = "symlink-each"
-exclude = ["betterlockscreenrc", "wallpapers/**"]
 
-[dotfile_groups.i3-lockscreen]
-root = "i3"
+[dotfile_groups.betterlockscreen]
+root = "betterlockscreen"
 target = "~/.config/betterlockscreen"
 mode = "symlink-each"
-exclude = ["config", "config.d/**"]
 
 # ==================================================================================================================== #
 # Bar, Launcher & Notifications

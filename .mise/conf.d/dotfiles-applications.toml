@@ -51,19 +51,9 @@ target = "~/.config"
 mode = "symlink-each"
 
 [dotfile_groups.shiopa]
-root = "shiopa/config"
-target = "~/.config/shiopa"
-mode = "symlink-each"
-
-[dotfile_groups.shiopa-launcher]
 root = "shiopa"
-target = "~"
+target = "~/.local"
 mode = "symlink-each"
-exclude = ["**"]
-
-[dotfile_groups.shiopa-launcher.entries]
-"~/.local/share/applications/shiopa.desktop" = { source = "applications/shiopa.desktop", mode = "symlink" }
-"~/.local/bin/shiopa" = { source = "bin/shiopa", mode = "symlink" }
 
 # ==================================================================================================================== #
 # Game Development
