@@ -32,11 +32,6 @@ root = "apiark"
 target = "~/.config/apiark"
 mode = "symlink-each"
 
-[dotfile_groups.bruno]
-root = "bruno"
-target = "~/.config/bruno"
-mode = "symlink-each"
-
 # ==================================================================================================================== #
 # Media & Chat
 
