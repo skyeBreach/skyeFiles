@@ -258,7 +258,7 @@ Use `//!` when you want to document the **purpose of a module or a crate**. It i
 📑 Traits
 
 - [ ] Explain the **purpose** of the trait (marker? dynamic dispatch?).
-- [ ] Doc for each method — include **when/why** to implement it.
+- [ ] Doc for each method - include **when/why** to implement it.
 - [ ] Document clearly default implemented methods and when to override.
 
 📦 Public Constants
@@ -267,8 +267,8 @@ Use `//!` when you want to document the **purpose of a module or a crate**. It i
 
 ### 📌 Best Practices
 
-- ✅ Use examples generously — they double as test cases.
-- ✅ Prefer clarity over formality — it's for humans, not machines.
+- ✅ Use examples generously - they double as test cases.
+- ✅ Prefer clarity over formality - it's for humans, not machines.
 - ✅ Prefer doc comments to explain usage, and leave implementation details to code comments if needed.
 - ✅ Use `cargo doc --open` to check your output often.
 - ✅ Add `#![deny(missing_docs)]` and other relevant doc lints in top-level modules if you want to enforce full doc coverage.

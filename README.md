@@ -70,7 +70,7 @@ Always go through the `dotfiles:*` tasks: they load `.env.local`, which a plain 
 | `mise`             | Global mise config                                                | base     |
 | `athame`           | Athame template sources                                           | app      |
 
-`config/grafana/gcx/config.yaml` is not a dotfile group — `gcx` manages its own OAuth token refresh, so it isn't
+`config/grafana/gcx/config.yaml` is not a dotfile group - `gcx` manages its own OAuth token refresh, so it isn't
 templated/synced. Run `gcx login` per machine; `config/grafana/gcx/config.yaml.example` documents the shape.
 
 ### Machine profiles

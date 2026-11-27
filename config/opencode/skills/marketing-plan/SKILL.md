@@ -23,11 +23,11 @@ Before marketing, you should have:
 
 Every customer journey:
 
-1. **Engage** — They encounter your content (social media, blog, word of mouth)
-2. **Follow** — They find you interesting enough to follow
-3. **Research** — They check out your product/website
-4. **Consider** — They evaluate your pricing, features
-5. **Buy** — They become a customer
+1. **Engage** - They encounter your content (social media, blog, word of mouth)
+2. **Follow** - They find you interesting enough to follow
+3. **Research** - They check out your product/website
+4. **Consider** - They evaluate your pricing, features
+5. **Buy** - They become a customer
 
 You can't skip steps. Every customer goes through all five.
 
@@ -47,13 +47,13 @@ Progress through these levels. Each reaches a wider audience:
 - Share what you've learned from building your business
 - If you have 100 customers, you've learned 100 things worth sharing
 - Your existing audience will engage and broadcast the best ideas
-- It doesn't need to be polished or produced — just consistent
+- It doesn't need to be polished or produced - just consistent
 
 ### Level 2: Inspire
 
 - Go beyond teaching into motivating
 - Share your journey, struggles, and successes
-- Be vulnerable and authentic — like Gimlet's _StartUp_ podcast
+- Be vulnerable and authentic - like Gimlet's _StartUp_ podcast
 - Document your progress, not just your expertise
 
 ### Level 3: Entertain
@@ -87,7 +87,7 @@ Create a simple, sustainable schedule:
 
 - Pick 1-2 platforms + email
 - Post consistently (e.g., Twitter M/W/F, YouTube once a week, Instagram once a week)
-- Quality over quantity — a monthly newsletter with substance beats daily noise
+- Quality over quantity - a monthly newsletter with substance beats daily noise
 
 ## Spend Money Last
 
@@ -104,5 +104,5 @@ Help the user create:
 1. Their primary content platform and posting schedule
 2. 5 content ideas for each level (educate, inspire, entertain)
 3. An email list strategy (what to offer, how to collect)
-4. A "build in public" plan — what to share from their journey
+4. A "build in public" plan - what to share from their journey
 5. When (if ever) to consider paid advertising

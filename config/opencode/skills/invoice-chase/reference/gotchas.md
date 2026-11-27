@@ -4,9 +4,9 @@ Known failure modes for invoice-chase.
 
 ---
 
-**Customer paid via check or bank transfer — not visible in PayPal.**
+**Customer paid via check or bank transfer - not visible in PayPal.**
 
-The PayPal cross-reference only catches PayPal payments. A customer who paid by check or ACH may still appear as overdue in AR. Note this in the summary: "PayPal history only — check/ACH payments not verified." Let the owner confirm before sending.
+The PayPal cross-reference only catches PayPal payments. A customer who paid by check or ACH may still appear as overdue in AR. Note this in the summary: "PayPal history only - check/ACH payments not verified." Let the owner confirm before sending.
 
 ---
 
@@ -16,7 +16,7 @@ Some setups include internal billing accounts or test records in AR. Before draf
 
 ---
 
-**Multiple overdue invoices from the same customer — send one email only.**
+**Multiple overdue invoices from the same customer - send one email only.**
 
 Never draft two separate reminders to the same customer in one batch. Consolidate all overdue invoices into one email with a total amount and a list of invoice numbers. Two emails to the same person in one batch looks disorganized and may trigger a spam filter.
 
@@ -24,7 +24,7 @@ Never draft two separate reminders to the same customer in one batch. Consolidat
 
 **PayPal reminder send fails for customers without a PayPal account.**
 
-PayPal reminders only work if the customer has an active PayPal account. If PayPal returns a send error, fall back to queuing a mail draft and report the fallback: "PayPal send failed for [customer] — queued as [mail app] draft instead." Do not silently drop the reminder.
+PayPal reminders only work if the customer has an active PayPal account. If PayPal returns a send error, fall back to queuing a mail draft and report the fallback: "PayPal send failed for [customer] - queued as [mail app] draft instead." Do not silently drop the reminder.
 
 ---
 
@@ -42,4 +42,4 @@ _Fix:_ Always query with `transaction_status: S` (settled only) and a **7-day wi
 
 _Retry pattern:_ If a 7-day query returns 429, retry immediately with a **3-day window**. A narrower window reduces the response payload and usually succeeds.
 
-_Fallback:_ If the 3-day retry also returns 429, skip the PayPal cross-reference for this run entirely. Flag every customer in the batch as "PayPal unavailable — verify manually" in the summary table. Proceed with QuickBooks-only scoring. Do not silently drop the caveat — the owner needs to know the cross-reference was skipped before approving any sends.
+_Fallback:_ If the 3-day retry also returns 429, skip the PayPal cross-reference for this run entirely. Flag every customer in the batch as "PayPal unavailable - verify manually" in the summary table. Proceed with QuickBooks-only scoring. Do not silently drop the caveat - the owner needs to know the cross-reference was skipped before approving any sends.

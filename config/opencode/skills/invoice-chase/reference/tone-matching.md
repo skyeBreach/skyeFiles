@@ -25,8 +25,8 @@ Score each customer using QuickBooks payment history for the last 12 months. Req
 ## Subject lines
 
 - Gentle: `Quick reminder: Invoice #[N] for $[amount]`
-- Neutral: `Following up: Invoice #[N] — $[amount] past due`
-- Firm: `Past due notice: Invoice #[N] — $[amount] ([X] days overdue)`
+- Neutral: `Following up: Invoice #[N] - $[amount] past due`
+- Firm: `Past due notice: Invoice #[N] - $[amount] ([X] days overdue)`
 
 ## Body structure (all tones)
 
@@ -35,7 +35,7 @@ Every reminder includes: invoice number(s), total amount due, original due date,
 Tone-specific additions:
 
 - **Gentle**: one acknowledgment sentence ("I know things get busy")
-- **Neutral**: none — facts only
+- **Neutral**: none - facts only
 - **Firm**: one deadline sentence ("Please remit by [date]")
 
 One call to action per email. Never two.

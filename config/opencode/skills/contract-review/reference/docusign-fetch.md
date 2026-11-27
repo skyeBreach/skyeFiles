@@ -21,12 +21,12 @@ Use `getEnvelope` with the `envelopeId` to get the full envelope details, then d
 
 - Never call `triggerWorkflow` or any action that moves the envelope forward in the signing process.
 - Never call `updateEnvelope` to modify the document.
-- Never call `createEnvelope` — this skill is review-only.
+- Never call `createEnvelope` - this skill is review-only.
 
 ## Fallback
 
 If DocuSign is not connected or the envelope is not found:
 
 ```
-"DocuSign isn't connected — paste the contract text or attach the file directly."
+"DocuSign isn't connected - paste the contract text or attach the file directly."
 ```

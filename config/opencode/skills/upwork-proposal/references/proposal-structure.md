@@ -20,10 +20,10 @@ Clients spend only **10-15 seconds** scanning proposals initially. Structure for
 Hey there 👋 I can help you automate that Google Sheets → AI → PDF workflow.
 ```
 ```
-Hi Sarah — saw you need Shopify order automation with n8n. That's exactly what I build.
+Hi Sarah - saw you need Shopify order automation with n8n. That's exactly what I build.
 ```
 ```
-Hey! Your email categorization project sounds perfect — I recently built something similar.
+Hey! Your email categorization project sounds perfect - I recently built something similar.
 ```
 
 **DON'T:**
@@ -84,7 +84,7 @@ I'll also add error handling and logging so you can monitor the workflow.
 **Examples:**
 
 ```
-I recently built a similar workflow for a finance client — automated weekly reports from Sheets to PDF emails, running reliably for 6 months now.
+I recently built a similar workflow for a finance client - automated weekly reports from Sheets to PDF emails, running reliably for 6 months now.
 ```
 ```
 My WhatsApp + n8n customer support system handles 200+ messages daily with 95% auto-resolution rate.
@@ -121,7 +121,7 @@ Available to start Monday. Estimated completion: December 15th.
 Fixed rate: $XXX for the complete workflow.
 ```
 ```
-Happy to discuss pricing based on scope — my typical rate for this type of project is $XX-$XX/hour.
+Happy to discuss pricing based on scope - my typical rate for this type of project is $XX-$XX/hour.
 ```
 
 **Note:** Only include if you're confident. Can skip for complex projects where scope needs discussion.
@@ -141,7 +141,7 @@ When would you like to kick off? I'm available to discuss tomorrow.
 Want me to share my screen and walk you through how I'd build this?
 ```
 ```
-If this sounds like a fit, invite me and share your workflow export — I'll start with a quick diagnosis.
+If this sounds like a fit, invite me and share your workflow export - I'll start with a quick diagnosis.
 ```
 
 **DON'T:** "Please let me know if you have any questions" (passive)
@@ -155,7 +155,7 @@ If this sounds like a fit, invite me and share your workflow export — I'll sta
 ```
 Hey there 👋
 
-I can set up exactly what you need — a clean n8n workflow that pulls from Google Sheets, runs prompts through ChatGPT, generates a PDF, and emails it twice a week.
+I can set up exactly what you need - a clean n8n workflow that pulls from Google Sheets, runs prompts through ChatGPT, generates a PDF, and emails it twice a week.
 
 Here's my approach:
 - Connect Sheets with time-based triggers
@@ -163,7 +163,7 @@ Here's my approach:
 - Format and convert to PDF (via Google Docs or external API)
 - Auto-send via Gmail on schedule
 
-I recently built a similar automated reporting system for a finance client — it's been running reliably for 6 months. Happy to share details.
+I recently built a similar automated reporting system for a finance client - it's been running reliably for 6 months. Happy to share details.
 
 Available to start Monday. First working version by Thursday.
 

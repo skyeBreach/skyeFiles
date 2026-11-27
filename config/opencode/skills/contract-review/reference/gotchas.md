@@ -30,7 +30,7 @@ Reserve red flags for genuinely non-standard terms. If a clause is boilerplate a
 
 ## Gotcha: Missing clauses aren't missing from the analysis
 
-**Why it matters:** For SMBs, the absence of standard protections (liability cap, change order process, consequential damages waiver) is often more dangerous than an unfavorable clause — the default legal position fills the gap, usually in the counterparty's favor.
+**Why it matters:** For SMBs, the absence of standard protections (liability cap, change order process, consequential damages waiver) is often more dangerous than an unfavorable clause - the default legal position fills the gap, usually in the counterparty's favor.
 
 ### ✗ Bad
 
@@ -80,7 +80,7 @@ Always read the full document. Use the `pages` parameter to chunk large PDFs.
 
 ## Gotcha: Counterparty template vs. negotiated draft
 
-**Why it matters:** Recommendations should match the negotiating context. Pushing back hard on a startup's first-draft agreement is different from pushing back on a Fortune 500 procurement template — the latter is often non-negotiable on 80% of its terms.
+**Why it matters:** Recommendations should match the negotiating context. Pushing back hard on a startup's first-draft agreement is different from pushing back on a Fortune 500 procurement template - the latter is often non-negotiable on 80% of its terms.
 
 ### ✗ Bad
 
@@ -97,7 +97,7 @@ Unrealistic recommendation wastes the user's political capital.
 ```
 Claude: "🟡 Net-60 payment terms. This is longer than typical (Net-30 is standard),
          but common in large enterprise procurement templates. Worth asking for
-         Net-45 as a compromise — they may accept it, especially for recurring work.
+         Net-45 as a compromise - they may accept it, especially for recurring work.
          Note: if this is a Fortune 500 template, payment terms are often non-negotiable
          in the first engagement."
 ```

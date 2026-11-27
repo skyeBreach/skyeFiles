@@ -19,7 +19,7 @@ a formatted PDF via email twice a week.
 ```
 Hey there 👋
 
-I can set up exactly what you need — a clean n8n workflow that pulls from
+I can set up exactly what you need - a clean n8n workflow that pulls from
 Google Sheets, runs prompts through ChatGPT/DeepSeek, generates a PDF, and
 emails it twice a week.
 
@@ -33,7 +33,7 @@ Here's my approach:
 I recently built a similar automated reporting system that's been running
 reliably for 6 months. Happy to share details.
 
-Available to start Monday — first working version by Thursday.
+Available to start Monday - first working version by Thursday.
 
 When would you like to kick off?
 ```
@@ -57,7 +57,7 @@ extract meaningful intelligence. Use of n8n is fine.
 ```
 Hey there 👋
 
-I can build an AI agent to process your 8 years of emails — categorizing,
+I can build an AI agent to process your 8 years of emails - categorizing,
 summarizing, and extracting insights efficiently.
 
 Here's my approach:
@@ -87,7 +87,7 @@ your 8 years of emails using n8n + Python + LLMs.
 My approach: batch processing with OpenAI/Gemini for categorization, structured
 storage for querying. Built similar pipelines with 94% accuracy.
 
-Let's discuss data format — when works to chat?
+Let's discuss data format - when works to chat?
 ```
 
 ---
@@ -108,7 +108,7 @@ replies based on category.
 ```
 Hey there 👋
 
-Yes — I can build this automation in n8n. Here's exactly how:
+Yes - I can build this automation in n8n. Here's exactly how:
 
 - Collect feedback from Google Forms → trigger n8n workflow
 - Use AI (ChatGPT or Gemini) to classify: request, complaint, or appreciation
@@ -185,7 +185,7 @@ notifications using n8n.
 ```
 Hey there 👋
 
-I've built Shopify + n8n automations before — here's what I can set up:
+I've built Shopify + n8n automations before - here's what I can set up:
 
 - Order processing: auto-confirm, update status, trigger fulfillment
 - Inventory sync: real-time updates between Shopify and your systems
@@ -227,7 +227,7 @@ Want me to share my screen and walk through how I'd build this?
 **Inviting action:**
 
 ```
-If this sounds like a fit, invite me and share your requirements — I'll start
+If this sounds like a fit, invite me and share your requirements - I'll start
 with a quick scope review.
 ```
 
@@ -270,7 +270,7 @@ What you'll get:
 - Documentation explaining how it works and why
 - Code you can actually maintain and extend
 
-I follow spec-driven development — you won't get "it works on my machine."
+I follow spec-driven development - you won't get "it works on my machine."
 You'll get verified, documented code.
 
 Built similar systems handling 200+ transactions daily. Happy to share details.
@@ -309,7 +309,7 @@ using n8n, Python, and AI agents.
 ```
 
 ```
-n8n specialist — I automate repetitive work so you can scale people, not problems.
+n8n specialist - I automate repetitive work so you can scale people, not problems.
 ```
 
 ```
@@ -321,5 +321,5 @@ that run with minimal human intervention.
 
 ```
 I build reliable, tested automation. You get working code plus specs, tests,
-and documentation — not just "it seems to work."
+and documentation - not just "it seems to work."
 ```

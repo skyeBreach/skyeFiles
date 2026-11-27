@@ -1,4 +1,4 @@
-# employment-contract-templates — templates and worked examples
+# employment-contract-templates - templates and worked examples
 
 ## Templates
 

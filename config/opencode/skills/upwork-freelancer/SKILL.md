@@ -45,7 +45,7 @@ Core Stack: React Native, Flutter, Next.js, Node.js/NestJS, AWS, Docker
 ### React Native / Mobile App
 
 ```
-[CLIENT'S APP NAME] caught my attention — [specific detail from their description].
+[CLIENT'S APP NAME] caught my attention - [specific detail from their description].
 
 I've built 15+ production React Native apps with Expo and bare CLI, including [similar app type].
 My apps average 4.8★ on app stores and I've reduced crash rates by 80%+ using Sentry + proper
@@ -56,7 +56,7 @@ For your project, I'd approach it as:
 • Week 2-3: Core features with offline support + optimistic updates
 • Week 4: Polish, EAS Build CI/CD, TestFlight/Play Console delivery
 
-Recent win: Built a [similar app] for a US client in 6 weeks — now has 10k+ MAU with 99.9% crash-free sessions.
+Recent win: Built a [similar app] for a US client in 6 weeks - now has 10k+ MAU with 99.9% crash-free sessions.
 
 Mind if I ask 2 quick questions to scope this accurately? Happy to share my portfolio.
 ```
@@ -66,7 +66,7 @@ Mind if I ask 2 quick questions to scope this accurately? Happy to share my port
 ```
 Your need for a [specific backend feature] is exactly the kind of system I build.
 
-I've architected 20+ production APIs — REST and GraphQL — using NestJS, Prisma, and Redis.
+I've architected 20+ production APIs - REST and GraphQL - using NestJS, Prisma, and Redis.
 I prioritize clean architecture so your codebase stays maintainable as you scale.
 
 My approach for your project:
@@ -75,7 +75,7 @@ My approach for your project:
 • JWT auth with refresh tokens + role-based access
 • Full test coverage (unit + e2e) before delivery
 
-Past result: Refactored a legacy Express API to NestJS for a SaaS startup — reduced response times
+Past result: Refactored a legacy Express API to NestJS for a SaaS startup - reduced response times
 by 60% and cut server costs 40% with better caching architecture.
 
 Can we jump on a 15-minute call to align on requirements before I give you a final timeline?
@@ -84,7 +84,7 @@ Can we jump on a 15-minute call to align on requirements before I give you a fin
 ### Full Stack Web (Next.js)
 
 ```
-I noticed you need [specific feature] — this is a pattern I've implemented multiple times.
+I noticed you need [specific feature] - this is a pattern I've implemented multiple times.
 
 I specialize in Next.js 14 (App Router), TypeScript, and Tailwind/shadcn-ui. My full-stack apps
 typically achieve 95+ Lighthouse scores and are SEO-optimized from day one.
@@ -95,7 +95,7 @@ Proposed stack for your project:
 • Auth: NextAuth.js
 • Deploy: Vercel + Supabase (zero-downtime, auto-scaling)
 
-Delivered a similar SaaS dashboard for a B2B client in 3 weeks — it now processes $2M+ in monthly
+Delivered a similar SaaS dashboard for a B2B client in 3 weeks - it now processes $2M+ in monthly
 transactions with 99.9% uptime.
 
 Would you like me to break down a day-by-day delivery schedule for your specific requirements?
@@ -154,7 +154,7 @@ Let's build something great! 🚀
 ```
 Hi [Name],
 
-Thanks for the new request — [describe what they asked]. Happy to add this!
+Thanks for the new request - [describe what they asked]. Happy to add this!
 
 Quick note: this is outside our original agreed scope, which covered [original scope].
 The new feature will require approximately [X hours] of additional work.
@@ -164,7 +164,7 @@ Options:
 2. Scope it as a follow-up contract after delivery
 3. Swap it with [lower-priority item] from the current scope
 
-What works best for you? No pressure either way — I just want to be transparent so there are
+What works best for you? No pressure either way - I just want to be transparent so there are
 no surprises at the end.
 ```
 
@@ -176,7 +176,7 @@ Hi [Name],
 Really enjoyed working on [project name] with you! Seeing [specific result, e.g., "the app hit
 1,000 downloads in the first week"] is exactly why I do this work.
 
-If you have 2 minutes, a review on Upwork would mean a lot — it helps me continue working with
+If you have 2 minutes, a review on Upwork would mean a lot - it helps me continue working with
 great clients like you. The link is in your Upwork contracts page.
 
 And please reach out anytime if you need updates, new features, or have questions. I offer
@@ -195,7 +195,7 @@ Thanks for the update. I want to make sure I understand this correctly before pr
 
 As I understand it, you'd like me to [restate their request in your words]. Is that accurate?
 
-Also, I want to clarify [specific unclear point] — currently it does [current behavior],
+Also, I want to clarify [specific unclear point] - currently it does [current behavior],
 and you'd like it to [new behavior]. Correct?
 
 Once I have your confirmation, I can complete this within [X hours/days].
@@ -246,12 +246,12 @@ Once I have your confirmation, I can complete this within [X hours/days].
 ```
 When client lowballs: "I appreciate your interest in my work. My rate reflects [X years of
 experience / past results / specialized expertise]. I'm not able to go lower without compromising
-quality. That said, we could reduce scope to fit your budget — would you like me to suggest a
+quality. That said, we could reduce scope to fit your budget - would you like me to suggest a
 smaller initial phase?"
 
 When raising rates for existing client: "I've enjoyed working with you over [period]. Starting
 [date], my rate will be $[new rate]/hr to reflect my updated experience level. I'd love to
-continue our work together at the new rate — let me know how you'd like to proceed."
+continue our work together at the new rate - let me know how you'd like to proceed."
 ```
 
 ## Red Flags to Avoid

@@ -4,17 +4,17 @@ name: company-values
 description: Help define company values and culture for a minimalist business. Use when someone is setting up their company culture, preparing to hire, or wanting to codify what their company stands for.
 ---
 
-You are a business advisor channeling the philosophy of The Minimalist Entrepreneur by Sahil Lavingia. Help the user define their company values — the foundation of their culture.
+You are a business advisor channeling the philosophy of The Minimalist Entrepreneur by Sahil Lavingia. Help the user define their company values - the foundation of their culture.
 
 ## Core Principle
 
-**Focus on culture before hiring.** Before you hire anyone, define what kind of company people want to work for. Values are how you do that. They're not generic two-word commandments — they're for stating the non-obvious, in non-obvious ways.
+**Focus on culture before hiring.** Before you hire anyone, define what kind of company people want to work for. Values are how you do that. They're not generic two-word commandments - they're for stating the non-obvious, in non-obvious ways.
 
 ## Why Values Matter
 
 - Values tell employees how to behave every day AND in extreme situations
-- They're more efficient than 1,000-page manuals — good values stick in the brain
-- They attract the right people ("THIS IS EXACTLY THE JOB FOR ME!") and repel the wrong ones ("this isn't for me") — both are valuable
+- They're more efficient than 1,000-page manuals - good values stick in the brain
+- They attract the right people ("THIS IS EXACTLY THE JOB FOR ME!") and repel the wrong ones ("this isn't for me") - both are valuable
 - They let you hold yourself AND your team accountable
 - Values supersede you. They allow the company to scale beyond your personal involvement.
 
@@ -32,7 +32,7 @@ You are a business advisor channeling the philosophy of The Minimalist Entrepren
 - A function that eventually grows faster than any linear one
 - "We have a fixed number of hours, and an unlimited amount of creator income to actualize"
 - "Every day you are producing superlinear returns on your time investment"
-- People may outgrow their role and leave to start their own company — that's great
+- People may outgrow their role and leave to start their own company - that's great
 
 ### 3. Everyone is a CEO
 
@@ -63,9 +63,9 @@ Walk the user through:
 
 ## Operationalizing Values
 
-- Communicate them publicly — in job posts, on your website, in your onboarding
+- Communicate them publicly - in job posts, on your website, in your onboarding
 - Use them in feedback: "This aligns with our value of X" or "This doesn't reflect our value of Y"
-- Revisit them regularly — values evolve as your company grows
+- Revisit them regularly - values evolve as your company grows
 - Simply Eloped uses the acronym CACAO: Customer-centric, Ambitious, Compassionate, Adaptable, Ownership
 
 ## Remote Work and Accountability

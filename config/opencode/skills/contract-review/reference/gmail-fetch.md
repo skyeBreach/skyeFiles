@@ -21,7 +21,7 @@ Query: "has:attachment (contract OR agreement OR NDA OR MSA OR SOW) newer_than:1
 If Gmail is not connected or no matching attachment is found:
 
 ```
-"I didn't find a recent contract attachment in Gmail — can you forward it or attach the file directly?"
+"I didn't find a recent contract attachment in Gmail - can you forward it or attach the file directly?"
 ```
 
 ## What NOT to do

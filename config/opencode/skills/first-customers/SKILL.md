@@ -28,12 +28,12 @@ Sell outward from the people who care most about you to the people who care leas
 - These are subject matter experts who understand the problem
 - Three steps:
   1. **Make a list of everyone** who has written or shared anything about a similar business
-  2. **Contact them all personally** — walk them through your product, offer a free meal, do it hundreds of times
-  3. **Ask for candid feedback** — not reviews or social posts, just honest feedback
+  2. **Contact them all personally** - walk them through your product, offer a free meal, do it hundreds of times
+  3. **Ask for candid feedback** - not reviews or social posts, just honest feedback
 
 ### Circle 3: Strangers (Cold Outreach)
 
-- Cold emails, calls, messages — this works. It's how Gumroad grew.
+- Cold emails, calls, messages - this works. It's how Gumroad grew.
 - Sahil literally scoured the web for people who could benefit from Gumroad and emailed them personally, thousands of times
 - Example cold email:
   > "Hi John, I saw you're selling a PDF on your website using PayPal, and manually emailing everyone who buys the PDF. I built a service called Gumroad which basically automates all of this. I'd love to show it to you, or you can check it out yourself: gumroad.com. Also happy to just share any learnings we see from creators in a little PDF we have. Let me know! Best, Sahil"
@@ -47,7 +47,7 @@ Reframe how you think about sales:
 - You're not convincing anyone. You're helping people.
 - You already have a relationship with your community
 - You're selling a product that adds value to their life
-- Turn every failed conversion into an insight — either wrong person, or product needs work
+- Turn every failed conversion into an insight - either wrong person, or product needs work
 - Sales is an education process: your customers get to know you, you get to know what's working
 
 ## Pricing (Charge Something!)

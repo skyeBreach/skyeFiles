@@ -24,7 +24,7 @@ Skills, experience, and positioning for Muhammad Umer Razzaq.
 "I design and ship agentic systems that use LLMs as the primary execution layer, glued together with no-code/low-code tools. I automate repetitive work so businesses can scale people, not problems."
 
 **With methodology (for quality-focused clients):**
-"I build reliable, documented automation using spec-driven development. You get working code plus specs, tests, and ADRs — not just 'it works on my machine.'"
+"I build reliable, documented automation using spec-driven development. You get working code plus specs, tests, and ADRs - not just 'it works on my machine.'"
 
 ---
 

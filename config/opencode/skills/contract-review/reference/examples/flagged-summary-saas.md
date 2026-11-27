@@ -26,7 +26,7 @@ Contract: 18-page SaaS Subscription Agreement, vendor template, governing law: C
 
 > _"IN NO EVENT SHALL VENDOR'S LIABILITY EXCEED THE AMOUNTS ACTUALLY PAID BY CUSTOMER IN THE THREE (3) MONTHS PRECEDING THE CLAIM."_
 
-**Problem:** Three months of fees = $600. If a vendor data breach exposes your client data, your recovery is capped at $600 — regardless of actual damages. For a consulting firm handling client information, this is inadequate.
+**Problem:** Three months of fees = $600. If a vendor data breach exposes your client data, your recovery is capped at $600 - regardless of actual damages. For a consulting firm handling client information, this is inadequate.
 
 **Ask for:** Cap at 12 months of fees paid ($2,400), or at a fixed floor of $50,000 for data security incidents. Suggested language:
 
@@ -50,7 +50,7 @@ Contract: 18-page SaaS Subscription Agreement, vendor template, governing law: C
 
 > _"Customer grants Vendor a non-exclusive, worldwide license to use, process, and analyze Customer Data to improve Vendor's products and services."_
 
-**Concern:** Vendor can use your data — including client project data — to train their product. This may conflict with your client confidentiality obligations.
+**Concern:** Vendor can use your data - including client project data - to train their product. This may conflict with your client confidentiality obligations.
 
 **Ask for:** Restrict to aggregated, anonymized usage only. Suggested language:
 
@@ -81,8 +81,8 @@ Contract: 18-page SaaS Subscription Agreement, vendor template, governing law: C
 
 | Flag                | Ask                                                        | Framing                                                                    |
 | ------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------------- |
-| Liability cap       | Raise to 12 months ($2,400) or $50K for security incidents | "We handle client data — we need the liability cap to reflect actual risk" |
-| Auto-renewal window | Reduce to 30 days                                          | "60 days is tight for a small team — 30 is more typical"                   |
+| Liability cap       | Raise to 12 months ($2,400) or $50K for security incidents | "We handle client data - we need the liability cap to reflect actual risk" |
+| Auto-renewal window | Reduce to 30 days                                          | "60 days is tight for a small team - 30 is more typical"                   |
 | Data license        | Restrict to anonymized/aggregated                          | "Our client agreements restrict how we share their project data"           |
 | Termination cure    | Add 15-day cure period                                     | "We need a chance to fix issues before access is cut off"                  |
 

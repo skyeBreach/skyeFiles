@@ -1,4 +1,4 @@
-# rust-async-patterns — detailed patterns and worked examples
+# rust-async-patterns - detailed patterns and worked examples
 
 ## Patterns
 

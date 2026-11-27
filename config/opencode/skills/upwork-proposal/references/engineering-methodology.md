@@ -110,7 +110,7 @@ project/
 ### Full mention (for quality-focused clients):
 
 ```
-I follow spec-driven development — I document requirements first, write
+I follow spec-driven development - I document requirements first, write
 tests before code, then implement. You'll get working code plus specs,
 tests, and ADRs in the repo. Not just "it works on my machine."
 ```
@@ -131,7 +131,7 @@ All deliverables include specs, tests, and documentation in the repo.
 ### When client mentions reliability concerns:
 
 ```
-I use test-driven development — tests are written before code, so
+I use test-driven development - tests are written before code, so
 everything is verified working, not just "looks right."
 ```
 
@@ -173,7 +173,7 @@ Here's my approach:
 - Process through ChatGPT API
 - Generate PDF and auto-email
 
-I follow spec-driven development — I'll document requirements first,
+I follow spec-driven development - I'll document requirements first,
 write tests, then implement. You'll get the workflow plus specs and
 tests in the repo, so it's maintainable long-term.
 
@@ -191,7 +191,7 @@ When would you like to kick off?
 ```
 I write a clear specification of what the system should do before coding.
 Then I write tests that verify the behavior. Then I implement. This means
-you get documented, tested code — not just "it seems to work."
+you get documented, tested code - not just "it seems to work."
 ```
 
 **Client: "Isn't that overkill for a small project?"**

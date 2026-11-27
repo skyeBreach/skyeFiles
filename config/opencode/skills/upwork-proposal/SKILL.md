@@ -163,7 +163,7 @@ User follows **Spec-Driven Development (SDD)** and **Test-Driven Development (TD
 **How to phrase it naturally:**
 
 ```
-I follow spec-driven development — I'll document requirements first,
+I follow spec-driven development - I'll document requirements first,
 write tests, then implement. You'll get working code plus specs and
 tests in the repo, not just "it works on my machine."
 ```
@@ -204,7 +204,7 @@ Here's the plan:
 - Generate formatted PDF (via API or Google Docs conversion)
 - Auto-send via Gmail
 
-I recently built a similar workflow connecting Sheets with ChatGPT for automated reporting — happy to share details.
+I recently built a similar workflow connecting Sheets with ChatGPT for automated reporting - happy to share details.
 
 When would you like to kick off?
 ```

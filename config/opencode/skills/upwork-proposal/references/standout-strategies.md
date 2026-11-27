@@ -11,7 +11,7 @@ The Upwork landscape in 2025-2026 is flooded with AI spam. Here's how to stand o
 - Clients receive 20+ proposals in the first 10 minutes
 - Most are clearly AI-generated: polished but generic
 - Clients archive robotic proposals instantly
-- Some clients add "test instructions" — only 30% of applicants follow them
+- Some clients add "test instructions" - only 30% of applicants follow them
 
 **What AI proposals look like:**
 
@@ -74,7 +74,7 @@ I would be delighted to discuss this opportunity further at your convenience.
 
 ```
 ✅ "Hey there 👋"
-✅ "Hi [Name] —"
+✅ "Hi [Name] -"
 ✅ "Hey!"
 
 ❌ "Dear Hiring Manager"
@@ -120,7 +120,7 @@ I would be delighted to discuss this opportunity further at your convenience.
 ✅ "I recently built an email categorization pipeline for a finance client"
 
 ❌ "I have relevant portfolio work"
-✅ "Check out my StudyBuddy project — similar tech stack"
+✅ "Check out my StudyBuddy project - similar tech stack"
 ```
 
 ### 4. Test Instruction Detection
@@ -186,7 +186,7 @@ Clients are 3x more likely to respond to video intros. Massively underused.
 2. **Understanding** (10s): "You need [X, Y, Z]"
 3. **Mini Plan** (15s): "Here's how I'd approach it"
 4. **Proof** (10s): "I did something similar for [client]"
-5. **CTA** (5s): "Let's talk — when works for you?"
+5. **CTA** (5s): "Let's talk - when works for you?"
 
 ---
 
